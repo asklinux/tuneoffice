@@ -1,17 +1,17 @@
 ## Core fonts
 
-This repo contains fonts used in [ONLYOFFICE Document Server](https://github.com/ONLYOFFICE/DocumentServer).
+This repo contains fonts used in [TUNEOFFICE Document Server](https://github.com/TUNEOFFICE/DocumentServer).
 
 ## Project information
 
-Official website: [http://www.onlyoffice.com](http://onlyoffice.com "http://www.onlyoffice.com")
+Official website: [http://www.tuneoffice.com](http://tuneoffice.com "http://www.tuneoffice.com")
 
-Code repository: [https://github.com/ONLYOFFICE/core-fonts/](https://github.com/ONLYOFFICE/core-fonts/ "https://github.com/ONLYOFFICE/core-fonts/")
+Code repository: [https://github.com/TUNEOFFICE/core-fonts/](https://github.com/TUNEOFFICE/core-fonts/ "https://github.com/TUNEOFFICE/core-fonts/")
 
-SaaS version: [https://www.onlyoffice.com/cloud-office.aspx](https://www.onlyoffice.com/cloud-office.aspx "https://www.onlyoffice.com/cloud-office.aspx")
+SaaS version: [https://www.tuneoffice.com/cloud-office.aspx](https://www.tuneoffice.com/cloud-office.aspx "https://www.tuneoffice.com/cloud-office.aspx")
 
 ## User feedback and support
 
-If you have questions, ask them on our [official forum](https://forum.onlyoffice.com/).
+If you have questions, ask them on our [official forum](https://forum.tuneoffice.com/).
 
-Development questions can also be asked on [Stack Overflow](http://stackoverflow.com/questions/tagged/onlyoffice).
+Development questions can also be asked on [Stack Overflow](http://stackoverflow.com/questions/tagged/tuneoffice).
