@@ -45,7 +45,7 @@ codeEditor.create("editor", window.editorTheme === "dark" ? "vs-dark" : "vs-ligh
 if(window.language == 'javascript') {
     codeEditor.addLibrary({
         url: "./libs/" + window.editorType + "/api.js",
-        name : "onlyoffice"
+        name : "tuneoffice"
     });
 }
 

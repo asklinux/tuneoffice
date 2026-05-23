@@ -1510,7 +1510,7 @@
   "DE.Controllers.Main.textLearnMore": "자세히",
   "DE.Controllers.Main.textLoadingDocument": "문서 로드 중",
   "DE.Controllers.Main.textLongName": "128자 미만의 이름을 입력하세요.",
-  "DE.Controllers.Main.textNoLicenseTitle": "ONLYOFFICE 연결 제한",
+  "DE.Controllers.Main.textNoLicenseTitle": "TUNEOFFICE 연결 제한",
   "DE.Controllers.Main.textNoResourcesTitle": "리소스 부족",
   "DE.Controllers.Main.textPaidFeature": "유료기능",
   "DE.Controllers.Main.textReconnect": "연결이 복원되었습니다",
@@ -4468,5 +4468,14 @@
   "DE.Views.WatermarkSettingsDialog.textTransparency": "투명한",
   "DE.Views.WatermarkSettingsDialog.textUnderline": "밑줄",
   "DE.Views.WatermarkSettingsDialog.tipFontName": "글꼴 이름",
-  "DE.Views.WatermarkSettingsDialog.tipFontSize": "글꼴 크기"
+  "DE.Views.WatermarkSettingsDialog.tipFontSize": "글꼴 크기",
+  "DE.Controllers.Toolbar.helpPasteOptions": "Use the dropdown arrow on the Paste button to choose how to paste content.",
+  "DE.Controllers.Toolbar.helpPasteOptionsHeader": "Paste options",
+  "DE.Views.RightMenu.txtSendForSigning": "Send for signing",
+  "DE.Views.SendForSigningSettings.txtCancel": "Cancel",
+  "DE.Views.SendForSigningSettings.txtDescription": "Please check the order of filling before sending.",
+  "DE.Views.SendForSigningSettings.txtNoUsersFound": "No users found",
+  "DE.Views.SendForSigningSettings.txtSelectUser": "Select user",
+  "DE.Views.SendForSigningSettings.txtSend": "Send",
+  "DE.Views.SendForSigningSettings.txtTitle": "Send for signing"
 }

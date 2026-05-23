@@ -1,39 +1,39 @@
 [![License](https://img.shields.io/badge/License-GNU%20AGPL%20V3-green.svg?style=flat)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 
-<h1 > ONLYOFFICE web-apps</h1>
+<h1 > TUNEOFFICE web-apps</h1>
 
 ## 💡 Overview
 
 Welcome to the `web-apps` repository! 
 
-It’s the frontend for [ONLYOFFICE Document Server](https://github.com/ONLYOFFICE/DocumentServer) and [ONLYOFFICE Desktop Editors](https://github.com/ONLYOFFICE/DesktopEditors) — the part you interact with. It powers the interface that lets you create, edit, save, and export your text documents, spreadsheets, and presentations.
+It’s the frontend for [TUNEOFFICE Document Server](https://github.com/TUNEOFFICE/DocumentServer) and [TUNEOFFICE Desktop Editors](https://github.com/TUNEOFFICE/DesktopEditors) — the part you interact with. It powers the interface that lets you create, edit, save, and export your text documents, spreadsheets, and presentations.
 
 *Previous versions: Until 2019-10-23 the repository was called web-apps-pro.*
 
 ---
 
-## ⚙️ How it fits in the ONLYOFFICE ecosystem
+## ⚙️ How it fits in the TUNEOFFICE ecosystem
 
 
 | Layer | Component | Role |
 |-----------|------------|------|
-| 🧠 **Engine** | [Document Server ↗](https://github.com/ONLYOFFICE/DocumentServer) | Handles editing logic, file conversion, real-time collaboration |
+| 🧠 **Engine** | [Document Server ↗](https://github.com/TUNEOFFICE/DocumentServer) | Handles editing logic, file conversion, real-time collaboration |
 | 💻 **Interface** | **Web Apps** *(this repo)* | Provides the browser-based user interface |
-| 🧩 **Integrations** | [Integration API ↗](https://api.onlyoffice.com/docs/docs-api/get-started/basic-concepts/?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) | Embeds editors into custom web platforms or apps |
+| 🧩 **Integrations** | [Integration API ↗](https://api.tuneoffice.com/docs/docs-api/get-started/basic-concepts/?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) | Embeds editors into custom web platforms or apps |
 
-Together, these layers make **ONLYOFFICE** a full-fledged online editing suite.
+Together, these layers make **TUNEOFFICE** a full-fledged online editing suite.
 
 ---
 
 ## 🚀 Key highlights
 
 ✨ **Multiple editors, one codebase**
-- [Document Editor](https://www.onlyoffice.com/word-processor?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) 📝  
-- [Spreadsheet Editor](https://www.onlyoffice.com/sheets?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) 📊  
-- [Presentation Editor](https://www.onlyoffice.com/slides?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) 📽️ 
-- [PDF Editor](https://www.onlyoffice.com/pdf-editor?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) ✂️
-- [Form Creator](https://www.onlyoffice.com/form-creator?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) 📝
-- [Diagram Viewer](https://www.onlyoffice.com/diagram-viewer?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) 🖼️
+- [Document Editor](https://www.tuneoffice.com/word-processor?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) 📝  
+- [Spreadsheet Editor](https://www.tuneoffice.com/sheets?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) 📊  
+- [Presentation Editor](https://www.tuneoffice.com/slides?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) 📽️ 
+- [PDF Editor](https://www.tuneoffice.com/pdf-editor?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) ✂️
+- [Form Creator](https://www.tuneoffice.com/form-creator?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) 📝
+- [Diagram Viewer](https://www.tuneoffice.com/diagram-viewer?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps) 🖼️
 
 💬 **Real-time collaboration**
 - Co-editing 
@@ -41,7 +41,7 @@ Together, these layers make **ONLYOFFICE** a full-fledged online editing suite.
 - Built-in chat and track changes  
 
 ⚡ **Developer-friendly integration**
-- Embed editors in any app using [ONLYOFFICE API ↗](https://api.onlyoffice.com/docs/docs-api/get-started/basic-concepts/?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps)
+- Embed editors in any app using [TUNEOFFICE API ↗](https://api.tuneoffice.com/docs/docs-api/get-started/basic-concepts/?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps)
 - Customize toolbar, permissions, and callback behavior  
 
 🌍 **Fully browser-compatible**
@@ -68,23 +68,23 @@ Here’s a quick tour of what lives inside this repository:
 
 ## 🔧 Want to build this yourself? 
 
-If you’d like to compile or modify the editors yourself, use the [`build_tools`](https://github.com/ONLYOFFICE/build_tools) repository.
+If you’d like to compile or modify the editors yourself, use the [`build_tools`](https://github.com/TUNEOFFICE/build_tools) repository.
 
 It automatically sets up dependencies and builds:
 
-* [Docs (Document Server)](https://www.onlyoffice.com/docs?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps)  
-* [Desktop Editors](https://www.onlyoffice.com/desktop?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps)  
-* [Document Builder](https://www.onlyoffice.com/document-builder?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps)
+* [Docs (Document Server)](https://www.tuneoffice.com/docs?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps)  
+* [Desktop Editors](https://www.tuneoffice.com/desktop?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps)  
+* [Document Builder](https://www.tuneoffice.com/document-builder?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps)
 
 ## Need help or have an idea? 💡
 
 We ❤️ community contributions!
 
-* **🐞 Found a bug?** Please report it by creating an [issue](https://github.com/ONLYOFFICE/web-apps/issues).
-* **❓ Have a question?** Ask our community and developers on the [ONLYOFFICE Forum](https://community.onlyoffice.com).
-* **💡 Want to suggest a feature?** Share your ideas on our [feedback platform](https://feedback.onlyoffice.com/forums/966080-your-voice-matters).
-* **🧑‍💻 Need help for developers?** Check our [API documentation](https://api.onlyoffice.com/?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps).
+* **🐞 Found a bug?** Please report it by creating an [issue](https://github.com/TUNEOFFICE/web-apps/issues).
+* **❓ Have a question?** Ask our community and developers on the [TUNEOFFICE Forum](https://community.tuneoffice.com).
+* **💡 Want to suggest a feature?** Share your ideas on our [feedback platform](https://feedback.tuneoffice.com/forums/966080-your-voice-matters).
+* **🧑‍💻 Need help for developers?** Check our [API documentation](https://api.tuneoffice.com/?utm_source=github&utm_medium=cpc&utm_campaign=GitHubWebApps).
 
 ---
 
-<p align="center"> Made with ❤️ by the ONLYOFFICE Team </p>
+<p align="center"> Made with ❤️ by the TUNEOFFICE Team </p>

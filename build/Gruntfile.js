@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -71,16 +71,16 @@ module.exports = function(grunt) {
     global.jsreplacements = [
                 {
                     from: /\{\{SUPPORT_EMAIL\}\}/g,
-                    to: _encode(process.env.SUPPORT_EMAIL) || 'support@onlyoffice.com'
+                    to: _encode(process.env.SUPPORT_EMAIL) || 'support@tuneoffice.com'
                 },{
                     from: /\{\{SUPPORT_URL\}\}/g,
-                    to: _encode(process.env.SUPPORT_URL) || 'https://support.onlyoffice.com'
+                    to: _encode(process.env.SUPPORT_URL) || 'https://support.tuneoffice.com'
                 },{
                     from: /\{\{SALES_EMAIL\}\}/g,
-                    to: _encode(process.env.SALES_EMAIL) || 'sales@onlyoffice.com'
+                    to: _encode(process.env.SALES_EMAIL) || 'sales@tuneoffice.com'
                 },{
                     from: /\{\{PUBLISHER_URL\}\}/g,
-                    to: _encode(process.env.PUBLISHER_URL) || 'https://www.onlyoffice.com'
+                    to: _encode(process.env.PUBLISHER_URL) || 'https://www.tuneoffice.com'
                 },{
                     from: /\{\{PUBLISHER_PHONE\}\}/,
                     to: process.env['PUBLISHER_PHONE'] || '+371 633-99867'
@@ -92,31 +92,31 @@ module.exports = function(grunt) {
                     to: _encode(process.env.PUBLISHER_ADDRESS) || '20A-12 Ernesta Birznieka-Upisha street, Riga, Latvia, EU, LV-1050'
                 },{
                     from: /\{\{API_URL_EDITING_CALLBACK\}\}/,
-                    to: _encode(process.env.API_URL_EDITING_CALLBACK) || 'https://api.onlyoffice.com/editors/callback'
+                    to: _encode(process.env.API_URL_EDITING_CALLBACK) || 'https://api.tuneoffice.com/editors/callback'
                 },{
                     from: /\{\{COMPANY_NAME\}\}/g,
-                    to: _encode(process.env.COMPANY_NAME) || 'ONLYOFFICE'
+                    to: _encode(process.env.COMPANY_NAME) || 'TUNEOFFICE'
                 }, {
                     from: /\{\{APP_TITLE_TEXT\}\}/g,
-                    to: _encode(process.env.APP_TITLE_TEXT) || 'ONLYOFFICE'
+                    to: _encode(process.env.APP_TITLE_TEXT) || 'TUNEOFFICE'
                 }, {
                     from: /\{\{HELP_URL\}\}/g,
-                    to: _encode(process.env.HELP_URL) || 'https://helpcenter.onlyoffice.com'
+                    to: _encode(process.env.HELP_URL) || 'https://helpcenter.tuneoffice.com'
                 }, {
                     from: /\{\{HELP_CENTER_WEB_DE\}\}/g,
-                    to: _encode(process.env.HELP_CENTER_WEB_DE) || _encode(process.env.HELP_CENTER_WEB_EDITORS) || 'https://helpcenter.onlyoffice.com/userguides/docs-de.aspx'
+                    to: _encode(process.env.HELP_CENTER_WEB_DE) || _encode(process.env.HELP_CENTER_WEB_EDITORS) || 'https://helpcenter.tuneoffice.com/userguides/docs-de.aspx'
                 }, {
                     from: /\{\{HELP_CENTER_WEB_SSE\}\}/g,
-                    to: _encode(process.env.HELP_CENTER_WEB_SSE) || _encode(process.env.HELP_CENTER_WEB_EDITORS) || 'https://helpcenter.onlyoffice.com/userguides/docs-se.aspx'
+                    to: _encode(process.env.HELP_CENTER_WEB_SSE) || _encode(process.env.HELP_CENTER_WEB_EDITORS) || 'https://helpcenter.tuneoffice.com/userguides/docs-se.aspx'
                 }, {
                     from: /\{\{HELP_CENTER_WEB_PE\}\}/g,
-                    to: _encode(process.env.HELP_CENTER_WEB_PE) || _encode(process.env.HELP_CENTER_WEB_EDITORS) || 'https://helpcenter.onlyoffice.com/userguides/docs-pe.aspx'
+                    to: _encode(process.env.HELP_CENTER_WEB_PE) || _encode(process.env.HELP_CENTER_WEB_EDITORS) || 'https://helpcenter.tuneoffice.com/userguides/docs-pe.aspx'
                 }, {
                     from: /\{\{DEFAULT_LANG\}\}/g,
                     to: _encode(process.env.DEFAULT_LANG) || 'en'
                 }, {
                     from: /\{\{SUGGEST_URL\}\}/g,
-                    to: _encode(process.env.SUGGEST_URL) || 'https://feedback.onlyoffice.com/forums/966080-your-voice-matters?category_id=519084'
+                    to: _encode(process.env.SUGGEST_URL) || 'https://feedback.tuneoffice.com/forums/966080-your-voice-matters?category_id=519084'
                 }];
 
     var helpreplacements = [
@@ -125,10 +125,10 @@ module.exports = function(grunt) {
                     to: _encode(process.env.COEDITING_DESKTOP) || 'Connect to cloud'
                 },{
                     from: /\{\{PLUGIN_LINK\}\}/g,
-                    to: _encode(process.env.PLUGIN_LINK) || 'https://api.onlyoffice.com/plugin/basic'
+                    to: _encode(process.env.PLUGIN_LINK) || 'https://api.tuneoffice.com/plugin/basic'
                 },{
                     from: /\{\{PLUGIN_LINK_MACROS\}\}/g,
-                    to: _encode(process.env.PLUGIN_LINK_MACROS) || 'https://api.onlyoffice.com/plugin/macros'
+                    to: _encode(process.env.PLUGIN_LINK_MACROS) || 'https://api.tuneoffice.com/plugin/macros'
                 }];
 
     let path = require('path');
@@ -286,7 +286,7 @@ module.exports = function(grunt) {
                           to: packageFile.version
                       },{
                           from: /\{\{APP_CUSTOMER_NAME\}\}/g,
-                          to: process.env['APP_CUSTOMER_NAME'] || 'ONLYOFFICE'
+                          to: process.env['APP_CUSTOMER_NAME'] || 'TUNEOFFICE'
                       },{
                           from: /\/\*\*[\s\S]+\.com\s+\*\//,
                           to: copyright

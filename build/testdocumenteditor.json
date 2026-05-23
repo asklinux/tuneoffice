@@ -2,7 +2,7 @@
     "name": "testdocumenteditor",
     "version": "4.3.0",
     "build": 1153,
-    "homepage": "http://www.onlyoffice.com",
+    "homepage": "http://www.tuneoffice.com",
     "private": true,
     "test": {
         "clean": {

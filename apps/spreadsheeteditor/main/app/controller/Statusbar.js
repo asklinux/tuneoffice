@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -149,13 +149,13 @@ define([
                     });
                     var stringSheet, arr = [];
                     stringSheet = this.api.asc_StartMoveSheet(_.clone(arrTabs));
-                    arr.push({type: 'onlyoffice', value: stringSheet});
+                    arr.push({type: 'tuneoffice', value: stringSheet});
                     arr.push({type: 'indexes', value: arrTabs});
                     arr.push({type: 'names', value: arrName});
                     arr.push({type: 'key', value: Common.Utils.InternalSettings.get("sse-doc-info-key")});
                     var json = JSON.stringify(arr);
                     if (!Common.Utils.isIE) {
-                        dataTransfer.setData('onlyoffice', json);
+                        dataTransfer.setData('tuneoffice', json);
                     } else {
                         dataTransfer.setData('text', 'sheet');
                         this.dataTransfer = json;
@@ -165,7 +165,7 @@ define([
                 'tab:drop': _.bind(function (dataTransfer, index, copy) {
                     if (this.isEditFormula || (Common.Utils.isIE && this.dataTransfer === undefined)) return;
                     Common.Utils.isIE && (this.isDrop = true);
-                    var data = !Common.Utils.isIE ? dataTransfer.getData('onlyoffice') : this.dataTransfer;
+                    var data = !Common.Utils.isIE ? dataTransfer.getData('tuneoffice') : this.dataTransfer;
                     if (data) {
                         var arrData = JSON.parse(data);
                         if (arrData) {
@@ -177,7 +177,7 @@ define([
                                 var arrNames = _.findWhere(arrData, {type: 'names'}).value;
                                 var newNames = this.generateSheetNames(false, undefined, arrNames);
                                 var index = _.isNumber(index) ? index : this.api.asc_getWorksheetsCount();
-                                this.api.asc_EndMoveSheet(index, newNames, _.findWhere(arrData, {type: 'onlyoffice'}).value);
+                                this.api.asc_EndMoveSheet(index, newNames, _.findWhere(arrData, {type: 'tuneoffice'}).value);
                             }
                         }
                     }

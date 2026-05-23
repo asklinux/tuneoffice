@@ -1,8 +1,8 @@
 {
     "name": "visioeditor",
     "version": "4.3.0",
-    "build": 791,
-    "homepage": "http://www.onlyoffice.com",
+    "build": 792,
+    "homepage": "http://www.tuneoffice.com",
     "private": true,
     "main": {
         "clean": {

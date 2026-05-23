@@ -4475,5 +4475,7 @@
   "DE.Views.WatermarkSettingsDialog.textTransparency": "Gjysmë transparente",
   "DE.Views.WatermarkSettingsDialog.textUnderline": "Nënvizim",
   "DE.Views.WatermarkSettingsDialog.tipFontName": "Emri i fontit",
-  "DE.Views.WatermarkSettingsDialog.tipFontSize": "Madhësia e fontit"
+  "DE.Views.WatermarkSettingsDialog.tipFontSize": "Madhësia e fontit",
+  "DE.Controllers.Toolbar.helpPasteOptions": "Use the dropdown arrow on the Paste button to choose how to paste content.",
+  "DE.Controllers.Toolbar.helpPasteOptionsHeader": "Paste options"
 }

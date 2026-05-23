@@ -38,7 +38,7 @@ function on_init_server(type)
     window.initCounter |= type;
     if (window.initCounter === 3)
     {
-        load_library("onlyoffice", "../libs/" + window.editorType + "/api.js");
+        load_library("tuneoffice", "../libs/" + window.editorType + "/api.js");
         _postMessage({
             command: 'aceEditorReady',
             referer: 'ace-editor'

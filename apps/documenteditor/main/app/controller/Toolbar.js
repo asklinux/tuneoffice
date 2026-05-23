@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -274,7 +274,7 @@ define([
             var _main = this.getApplication().getController('Main');
             this.mode = mode;
             this.toolbar.applyLayout(mode);
-            // var url = 'https://www.onlyoffice.com/blog/2025/10/docs-9-1-released';
+            // var url = 'https://www.tuneoffice.com/blog/2025/10/docs-9-1-released';
             Common.UI.FeaturesManager.isFeatureEnabled('featuresTips', true) && Common.UI.TooltipManager.addTips({
                 // 'commentFilter' : {name: 'help-tip-comment-filter', placement: 'bottom-right', text: this.helpCommentFilter, header: this.helpCommentFilterHeader, target: '#comments-btn-sort', maxwidth: 300,
                 //                   closable: false, isNewFeature: true, link: {text: _main.textLearnMore, url: url}},

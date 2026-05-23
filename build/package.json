@@ -1,7 +1,7 @@
 {
   "name": "common",
   "version": "1.0.1",
-  "homepage": "http://www.onlyoffice.com",
+  "homepage": "http://www.tuneoffice.com",
   "private": true,
   "dependencies": {
     "@babel/core": "^7.25.2",

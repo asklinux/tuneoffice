@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ONLYOFFICE Documents</title>
+    <title>TUNEOFFICE Documents</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=IE8"/>
     <meta name="description" content="" />
@@ -105,9 +105,9 @@
             function getEditorConfig(urlParams) {
                 return {
                     customization   : {
-                        goback: { url: "onlyoffice.com" }
+                        goback: { url: "tuneoffice.com" }
                         , feedback: {
-                            url: "https://helpdesk.onlyoffice.com/?desktop=true"
+                            url: "https://helpdesk.tuneoffice.com/?desktop=true"
                         }
                         , uiTheme: urlParams["uitheme"]
                     },

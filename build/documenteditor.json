@@ -1,8 +1,8 @@
 {
     "name": "documenteditor",
     "version": "4.3.0",
-    "build": 1150,
-    "homepage": "http://www.onlyoffice.com",
+    "build": 1151,
+    "homepage": "http://www.tuneoffice.com",
     "private": true,
     "main": {
         "clean": {
@@ -102,7 +102,7 @@
                 }
             },
             "postload": {
-                "options":{
+                "options": {
                     "baseUrl": "../apps/",
                     "optimize": "none",
                     "name": "../apps/documenteditor/main/app_pack.js",
