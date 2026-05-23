@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -77,7 +77,7 @@ QVideoPlaylist::QVideoPlaylist(QWidget *parent) : QWidget(parent)
 
 	m_pDialogParent = NULL;
 
-	m_sSavePlayListAddon = "/ONLYOFFICE/VideoPlayer";
+	m_sSavePlayListAddon = "/TUNEOFFICE/VideoPlayer";
 	QWidgetUtils::SetBackground(this, QColor(0x22, 0x22, 0x22));
 
 	m_pAdd = new QIconPushButton(this, true, "add-files", "add-files-active");

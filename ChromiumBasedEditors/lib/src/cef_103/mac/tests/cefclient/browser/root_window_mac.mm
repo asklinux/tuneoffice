@@ -386,7 +386,7 @@ void RootWindowMacImpl::CreateRootWindow(const CefBrowserSettings& settings,
                            NSUnifiedTitleAndToolbarWindowMask)
                   backing:NSBackingStoreBuffered
                     defer:NO];
-  [window_ setTitle:@"ONLYOFFICE"];
+  [window_ setTitle:@"TUNEOFFICE"];
   // No dark mode, please
   window_.appearance = [NSAppearance appearanceNamed:NSAppearanceNameAqua];
 

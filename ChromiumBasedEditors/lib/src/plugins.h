@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -58,7 +58,7 @@ public:
 	std::string sNameObject;
 	std::string sConfigName;
 	std::string sUrl;
-	bool isOnlyofficeScheme;
+	bool isTuneofficeScheme;
 	bool isUser;
 };
 
@@ -276,7 +276,7 @@ public:
 
 	bool InstallPluginFromStore(const std::wstring& name)
 	{
-		std::wstring sPackageUrl = L"https://github.com/ONLYOFFICE/onlyoffice.github.io/releases/latest/download/" + name + L".plugin";
+		std::wstring sPackageUrl = L"https://github.com/TUNEOFFICE/tuneoffice.github.io/releases/latest/download/" + name + L".plugin";
 
 		std::wstring sTmpFile = NSDirectory::GetTempPath() + L"/temp_asc_plugin.plugin";
 		if (NSFile::CFileBinary::Exists(sTmpFile))
@@ -332,7 +332,7 @@ private:
 					if (_sPath[j] == L'/')
 						sLayers += L"../";
 				}
-				ReplaceInFile(sPath, L"https://onlyoffice.github.io/sdkjs-plugins/", sLayers);
+				ReplaceInFile(sPath, L"https://tuneoffice.github.io/sdkjs-plugins/", sLayers);
 			}
 		}
 	}
@@ -661,7 +661,7 @@ private:
 				info.sNameObject = GetObjectValue(sJson, "nameLocale");
 				info.isUser = isSystem ? false : true;
 				info.sUrl = GetStringValue(sJson, "url");
-				info.isOnlyofficeScheme = (std::string::npos != sJson.find("onlyofficeScheme")) ? true : false;
+				info.isTuneofficeScheme = (std::string::npos != sJson.find("tuneofficeScheme")) ? true : false;
 
 				m_arExternals.push_back(info);
 			}

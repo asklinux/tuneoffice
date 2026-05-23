@@ -195,7 +195,7 @@ describe("WebSearch", () => {
       await webSearch.webSearch({ query: "test query" });
 
       expect(mockFetch).toHaveBeenCalledWith(
-        "onlyoffice-proxy://https://api.exa.ai/search",
+        "tuneoffice-proxy://https://api.exa.ai/search",
         expect.objectContaining({
           method: "POST",
           headers: {
@@ -287,7 +287,7 @@ describe("WebSearch", () => {
       await webSearch.webSearch({ query: "test" });
 
       expect(mockFetch).toHaveBeenCalledWith(
-        "onlyoffice-proxy://https://api.exa.ai/search",
+        "tuneoffice-proxy://https://api.exa.ai/search",
         expect.objectContaining({
           headers: {
             "Content-Type": "application/json",
@@ -325,7 +325,7 @@ describe("WebSearch", () => {
       await webSearch.webCrawling({ urls: ["https://example.com"] });
 
       expect(mockFetch).toHaveBeenCalledWith(
-        "onlyoffice-proxy://https://api.exa.ai/contents",
+        "tuneoffice-proxy://https://api.exa.ai/contents",
         expect.objectContaining({
           method: "POST",
         })
@@ -418,7 +418,7 @@ describe("WebSearch", () => {
       await webSearch.webCrawling({ urls: ["https://example.com"] });
 
       expect(mockFetch).toHaveBeenCalledWith(
-        "onlyoffice-proxy://https://api.exa.ai/contents",
+        "tuneoffice-proxy://https://api.exa.ai/contents",
         expect.objectContaining({
           headers: {
             "Content-Type": "application/json",
@@ -448,7 +448,7 @@ describe("WebSearch", () => {
       });
 
       expect(mockFetch).toHaveBeenCalledWith(
-        "onlyoffice-proxy://https://api.exa.ai/search",
+        "tuneoffice-proxy://https://api.exa.ai/search",
         expect.anything()
       );
       expect(result).toBeDefined();
@@ -460,7 +460,7 @@ describe("WebSearch", () => {
       });
 
       expect(mockFetch).toHaveBeenCalledWith(
-        "onlyoffice-proxy://https://api.exa.ai/contents",
+        "tuneoffice-proxy://https://api.exa.ai/contents",
         expect.anything()
       );
       expect(result).toBeDefined();

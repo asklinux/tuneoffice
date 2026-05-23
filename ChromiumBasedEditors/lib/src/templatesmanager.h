@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -66,7 +66,7 @@ public:
 	}
 };
 
-#define ONLYOFFICE_TEMPLATES_VERSION 1
+#define TUNEOFFICE_TEMPLATES_VERSION 1
 class CTemplatesCache : public NSThreads::CBaseThread
 {
 private:
@@ -313,12 +313,12 @@ public:
 				delete[] pBuffer;
 			}
 
-#ifdef ONLYOFFICE_TEMPLATES_VERSION
+#ifdef TUNEOFFICE_TEMPLATES_VERSION
 			if (0 != arTemplates.size())
 			{
 				// check version!!!
 				std::string sOO_Version = arTemplates[0];
-				if (0 != sOO_Version.find("ONLYOFFICE_TEMPLATES_VERSION_"))
+				if (0 != sOO_Version.find("TUNEOFFICE_TEMPLATES_VERSION_"))
 				{
 					arTemplates.clear();
 				}
@@ -326,7 +326,7 @@ public:
 				{
 					std::string sVersion = sOO_Version.substr(29);
 					int nVersion = std::stoi(sVersion);
-					if (nVersion != ONLYOFFICE_TEMPLATES_VERSION)
+					if (nVersion != TUNEOFFICE_TEMPLATES_VERSION)
 						arTemplates.clear();
 					else
 						arTemplates.erase(arTemplates.begin());
@@ -486,9 +486,9 @@ public:
 
 			// формируем новый набор шаблонов
 			NSStringUtils::CStringBuilder oTemplatesLog;
-#ifdef ONLYOFFICE_TEMPLATES_VERSION
-			oTemplatesLog.WriteString(L"ONLYOFFICE_TEMPLATES_VERSION_");
-			oTemplatesLog.WriteString(std::to_wstring(ONLYOFFICE_TEMPLATES_VERSION));
+#ifdef TUNEOFFICE_TEMPLATES_VERSION
+			oTemplatesLog.WriteString(L"TUNEOFFICE_TEMPLATES_VERSION_");
+			oTemplatesLog.WriteString(std::to_wstring(TUNEOFFICE_TEMPLATES_VERSION));
 			oTemplatesLog.WriteString(L"\n");
 #endif
 			int nCount = (int)arTemplatesPaths.size();

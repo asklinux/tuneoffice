@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -361,7 +361,7 @@ public:
 
 #if 0
 #define DEBUG_SPELL_CHECKER
-#define DEBUG_SPELL_CHECKER_PATH "C:\\ProgramData\\ONLYOFFICE\\spell_checker.log"
+#define DEBUG_SPELL_CHECKER_PATH "C:\\ProgramData\\TUNEOFFICE\\spell_checker.log"
 #endif
 
 class CAscSpellChecker_Private : public NSTimers::CTimer
@@ -758,7 +758,7 @@ public:
 		}
 
 		if (!NSFile::CFileBinary::Exists(sAll_dic))
-			NSFile::CFileBinary::SaveToFile(sAll_dic, L"2\nonlyoffice\nONLYOFFICE", true);
+			NSFile::CFileBinary::SaveToFile(sAll_dic, L"2\ntuneoffice\nTUNEOFFICE", true);
 
 		std::string sAff = U_TO_UTF8(sAll_aff);
 		std::string sDic = U_TO_UTF8(sAll_dic);

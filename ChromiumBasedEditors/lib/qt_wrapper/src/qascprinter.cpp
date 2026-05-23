@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -357,7 +357,7 @@ void QAscPrinterContext::InitRenderer(void* pRenderer, void* pFontManager)
 void QAscPrinterContext::SetPageOrientation(int nOrientaion)
 {
 	// отключаем это, из-за бага
-	// https://bugzilla.onlyoffice.com/show_bug.cgi?id=59263
+	// https://bugzilla.tuneoffice.com/show_bug.cgi?id=59263
 	// в QT ориентрацию нужно создавать ДО newPage(), но так как картинки отправляются отложенно(?)
 	// то смена ориентации влияет на печать картинок (клиппируется по странице в новой ориентации).
 	// похоже на баг в  QT. При переходе на новую версию  QT - пересмотреть.

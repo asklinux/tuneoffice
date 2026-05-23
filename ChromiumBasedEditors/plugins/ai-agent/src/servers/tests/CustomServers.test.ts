@@ -279,7 +279,7 @@ describe("CustomServers", () => {
       expect(abortSpy).toHaveBeenCalled();
     });
 
-    it("should use onlyoffice-proxy:// prefix for HTTP requests", async () => {
+    it("should use tuneoffice-proxy:// prefix for HTTP requests", async () => {
       mockFetch.mockResolvedValue(
         createMockResponse({
           jsonrpc: "2.0",
@@ -300,7 +300,7 @@ describe("CustomServers", () => {
       await vi.runAllTimersAsync();
 
       expect(mockFetch).toHaveBeenCalledWith(
-        "onlyoffice-proxy://https://api.example.com/mcp",
+        "tuneoffice-proxy://https://api.example.com/mcp",
         expect.objectContaining({
           method: "POST",
           headers: expect.objectContaining({
@@ -634,7 +634,7 @@ describe("CustomServers", () => {
       await customServers.initHttpServer("httpTest");
 
       expect(mockFetch).toHaveBeenCalledWith(
-        "onlyoffice-proxy://https://example.com/mcp",
+        "tuneoffice-proxy://https://example.com/mcp",
         expect.objectContaining({
           method: "POST",
           headers: {
@@ -1011,7 +1011,7 @@ describe("CustomServers", () => {
       });
 
       expect(mockFetch).toHaveBeenCalledWith(
-        "onlyoffice-proxy://https://example.com/mcp",
+        "tuneoffice-proxy://https://example.com/mcp",
         expect.objectContaining({
           method: "POST",
           headers: {

@@ -18,7 +18,7 @@ const configPath = path.join(sourceDir, "config.json");
 // Default path - can be overridden via command line argument
 const defaultTargetPath = path.join(
   process.env.HOME || "~",
-  "Library/Application Support/asc.onlyoffice.ONLYOFFICE/data/sdkjs-plugins"
+  "Library/Application Support/asc.tuneoffice.TUNEOFFICE/data/sdkjs-plugins"
 );
 
 // Get target path from command line argument or use default

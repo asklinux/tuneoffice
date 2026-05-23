@@ -60,7 +60,7 @@ const Settings = () => {
                     className="font-normal text-[14px] leading-[20px] text-[var(--text-normal)] cursor-pointer"
                     onClick={() => setSelectedSection(item)}
                   >
-                    {isWallet ? t("ONLYOFFICEWallet") : t("AIProviders")}
+                    {isWallet ? t("TUNEOFFICEWallet") : t("AIProviders")}
                   </h2>
                 ) : null}
                 <p
@@ -70,7 +70,7 @@ const Settings = () => {
                   )}
                 >
                   {isWallet
-                    ? t("ONLYOFFICEWalletDescription")
+                    ? t("TUNEOFFICEWalletDescription")
                     : t("AIProvidersDescription")}
                 </p>
               </div>

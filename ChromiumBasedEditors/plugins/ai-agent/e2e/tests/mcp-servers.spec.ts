@@ -891,7 +891,7 @@ test.describe('MCP Servers', () => {
   });
 
   test.describe('HTTP MCP Servers', () => {
-    // Note: In e2e tests, the onlyoffice-proxy:// scheme is not supported,
+    // Note: In e2e tests, the tuneoffice-proxy:// scheme is not supported,
     // so HTTP MCP servers won't actually connect. These tests verify config
     // validation and persistence only (not server interactions).
 

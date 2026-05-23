@@ -360,7 +360,7 @@ class CustomServers {
         },
       };
 
-      const response = await fetch(`onlyoffice-proxy://${server.url}`, {
+      const response = await fetch(`tuneoffice-proxy://${server.url}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -450,7 +450,7 @@ class CustomServers {
         params: {},
       };
 
-      const response = await fetch(`onlyoffice-proxy://${server.url}`, {
+      const response = await fetch(`tuneoffice-proxy://${server.url}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -541,7 +541,7 @@ class CustomServers {
         },
       };
 
-      const response = await fetch(`onlyoffice-proxy://${server.url}`, {
+      const response = await fetch(`tuneoffice-proxy://${server.url}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

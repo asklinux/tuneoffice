@@ -7,7 +7,7 @@ test.describe('Smoke Tests', () => {
   });
 
   test('should load the application', async ({ page }) => {
-    await expect(page).toHaveTitle(/AI Agent|ONLYOFFICE/i);
+    await expect(page).toHaveTitle(/AI Agent|TUNEOFFICE/i);
   });
 
   test('should show empty screen when no providers configured', async ({ chatPage, page }) => {

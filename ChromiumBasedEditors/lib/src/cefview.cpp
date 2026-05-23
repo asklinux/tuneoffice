@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -1000,7 +1000,7 @@ public:
 	// прерывание скачивания у проблемных ссылок
 	CDownloadFilesAborted m_oDownloaderAbortChecker;
 
-	// настройки внешних (не onlyoffice) облаков
+	// настройки внешних (не tuneoffice) облаков
 	bool m_bIsExternalCloud;
 	CExternalCloudRegister m_oExternalCloud;
 
@@ -1876,7 +1876,7 @@ public:
 											#ifdef CEF_VERSION_ABOVE_102
 												false,
 											#endif
-												"https://onlyoffice.com/")
+												"https://tuneoffice.com/")
 	{
 		m_pParent = NULL;
 		m_bIsLoaded = false;
@@ -2127,7 +2127,7 @@ public:
 				if (0 == sUrl.find(L"about:blank"))
 					return true;
 
-				// заглушка для персонал (https://bugzilla.onlyoffice.com/show_bug.cgi?id=57638)
+				// заглушка для персонал (https://bugzilla.tuneoffice.com/show_bug.cgi?id=57638)
 				if (m_pParent->GetType() == cvwtSimple && !m_pParent->m_pInternal->m_bIsExternalCloud)
 				{
 					std::wstring sFindEnd = L"products/files/doceditor";
@@ -4923,8 +4923,8 @@ virtual void OnLoadEnd(CefRefPtr<CefBrowser> browser,
 
 				std::wstring sSrc = (iterExt->isUser ? sUserPluginsPath : sSystemPluginsPath) + L"/" + sGuid + L"/" + UTF8_TO_U(iterExt->sUrl) + m_pParent->m_pInternal->m_pManager->m_pInternal->m_mainPostFix;
 				NSCommon::url_correct(sSrc);
-				if (iterExt->isOnlyofficeScheme)
-					sSrc = L"onlyoffice://plugin/" + sSrc;
+				if (iterExt->isTuneofficeScheme)
+					sSrc = L"tuneoffice://plugin/" + sSrc;
 
 				std::wstring sNameG = UTF8_TO_U((iterExt->sName));
 				std::wstring sNameLocal = UTF8_TO_U((iterExt->sNameObject));
@@ -5167,10 +5167,10 @@ virtual CefRefPtr<CefResourceHandler> GetResourceHandler(
 	std::wstring url = request->GetURL().ToWString();
 
 #ifdef CEF_SUPPORT_STREAMING_CORS_RESOURCE_HANDLER
-	if (0 == url.find(L"onlyoffice-proxy://") && frame)
+	if (0 == url.find(L"tuneoffice-proxy://") && frame)
 	{
 		std::string urlFrame = frame->GetURL().ToString();
-		if (0 == urlFrame.find("onlyoffice://"))
+		if (0 == urlFrame.find("tuneoffice://"))
 			return new StreamingCORSResourceHandler(request);
 	}
 #endif
@@ -7917,7 +7917,7 @@ bool CCefView::StartDownload(const std::wstring& sUrl)
 
 void CCefView::SetExternalCloud(const std::wstring& sProviderId)
 {
-	if (L"asc" == sProviderId || L"onlyoffice" == sProviderId)
+	if (L"asc" == sProviderId || L"tuneoffice" == sProviderId)
 	{
 		m_pInternal->m_bIsSSO = true;
 		// все равно заполним - и для наших облаков могут быть регулярки на editorPage

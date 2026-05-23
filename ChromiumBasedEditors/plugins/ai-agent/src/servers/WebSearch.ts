@@ -48,7 +48,7 @@ class WebSearch {
     if (this.webSearchData?.provider === "Exa") {
       try {
         const response = await fetch(
-          "onlyoffice-proxy://https://api.exa.ai/search",
+          "tuneoffice-proxy://https://api.exa.ai/search",
           {
             method: "POST",
             headers: {
@@ -89,7 +89,7 @@ class WebSearch {
     if (this.webSearchData?.provider === "Exa") {
       try {
         const response = await fetch(
-          "onlyoffice-proxy://https://api.exa.ai/contents",
+          "tuneoffice-proxy://https://api.exa.ai/contents",
           {
             method: "POST",
             headers: {

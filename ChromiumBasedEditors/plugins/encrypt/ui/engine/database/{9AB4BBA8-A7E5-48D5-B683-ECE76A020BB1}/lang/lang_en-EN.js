@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -39,7 +39,7 @@ ONLYONET.Resources = {
     "info-box-off":"<strong>The end-to-end encryption mode is OFF.</strong> To switch it on, you must close all active edition sessions.",
     "info-box-on":"<strong>The end-to-end encryption mode is ON.</strong> To switch it off, you must close all active edition sessions.",
     "box-blockchain-connect-description-line1": "Keep your DOCX, XLSX, PPTX, ODT, ODS, ODP and PDF files always encrypted and private. Edit and collaborate on your docs securely.",
-    "box-blockchain-connect-description-line2": "ONLYOFFICE uses AES-256 to encrypt your files and a  blockchain technology with asymmetric encryption for reliable password storing and transferring.",
+    "box-blockchain-connect-description-line2": "TUNEOFFICE uses AES-256 to encrypt your files and a  blockchain technology with asymmetric encryption for reliable password storing and transferring.",
     "box-blockchain-connect-btn-read": "Read how it works",
     "box-blockchain-connect-description-line3": "To start, <strong>create a blockchain account</strong> in our network based on Parity with support for a Proof-of-Authority consensus engine.",
     "box-blockchain-connect-description-line4": "Warning! This network was created for demonstration purposes only. Please, do NOT use it to encrypt your sensitive documents.",
@@ -84,11 +84,11 @@ ONLYONET.Resources = {
     "box-database-connect-description-warning": "Warning! This network was created for demonstration purposes only. Please, do NOT use it to encrypt your sensitive documents.",
     "tbl-acount-info-btn-copy-address1":"Copy public key",    
     "system-message-save-to-database": "Saving encryption data to database...",
-    "box-database-info-description-line2": "ONLYOFFICE uses AES-256 to encrypt your files, and asymmetric encryption algorithm to securely store the encryption data in the private database on your portal.",
+    "box-database-info-description-line2": "TUNEOFFICE uses AES-256 to encrypt your files, and asymmetric encryption algorithm to securely store the encryption data in the private database on your portal.",
     "box-database-connect-description-line1": "Before you start:",
-    "box-database-connect-description-line2": "Log in to your ONLYOFFICE portal via  <strong>Connect to cloud</strong> section",
+    "box-database-connect-description-line2": "Log in to your TUNEOFFICE portal via  <strong>Connect to cloud</strong> section",
     "box-database-connect-description-line3": "Obtain your personal encryption data using the button below.",
-    "box-database-connect-description-line4": "ONLYOFFICE will generate your individual pair of the encryption keys: public and private. Your private key (used for decrypting the documents) will be stored on this machine. For the correct work of the application, do not remove this file. You may keep a copy in some other location as a backup.",
+    "box-database-connect-description-line4": "TUNEOFFICE will generate your individual pair of the encryption keys: public and private. Your private key (used for decrypting the documents) will be stored on this machine. For the correct work of the application, do not remove this file. You may keep a copy in some other location as a backup.",
     "box-database-connect-description-line5": "You can also use your existing credentials and the private key to get access to the files encrypted with that account.",
     "box-database-info-description-line3": "This is your individual private key. It is also stored on this machine. For the correct work of the application, do not remove this file. You may keep a copy in some other location as a backup.",
     "box-database-connect-btn-create": "Generate new credentials",

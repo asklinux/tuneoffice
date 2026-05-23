@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -39,7 +39,7 @@ ONLYONET.Resources = {
   "info-box-off": "<strong>La modalità crittografia end-to-end è DISATTIVA</strong> Per passare alla modalità attiva è necessario chiudere tutte le sessioni di modifica attive. ",
   "info-box-on": "<strong>La modalità crittografia end-to-end è ATTIVA</strong> Per passare alla modalità disattiva è necessario chiudere tutte le sessioni di modifica attive.",
   "box-blockchain-connect-description-line1": "Tieni i tuoi file DOCX, XLSX, PPTX, ODT, ODS, ODP e PDF sempre crittografati e privati.  Modifica e collabora sui documenti in modi sicuro. ",
-  "box-blockchain-connect-description-line2": "ONLYOFFICE utilizza AES-256 per crittografare i tuoi file e una tecnologia blockchain con crittografia asimmetrica per salvataggio e trasferimento password sicuro. ",
+  "box-blockchain-connect-description-line2": "TUNEOFFICE utilizza AES-256 per crittografare i tuoi file e una tecnologia blockchain con crittografia asimmetrica per salvataggio e trasferimento password sicuro. ",
   "box-blockchain-connect-btn-read": "Leggi come funziona",
   "box-blockchain-connect-description-line3": "Per iniziare, <strong>crea un account blockchain</strong> nella nostra rete basato su Parity con supporto per un motore di consenso Proof-of-Authority.",
   "box-blockchain-connect-btn-create": "Crea un account",

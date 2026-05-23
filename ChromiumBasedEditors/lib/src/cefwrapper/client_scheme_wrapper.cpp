@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -399,7 +399,7 @@ public:
 		CEF_REQUIRE_IO_THREAD();
 
 		std::string url = request->GetURL().ToString();
-		std::string::size_type posFind = url.find("onlyoffice://plugin/");
+		std::string::size_type posFind = url.find("tuneoffice://plugin/");
 		if (posFind != std::string::npos)
 		{
 			std::wstring sFile = read_file_path(request).substr(20);
@@ -555,9 +555,9 @@ namespace asc_scheme
 			CEF_REQUIRE_IO_THREAD();
 			std::string schemeName = scheme_name.ToString();
 
-			if (schemeName == "onlyoffice")
+			if (schemeName == "tuneoffice")
 				return new ClientSchemeHandlerOO(m_pManager);
-			if (schemeName == "onlyoffice-proxy")
+			if (schemeName == "tuneoffice-proxy")
 				return nullptr;
 
 			std::wstring sMainUrl = L"";
@@ -584,8 +584,8 @@ namespace asc_scheme
 							   )
 	{
 		registrar->AddCustomScheme("ascdesktop", CEF_SCHEME_OPTION_STANDARD | CEF_SCHEME_OPTION_SECURE | CEF_SCHEME_OPTION_CORS_ENABLED | CEF_SCHEME_OPTION_FETCH_ENABLED);
-		registrar->AddCustomScheme("onlyoffice", CEF_SCHEME_OPTION_STANDARD | CEF_SCHEME_OPTION_SECURE | CEF_SCHEME_OPTION_CORS_ENABLED | CEF_SCHEME_OPTION_FETCH_ENABLED);
-		registrar->AddCustomScheme("onlyoffice-proxy", CEF_SCHEME_OPTION_STANDARD | CEF_SCHEME_OPTION_SECURE | CEF_SCHEME_OPTION_CORS_ENABLED | CEF_SCHEME_OPTION_FETCH_ENABLED);
+		registrar->AddCustomScheme("tuneoffice", CEF_SCHEME_OPTION_STANDARD | CEF_SCHEME_OPTION_SECURE | CEF_SCHEME_OPTION_CORS_ENABLED | CEF_SCHEME_OPTION_FETCH_ENABLED);
+		registrar->AddCustomScheme("tuneoffice-proxy", CEF_SCHEME_OPTION_STANDARD | CEF_SCHEME_OPTION_SECURE | CEF_SCHEME_OPTION_CORS_ENABLED | CEF_SCHEME_OPTION_FETCH_ENABLED);
 	}
 #endif
 
@@ -593,8 +593,8 @@ namespace asc_scheme
 	{
 		bool res = true;
 		res = res && CefRegisterSchemeHandlerFactory("ascdesktop", "", new ClientSchemeHandlerFactory(pManager));
-		res = res && CefRegisterSchemeHandlerFactory("onlyoffice", "", new ClientSchemeHandlerFactory(pManager));
-		res = res && CefRegisterSchemeHandlerFactory("onlyoffice-proxy", "", new ClientSchemeHandlerFactory(pManager));
+		res = res && CefRegisterSchemeHandlerFactory("tuneoffice", "", new ClientSchemeHandlerFactory(pManager));
+		res = res && CefRegisterSchemeHandlerFactory("tuneoffice-proxy", "", new ClientSchemeHandlerFactory(pManager));
 		return res;
 	}
 

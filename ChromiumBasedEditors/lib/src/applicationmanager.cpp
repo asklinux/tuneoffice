@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -112,7 +112,7 @@ CAscApplicationSettings::CAscApplicationSettings()
 
 	user_providers_path = L"";
 
-	converter_application_name    = "ONLYOFFICE";
+	converter_application_name    = "TUNEOFFICE";
 	converter_application_company = "Ascensio System SIA Copyright (c) 2022";
 
 	macroses_support = true;

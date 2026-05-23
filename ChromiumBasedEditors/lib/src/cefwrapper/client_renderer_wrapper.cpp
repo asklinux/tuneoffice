@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -232,7 +232,7 @@ public:
 	#endif
 				keyObj->SetValue("id", CefV8Value::CreateString(ki.id), V8_PROPERTY_ATTRIBUTE_NONE);
 
-				if (frameUrl.find(L"onlyoffice://") == 0)
+				if (frameUrl.find(L"tuneoffice://") == 0)
 					keyObj->SetValue("value", CefV8Value::CreateString(ki.value), V8_PROPERTY_ATTRIBUTE_NONE);
 
 				keysArr->SetValue(keyIdx++, keyObj);
@@ -978,7 +978,7 @@ namespace asc_client_renderer
 			m_nIsCryptoModeProperty = 0;
 
 			m_bEditorsCloudFeaturesCheck = false;
-			m_arCloudFeaturesBlackList.push_back("personal.onlyoffice.com");
+			m_arCloudFeaturesBlackList.push_back("personal.tuneoffice.com");
 
 			m_external_processes = NULL;
 		}
@@ -2724,7 +2724,7 @@ window.AscDesktopEditor.LocalFileTemplates=function(e){window.__lang_checker_tem
 					_frame->ExecuteJavaScript(sCodeInitJS, _frame->GetURL(), 0);
 
 					std::string sUrl = _frame->GetURL().ToString();
-					if (0 == sUrl.find("file:///") || 0 == sUrl.find("onlyoffice://"))
+					if (0 == sUrl.find("file:///") || 0 == sUrl.find("tuneoffice://"))
 					{
 						std::string sCode = "function ExternalProcess(command, env)\n\
 {\n\
@@ -2863,10 +2863,10 @@ resolve([]);\
 						sPluginName.erase(std::remove(sPluginName.begin(), sPluginName.end(), L'/'), sPluginName.end());
 
 						std::wstring sPackageUrl = sBaseUrl + L"/deploy/" + sPluginName + L".plugin";
-						if (0 == sBaseUrl.find(L"https://onlyoffice.github.io"))
-							sPackageUrl = L"https://github.com/ONLYOFFICE/onlyoffice.github.io/releases/latest/download/" + sPluginName + L".plugin";
-						else if (0 == sBaseUrl.find(L"https://onlyoffice-plugins.github.io/onlyoffice.github.io"))
-							sPackageUrl = L"https://github.com/ONLYOFFICE-PLUGINS/onlyoffice.github.io/releases/latest/download/" + sPluginName + L".plugin";
+						if (0 == sBaseUrl.find(L"https://tuneoffice.github.io"))
+							sPackageUrl = L"https://github.com/TUNEOFFICE/tuneoffice.github.io/releases/latest/download/" + sPluginName + L".plugin";
+						else if (0 == sBaseUrl.find(L"https://tuneoffice-plugins.github.io/tuneoffice.github.io"))
+							sPackageUrl = L"https://github.com/TUNEOFFICE-PLUGINS/tuneoffice.github.io/releases/latest/download/" + sPluginName + L".plugin";
 
 						std::wstring sTmpFile = NSFile::CFileBinary::GetTempPath() + L"/temp_asc_plugin.plugin";
 						if (NSFile::CFileBinary::Exists(sTmpFile))
@@ -2886,7 +2886,7 @@ resolve([]);\
 				// ENGINE can be updated!!!
 				if (true)
 				{
-					std::wstring baseUrl = L"https://onlyoffice.github.io/sdkjs-plugins/v1/";
+					std::wstring baseUrl = L"https://tuneoffice.github.io/sdkjs-plugins/v1/";
 					std::vector<std::wstring> arFiles = {L"plugins.js", L"plugins-ui.js", L"plugins.css"};
 					std::wstring userFolder = m_sUserPlugins + L"/v1/";
 
@@ -4895,7 +4895,7 @@ window.AscDesktopEditor.CallInFrame(\"" +
 			else if (name == "_createProcess")
 			{
 				std::string sCurrentUrl = CefV8Context::GetCurrentContext()->GetFrame()->GetURL().ToString();
-				if (0 != sCurrentUrl.find("onlyoffice://"))
+				if (0 != sCurrentUrl.find("tuneoffice://"))
 				{
 					retval = CefV8Value::CreateInt(-1);
 					return true;
@@ -5022,7 +5022,7 @@ window.AscDesktopEditor.CallInFrame(\"" +
 					return true;
 
 				std::string sCurrentUrl = CefV8Context::GetCurrentContext()->GetFrame()->GetURL().ToString();
-				if (0 != sCurrentUrl.find("onlyoffice://") || !arguments[0]->IsString())
+				if (0 != sCurrentUrl.find("tuneoffice://") || !arguments[0]->IsString())
 				{
 					std::string sCode = "(function(){window.AscDesktopEditor._saveAndOpenCallback(100);delete window.AscDesktopEditor._saveAndOpenCallback;})();";
 					CefV8Context::GetCurrentContext()->GetFrame()->ExecuteJavaScript(sCode, "", 0);

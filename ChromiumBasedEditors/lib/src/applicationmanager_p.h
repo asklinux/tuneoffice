@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -441,7 +441,7 @@ namespace NSRequest
 				return;
 			}
 
-			// TODO: https://bugzilla.onlyoffice.com/show_bug.cgi?id=63094
+			// TODO: https://bugzilla.tuneoffice.com/show_bug.cgi?id=63094
 			if (404 == responseStatus)
 			{
 				if (std::string::npos != m_download_data.find("A runtime error has occurred") &&
@@ -844,7 +844,7 @@ namespace NSSystem
 								if (sLastDir.empty())
 								{
 									std::string sHeader(pBuffer + nStart, nEnd - nStart + 1);
-									if (0 == sHeader.find("ONLYOFFICE_FONTS_VERSION_"))
+									if (0 == sHeader.find("TUNEOFFICE_FONTS_VERSION_"))
 										bIsAdd = false;
 								}
 
@@ -1700,7 +1700,7 @@ public:
 	// плагины не для редактора, а для десктопа (на стартовой странице)
 	std::vector<CExternalPluginInfo> m_arExternalPlugins;
 
-	// те, кто подключает onlyoffice
+	// те, кто подключает tuneoffice
 	std::vector<CExternalCloudRegister> m_arExternalClouds;
 
 	// критическая секция для всех системных сообщений всех view
@@ -1869,7 +1869,7 @@ public:
 	// logout из портала -----------------------------------------------------------------------
 	void Logout(std::wstring strUrl, CefRefPtr<CefCookieManager> manager)
 	{
-		if (0 == strUrl.find(L"onlyoffice.com"))
+		if (0 == strUrl.find(L"tuneoffice.com"))
 			return;
 
 		CCefCookieVisitor* pVisitor = new CCefCookieVisitor();
