@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       repositories:
-        description: 'Target repositories, one per line. Accepts owner/repo or repo (owner defaults to ONLYOFFICE).'
+        description: 'Target repositories, one per line. Accepts owner/repo or repo (owner defaults to TUNEOFFICE).'
         required: true
         type: string
       base_branch:
@@ -33,7 +33,7 @@ jobs:
       GIT_USERNAME: ${{ secrets.USERNAME }}
       GIT_TOKEN:    ${{ secrets.TOKEN }}
       # Gitea auto-populates github.server_url with the instance URL
-      # (e.g. https://git.onlyoffice.com). vars.GITEA_URL is honored as an
+      # (e.g. https://git.tuneoffice.com). vars.GITEA_URL is honored as an
       # override if a deployment wants to point at a different host.
       GITEA_URL:    ${{ vars.GITEA_URL || github.server_url }}
     steps:
@@ -62,7 +62,7 @@ jobs:
             # workflow_dispatch: parse the multiline `repositories` input.
             python3 - > targets.env <<'PY'
           import json, os
-          DEFAULT_OWNER = "ONLYOFFICE"
+          DEFAULT_OWNER = "TUNEOFFICE"
           raw = os.environ.get("REPOSITORIES_INPUT", "")
           repos = []
           for line in raw.splitlines():
@@ -212,7 +212,7 @@ jobs:
                 reason="no_changes"
               else
                 git config user.name  "copyright-bot"
-                git config user.email "copyright-bot@onlyoffice.com"
+                git config user.email "copyright-bot@tuneoffice.com"
                 git add -u
                 # Commit body is a single stats line, not_our_header first.
                 git commit \

@@ -25,7 +25,7 @@ for /f "delims=" %%a in ('type "%config_file%"') do (
 )
 
 if "!branding_value!"=="" (
-    set "branding_value=onlyoffice"
+    set "branding_value=tuneoffice"
 )
 
 set "base_out_dir=%script_dir%..\..\..\out\win_arm64\%branding_value%"

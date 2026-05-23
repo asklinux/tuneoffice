@@ -72,7 +72,7 @@ def make(arm_toolchain_bin=""):
   for param in qt_params:
       qt_params_str += (param + " ")
 
-  qt_url = "https://github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/qt/qt-everywhere-src-5.15.2.tar.xz"
+  qt_url = "https://github.com/TUNEOFFICE-data/build_tools_data/raw/refs/heads/master/qt/qt-everywhere-src-5.15.2.tar.xz"
   if not base.is_file("./qt_source_5.15.2.tar.xz"):
     base.download(qt_url, "./qt_source_5.15.2.tar.xz")
   

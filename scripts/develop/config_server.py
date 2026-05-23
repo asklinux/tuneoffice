@@ -60,9 +60,9 @@ def make():
 
   if not base.is_dir(git_dir + "/sdkjs-plugins/v1"):
     base.create_dir(git_dir + "/sdkjs-plugins/v1")
-    base.download("https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js", git_dir + "/sdkjs-plugins/v1/plugins.js")
-    base.download("https://onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.js", git_dir + "/sdkjs-plugins/v1/plugins-ui.js")
-    base.download("https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css", git_dir + "/sdkjs-plugins/v1/plugins.css")
+    base.download("https://tuneoffice.github.io/sdkjs-plugins/v1/plugins.js", git_dir + "/sdkjs-plugins/v1/plugins.js")
+    base.download("https://tuneoffice.github.io/sdkjs-plugins/v1/plugins-ui.js", git_dir + "/sdkjs-plugins/v1/plugins-ui.js")
+    base.download("https://tuneoffice.github.io/sdkjs-plugins/v1/plugins.css", git_dir + "/sdkjs-plugins/v1/plugins.css")
 
   base.support_old_versions_plugins(git_dir + "/sdkjs-plugins")
   base.copy_marketplace_plugin(git_dir + "/sdkjs-plugins", False, False)

@@ -10,8 +10,8 @@ end
 desc 'Build version anew'
 task build: :clean do
   sh('mkdir out')
-  sh('docker build --tag onlyoffice-document-editors-builder .')
-  sh("docker run -v #{Dir.pwd}/out:/build_tools/out onlyoffice-document-editors-builder")
+  sh('docker build --tag tuneoffice-document-editors-builder .')
+  sh("docker run -v #{Dir.pwd}/out:/build_tools/out tuneoffice-document-editors-builder")
 end
 
 desc 'Archive current build version'

@@ -1,12 +1,12 @@
-<h1>ONLYOFFICE Build Tools</h1>
+<h1>TUNEOFFICE Build Tools</h1>
 
-Welcome to the ```build_tools``` repository! This powerful toolkit simplifies the process of compiling [ONLYOFFICE](https://github.com/ONLYOFFICE) products from source on Linux.
+Welcome to the ```build_tools``` repository! This powerful toolkit simplifies the process of compiling [TUNEOFFICE](https://github.com/TUNEOFFICE) products from source on Linux.
 
 It automatically fetches all the required dependencies and source code to build the latest versions of:
 
-* [Docs (Document Server)](https://www.onlyoffice.com/docs?utm_source=github&utm_medium=cpc&utm_campaign=GitHubBuildTools)  
-* [Desktop Editors](https://www.onlyoffice.com/desktop?utm_source=github&utm_medium=cpc&utm_campaign=GitHubBuildTools)  
-* [Document Builder](https://www.onlyoffice.com/document-builder?utm_source=github&utm_medium=cpc&utm_campaign=GitHubBuildTools)
+* [Docs (Document Server)](https://www.tuneoffice.com/docs?utm_source=github&utm_medium=cpc&utm_campaign=GitHubBuildTools)  
+* [Desktop Editors](https://www.tuneoffice.com/desktop?utm_source=github&utm_medium=cpc&utm_campaign=GitHubBuildTools)  
+* [Document Builder](https://www.tuneoffice.com/document-builder?utm_source=github&utm_medium=cpc&utm_campaign=GitHubBuildTools)
 
 **A quick note:** For the most stable and reliable builds, we strongly recommend compiling from the ```master``` branch of this repository.
 
@@ -33,13 +33,13 @@ sudo apt-get install -y python
 
 ### **Step 2: Build the source code**
 
-Now, you're ready to build the ONLYOFFICE products.
+Now, you're ready to build the TUNEOFFICE products.
 
 1. **Clone the build_tools repository:**  
 
     This command downloads the build tools to your machine using Git:
    ```bash
-   git clone https://github.com/ONLYOFFICE/build_tools.git
+   git clone https://github.com/TUNEOFFICE/build_tools.git
    ```
 
 2. **Navigate to the scripts directory:**  
@@ -53,7 +53,7 @@ Now, you're ready to build the ONLYOFFICE products.
    ```bash
    python3 ./automate.py
    ```
-You can also build ONLYOFFICE products separately. Just run the script with the parameter corresponding to the necessary product. For example, to build *Desktop Editors* and *Document Server*
+You can also build TUNEOFFICE products separately. Just run the script with the parameter corresponding to the necessary product. For example, to build *Desktop Editors* and *Document Server*
 ```bash
 python3 ./automate.py desktop server
 ```
@@ -70,7 +70,7 @@ If you prefer using Docker, you can build all products inside a container. This 
 
 2. **Clone the build_tools repository:**
    ```bash
-   git clone https://github.com/ONLYOFFICE/build_tools.git
+   git clone https://github.com/TUNEOFFICE/build_tools.git
     ```
 
 3. **Go to the build_tools:**
@@ -87,7 +87,7 @@ If you prefer using Docker, you can build all products inside a container. This 
 5. **Build the Docker image:**  
 
    ```bash
-   docker build --tag onlyoffice-document-editors-builder .
+   docker build --tag tuneoffice-document-editors-builder .
    ```
 
 6. **Run the container to start the build:** 
@@ -95,7 +95,7 @@ If you prefer using Docker, you can build all products inside a container. This 
    This command mounts your local out directory into the container, so the final build files will appear on your machine. 
 
    ```bash 
-   docker run -v $PWD/out:/build_tools/out onlyoffice-document-editors-builder
+   docker run -v $PWD/out:/build_tools/out tuneoffice-document-editors-builder
     ```
 
 You've done it! The results will be in the ```./out``` directory you created.
@@ -104,7 +104,7 @@ You've done it! The results will be in the ```./out``` directory you created.
 
 Don't need everything? You can save time by building only the products you need. Just add the product name as an argument to the script.
 
-### Need just the [Document Builder](https://github.com/ONLYOFFICE/DocumentBuilder)❓
+### Need just the [Document Builder](https://github.com/TUNEOFFICE/DocumentBuilder)❓
 * How to build
 
   ```bash
@@ -112,11 +112,11 @@ Don't need everything? You can save time by building only the products you need.
   ```
 * How to run
   ```bash
-  cd ../../out/linux_64/onlyoffice/documentbuilder
+  cd ../../out/linux_64/tuneoffice/documentbuilder
   ./docbuilder
   ```
 
-### Need just the [Desktop Editors](https://github.com/ONLYOFFICE/DesktopEditors)❓
+### Need just the [Desktop Editors](https://github.com/TUNEOFFICE/DesktopEditors)❓
 
 * How to build
   ```bash
@@ -124,11 +124,11 @@ Don't need everything? You can save time by building only the products you need.
   ```
 * How to run
   ```bash
-  cd ../../out/linux_64/onlyoffice/desktopeditors
+  cd ../../out/linux_64/tuneoffice/desktopeditors
   LD_LIBRARY_PATH=./ ./DesktopEditors
   ```
 
-### Need just the [Docs (Document Server)](https://github.com/ONLYOFFICE/DocumentServer)❓
+### Need just the [Docs (Document Server)](https://github.com/TUNEOFFICE/DocumentServer)❓
 * How to build
   ```bash
   python3 ./automate.py server
@@ -147,7 +147,7 @@ sudo apt-get install nginx
 ```bash
 sudo rm -f /etc/nginx/sites-enabled/default
 ```
-3. Set up the new website. To do that create the ```/etc/nginx/sites-available/onlyoffice-documentserver``` file with the following contents:
+3. Set up the new website. To do that create the ```/etc/nginx/sites-available/tuneoffice-documentserver``` file with the following contents:
 
 ```bash
 map $http_host $this_host {
@@ -185,7 +185,7 @@ server {
 
 4. Enable the new site by creating a symbolic link  
 ```bash
-sudo ln -s /etc/nginx/sites-available/onlyoffice-documentserver /etc/nginx/sites-enabled/onlyoffice-documentserver
+sudo ln -s /etc/nginx/sites-available/tuneoffice-documentserver /etc/nginx/sites-enabled/tuneoffice-documentserver
 ```
 5. Restart NGINX to apply the changes  
 ```bash
@@ -199,7 +199,7 @@ Before running the server, you need to generate font and theme data.
 ##### **Generate fonts data**
 
 ```bash
-cd out/linux_64/onlyoffice/documentserver/
+cd out/linux_64/tuneoffice/documentserver/
 mkdir fonts
 LD_LIBRARY_PATH=${PWD}/server/FileConverter/bin server/tools/allfontsgen \
   --input="${PWD}/core-fonts" \
@@ -213,7 +213,7 @@ LD_LIBRARY_PATH=${PWD}/server/FileConverter/bin server/tools/allfontsgen \
 
 ##### **Generate presentation themes**
 ```bash
-cd out/linux_64/onlyoffice/documentserver/
+cd out/linux_64/tuneoffice/documentserver/
 LD_LIBRARY_PATH=${PWD}/server/FileConverter/bin server/tools/allthemesgen \
   --converter-dir="${PWD}/server/FileConverter/bin"\
   --src="${PWD}/sdkjs/slide/themes"\
@@ -226,7 +226,7 @@ All Document Server components run as foreground processes. Thus you need separa
 
 * **Start the FileConverter service:**  
   ```bash
-  cd out/linux_64/onlyoffice/documentserver/server/FileConverter
+  cd out/linux_64/tuneoffice/documentserver/server/FileConverter
   LD_LIBRARY_PATH=$PWD/bin \
   NODE_ENV=development-linux \
   NODE_CONFIG_DIR=$PWD/../Common/config \
@@ -235,24 +235,24 @@ All Document Server components run as foreground processes. Thus you need separa
 
 * **Start the DocService service:**  
   ```bash
-  cd out/linux_64/onlyoffice/documentserver/server/DocService
+  cd out/linux_64/tuneoffice/documentserver/server/DocService
   NODE_ENV=development-linux \
   NODE_CONFIG_DIR=$PWD/../Common/config \
   ./docservice
   ```
 
 ## And it's a wrap!  🎉
-Congratulations! You have successfully used the ```build_tools``` to compile your desired ONLYOFFICE products from the latest source code. 
+Congratulations! You have successfully used the ```build_tools``` to compile your desired TUNEOFFICE products from the latest source code. 
 
-Everything is now set up. You can go ahead and run your brand-new, self-compiled ONLYOFFICE applications. 
+Everything is now set up. You can go ahead and run your brand-new, self-compiled TUNEOFFICE applications. 
 
 ## Need help or have an idea? 💡
 
-* **🐞 Found a bug?** Please report it by creating an [issue](https://github.com/ONLYOFFICE/build_tools/issues).
-* **❓ Have a question?** Ask our community and developers on the [ONLYOFFICE Forum](https://community.onlyoffice.com).
-* **💡 Want to suggest a feature?** Share your ideas on our [feedback platform](https://feedback.onlyoffice.com/forums/966080-your-voice-matters).
-* **🧑‍💻 Need help for developers?** Check our [API documentation](https://api.onlyoffice.com/?utm_source=github&utm_medium=cpc&utm_campaign=GitHubBuildTools).
+* **🐞 Found a bug?** Please report it by creating an [issue](https://github.com/TUNEOFFICE/build_tools/issues).
+* **❓ Have a question?** Ask our community and developers on the [TUNEOFFICE Forum](https://community.tuneoffice.com).
+* **💡 Want to suggest a feature?** Share your ideas on our [feedback platform](https://feedback.tuneoffice.com/forums/966080-your-voice-matters).
+* **🧑‍💻 Need help for developers?** Check our [API documentation](https://api.tuneoffice.com/?utm_source=github&utm_medium=cpc&utm_campaign=GitHubBuildTools).
 
 ---
 
-<p align="center"> Made with ❤️ by the ONLYOFFICE Team </p>
+<p align="center"> Made with ❤️ by the TUNEOFFICE Team </p>

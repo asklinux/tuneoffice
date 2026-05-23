@@ -383,14 +383,14 @@ class EmitTargetsTests(unittest.TestCase):
         path = self._write_config('{"repositories":["sdkjs","server"]}')
         rc, out = self._emit(path)
         self.assertEqual(rc, 0)
-        self.assertIn('repos=["ONLYOFFICE/sdkjs", "ONLYOFFICE/server"]', out)
+        self.assertIn('repos=["TUNEOFFICE/sdkjs", "TUNEOFFICE/server"]', out)
         self.assertIn('enabled=true', out)
 
     def test_owner_repo_left_as_is(self):
-        path = self._write_config('{"repositories":["other-org/lib","ONLYOFFICE/sdkjs"]}')
+        path = self._write_config('{"repositories":["other-org/lib","TUNEOFFICE/sdkjs"]}')
         rc, out = self._emit(path)
         self.assertEqual(rc, 0)
-        self.assertIn('repos=["other-org/lib", "ONLYOFFICE/sdkjs"]', out)
+        self.assertIn('repos=["other-org/lib", "TUNEOFFICE/sdkjs"]', out)
         self.assertIn('enabled=true', out)
 
     def test_base_branch_passed_through(self):
@@ -433,7 +433,7 @@ class EmitTargetsTests(unittest.TestCase):
         path = self._write_config('{"repositories":["sdkjs","   ",""]}')
         rc, out = self._emit(path)
         self.assertEqual(rc, 0)
-        self.assertIn('repos=["ONLYOFFICE/sdkjs"]', out)
+        self.assertIn('repos=["TUNEOFFICE/sdkjs"]', out)
 
     def test_bad_json_returns_nonzero(self):
         path = self._write_config('this is not json')

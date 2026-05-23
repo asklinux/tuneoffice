@@ -213,7 +213,7 @@ def set_option(name, value):
 def branding():
   branding = option("branding-name")
   if ("" == branding):
-    branding = "onlyoffice"
+    branding = "tuneoffice"
   return branding
 
 def is_mobile_platform():

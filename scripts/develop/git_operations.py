@@ -24,16 +24,16 @@ logger = logging.getLogger(__name__)
 class GitOperations:
     """Class to handle git clone and branch creation using existing base module methods."""
     
-    def __init__(self, branding: str = "onlyoffice", base_branch: str = "develop", 
-                 branding_url: str = "ONLYOFFICE/onlyoffice.git", branch_name: str = None,
+    def __init__(self, branding: str = "tuneoffice", base_branch: str = "develop", 
+                 branding_url: str = "TUNEOFFICE/tuneoffice.git", branch_name: str = None,
                  modules: str = "core desktop builder server mobile"):
         """
         Initialize GitOperations with branding configuration and configure repositories.
         
         Args:
-            branding: Branding name (default: onlyoffice)
+            branding: Branding name (default: tuneoffice)
             base_branch: Base branch to work from (default: develop)
-            branding_url: Relative path from git host base (default: ONLYOFFICE/onlyoffice.git)
+            branding_url: Relative path from git host base (default: TUNEOFFICE/tuneoffice.git)
             branch_name: Name of the branch to create (required for branch operations)
             modules: Modules to include (default: core desktop builder server mobile)
         """
@@ -309,16 +309,16 @@ def main():
     branch_parser = subparsers.add_parser('create', help='Configure, clone and create branch in all repositories')
     branch_parser.add_argument('branch_name', help='Name of the branch to create')
     branch_parser.add_argument('--base-branch', default='develop', help='Base branch to work from (default: develop)')
-    branch_parser.add_argument('--branding', default='onlyoffice', help='Branding name')
-    branch_parser.add_argument('--branding-url', default='ONLYOFFICE/onlyoffice.git', help='Relative path from git host base (default: ONLYOFFICE/onlyoffice.git)')
+    branch_parser.add_argument('--branding', default='tuneoffice', help='Branding name')
+    branch_parser.add_argument('--branding-url', default='TUNEOFFICE/tuneoffice.git', help='Relative path from git host base (default: TUNEOFFICE/tuneoffice.git)')
     branch_parser.add_argument('--modules', default='core desktop builder server mobile', help='Modules to include')
     
     # Remove branch command (configure, clone and remove branch from all repositories)
     remove_parser = subparsers.add_parser('remove', help='Configure, clone and remove branch from all repositories')
     remove_parser.add_argument('branch_name', help='Name of the branch to remove')
     remove_parser.add_argument('--base-branch', default='develop', help='Base branch to work from (default: develop)')
-    remove_parser.add_argument('--branding', default='onlyoffice', help='Branding name')
-    remove_parser.add_argument('--branding-url', default='ONLYOFFICE/onlyoffice.git', help='Relative path from git host base (default: ONLYOFFICE/onlyoffice.git)')
+    remove_parser.add_argument('--branding', default='tuneoffice', help='Branding name')
+    remove_parser.add_argument('--branding-url', default='TUNEOFFICE/tuneoffice.git', help='Relative path from git host base (default: TUNEOFFICE/tuneoffice.git)')
     remove_parser.add_argument('--modules', default='core desktop builder server mobile', help='Modules to include')
     remove_parser.add_argument('--force', action='store_true', help='Force delete the branch (equivalent to git branch -D)')
     

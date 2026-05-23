@@ -6,7 +6,7 @@ sys.path.append('../../../scripts')
 
 import base
 
-URL = "https://github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/sysroot/"
+URL = "https://github.com/TUNEOFFICE-data/build_tools_data/raw/refs/heads/master/sysroot/"
 
 SYSROOTS = {
   "amd64": "ubuntu16-amd64-sysroot.tar.gz",

@@ -33,7 +33,7 @@ def make():
       continue
 
     root_dir = base_dir + ("/" + native_platform + "/" + branding + "/documentserver")
-    root_dir_snap = root_dir + '-snap/var/www/onlyoffice/documentserver'
+    root_dir_snap = root_dir + '-snap/var/www/tuneoffice/documentserver'
     root_dir_snap_example = root_dir_snap + '-example'
     if (base.is_dir(root_dir)):
       base.delete_dir(root_dir)
@@ -140,9 +140,9 @@ def make():
     else:
       base.generate_sdkjs_plugin_list(js_dir + "/sdkjs-plugins/plugin-list-default.json")
     base.create_dir(js_dir + "/sdkjs-plugins/v1")
-    base.download("https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js", js_dir + "/sdkjs-plugins/v1/plugins.js")
-    base.download("https://onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.js", js_dir + "/sdkjs-plugins/v1/plugins-ui.js")
-    base.download("https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css", js_dir + "/sdkjs-plugins/v1/plugins.css")
+    base.download("https://tuneoffice.github.io/sdkjs-plugins/v1/plugins.js", js_dir + "/sdkjs-plugins/v1/plugins.js")
+    base.download("https://tuneoffice.github.io/sdkjs-plugins/v1/plugins-ui.js", js_dir + "/sdkjs-plugins/v1/plugins-ui.js")
+    base.download("https://tuneoffice.github.io/sdkjs-plugins/v1/plugins.css", js_dir + "/sdkjs-plugins/v1/plugins.css")
     base.support_old_versions_plugins(js_dir + "/sdkjs-plugins")
 
     # tools
@@ -154,7 +154,7 @@ def make():
       base.copy_exe(core_build_dir + "/bin/" + platform_postfix, tools_dir, "pluginsmanager")
 
     branding_dir = server_dir + "/branding"
-    if("" != config.option("branding") and "onlyoffice" != config.option("branding")):
+    if("" != config.option("branding") and "tuneoffice" != config.option("branding")):
       branding_dir = git_dir + '/' + config.option("branding") + '/server'
 
     #dictionaries
@@ -187,7 +187,7 @@ def make():
     document_formats_files = server_dir + '/../document-formats'
     document_formats = build_server_dir + '/../document-formats'
     base.create_dir(document_formats)
-    base.copy_file(document_formats_files + '/onlyoffice-docs-formats.json', document_formats + '/onlyoffice-docs-formats.json')
+    base.copy_file(document_formats_files + '/tuneoffice-docs-formats.json', document_formats + '/tuneoffice-docs-formats.json')
 
     #license
     license_file1 = server_dir + '/LICENSE.txt'

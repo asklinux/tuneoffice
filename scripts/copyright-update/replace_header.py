@@ -64,7 +64,7 @@ MAX_BLOCK_BYTES = 32 * 1024
 
 # Default owner used by --emit-targets when a config entry is a bare repo name.
 # Matches the constant inlined into the workflow's dispatch fanout path.
-DEFAULT_OWNER = 'ONLYOFFICE'
+DEFAULT_OWNER = 'TUNEOFFICE'
 
 CLASS_REPLACE = 'REPLACE'
 CLASS_SKIP_NO_HEADER = 'SKIP_NO_HEADER'

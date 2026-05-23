@@ -6,7 +6,7 @@ sys.path.append('../../scripts')
 
 import base
 
-URL = "https://github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/qt/"
+URL = "https://github.com/TUNEOFFICE-data/build_tools_data/raw/refs/heads/master/qt/"
 
 SYSROOTS = {
   "amd64": "qt_binary_5.9.9_gcc_64.7z",

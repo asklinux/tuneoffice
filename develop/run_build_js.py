@@ -53,16 +53,16 @@ else:
   staticContent = ""
   for addon in addons:
       if (addon):
-        staticContent += '"/' + addon + '": {"path": "/var/www/onlyoffice/documentserver/' + addon + '","options": {"maxAge": "7d"}},'
+        staticContent += '"/' + addon + '": {"path": "/var/www/tuneoffice/documentserver/' + addon + '","options": {"maxAge": "7d"}},'
   
   if staticContent:
     base.print_info('replace production-linux.json for addons'+staticContent)
-    base.replaceInFileRE("/etc/onlyoffice/documentserver/production-linux.json", '"static_content": {.*', '"static_content": {' + staticContent)
+    base.replaceInFileRE("/etc/tuneoffice/documentserver/production-linux.json", '"static_content": {.*', '"static_content": {' + staticContent)
 
   base.print_info('replace supervisor cfg to run docservice and converter from pkg')
-  base.replaceInFileRE("/etc/supervisor/conf.d/ds-docservice.conf", "command=node .*", "command=/var/www/onlyoffice/documentserver/server/DocService/docservice")
-  base.replaceInFileRE("/app/ds/setup/config/supervisor/ds/ds-docservice.conf", "command=node .*", "command=/var/www/onlyoffice/documentserver/server/DocService/docservice")
-  base.replaceInFileRE("/etc/supervisor/conf.d/ds-converter.conf", "command=node .*", "command=/var/www/onlyoffice/documentserver/server/FileConverter/converter")
-  base.replaceInFileRE("/app/ds/setup/config/supervisor/ds/ds-converter.conf", "command=node .*", "command=/var/www/onlyoffice/documentserver/server/FileConverter/converter")
+  base.replaceInFileRE("/etc/supervisor/conf.d/ds-docservice.conf", "command=node .*", "command=/var/www/tuneoffice/documentserver/server/DocService/docservice")
+  base.replaceInFileRE("/app/ds/setup/config/supervisor/ds/ds-docservice.conf", "command=node .*", "command=/var/www/tuneoffice/documentserver/server/DocService/docservice")
+  base.replaceInFileRE("/etc/supervisor/conf.d/ds-converter.conf", "command=node .*", "command=/var/www/tuneoffice/documentserver/server/FileConverter/converter")
+  base.replaceInFileRE("/app/ds/setup/config/supervisor/ds/ds-converter.conf", "command=node .*", "command=/var/www/tuneoffice/documentserver/server/FileConverter/converter")
   base.print_info('run_server.run_docker_sdk_web_apps: ' + git_dir)
   run_server.run_docker_sdk_web_apps(git_dir)

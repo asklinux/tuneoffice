@@ -40,7 +40,7 @@ def make_windows(edition):
     make_args = ["exe-pr"]
   else:
     make_args = ["exe", "-e", "PRODUCT_NAME=" + product_name]
-  if not branding.onlyoffice:
+  if not branding.tuneoffice:
     make_args += ["-e", "BRANDING_DIR=../" + common.branding + "/document-server-package"]
   ret &= utils.cmd("make", *make_args, verbose=True)
   utils.set_summary("server " + edition + " build", ret)
@@ -67,7 +67,7 @@ def make_linux(edition):
   make_args += ["-e", "PRODUCT_NAME=" + product_name]
   if common.platform == "linux_aarch64":
     make_args += ["-e", "UNAME_M=aarch64"]
-  if not branding.onlyoffice:
+  if not branding.tuneoffice:
     make_args += ["-e", "BRANDING_DIR=../" + common.branding + "/document-server-package"]
   ret = utils.sh("make clean && make " + " ".join(make_args), verbose=True)
   utils.set_summary("server " + edition + " build", ret)

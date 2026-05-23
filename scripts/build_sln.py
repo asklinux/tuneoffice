@@ -34,16 +34,16 @@ def make(solution=""):
       if config.check_option("platform", "ios") and config.check_option("config", "bundle_xcframeworks"):
         qmake.make(platform, pro, "xcframework_platform_ios_simulator")
 
-  if config.check_option("module", "builder") and base.is_windows() and "onlyoffice" == config.branding():
+  if config.check_option("module", "builder") and base.is_windows() and "tuneoffice" == config.branding():
     # check branding libs
-    if (config.option("branding-name") == "onlyoffice"):
+    if (config.option("branding-name") == "tuneoffice"):
       for platform in platforms:
         if not platform in config.platforms:
           continue
         core_lib_unbranding_dir = os.getcwd() + "/../core/build/lib/" + platform + base.qt_dst_postfix()
         if not base.is_dir(core_lib_unbranding_dir):
           base.create_dir(core_lib_unbranding_dir)
-        core_lib_branding_dir = os.getcwd() + "/../core/build/onlyoffice/lib/" + platform + base.qt_dst_postfix()
+        core_lib_branding_dir = os.getcwd() + "/../core/build/tuneoffice/lib/" + platform + base.qt_dst_postfix()
         base.copy_file(core_lib_branding_dir + "/doctrenderer.dll", core_lib_unbranding_dir + "/doctrenderer.dll")
         base.copy_file(core_lib_branding_dir + "/doctrenderer.lib", core_lib_unbranding_dir + "/doctrenderer.lib")
 
@@ -62,7 +62,7 @@ def make(solution=""):
       base.restorePathForBuilder(new_replace_path)
 
   # build Java docbuilder wrapper
-  if config.check_option("module", "builder") and "onlyoffice" == config.branding():
+  if config.check_option("module", "builder") and "tuneoffice" == config.branding():
     for platform in platforms:
       if not platform in config.platforms:
         continue

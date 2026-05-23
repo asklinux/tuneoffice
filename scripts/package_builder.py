@@ -135,7 +135,7 @@ def make_tar():
     make_args += ["-e", "UNAME_M=x86_64"]
   if common.platform == "linux_aarch64":
     make_args += ["-e", "UNAME_M=aarch64"]
-  if not branding.onlyoffice:
+  if not branding.tuneoffice:
     make_args += ["-e", "BRANDING_DIR=../" + common.branding + "/document-builder-package"]
   ret = utils.sh("make clean && make " + " ".join(make_args), verbose=True)
   utils.set_summary("builder tar build", ret)
@@ -166,13 +166,13 @@ def make_wheel():
 
   builder_dir = "build"
   if utils.is_linux():
-    builder_dir = "build/opt/onlyoffice/documentbuilder"
+    builder_dir = "build/opt/tuneoffice/documentbuilder"
 
   utils.delete_dir("python")
-  utils.copy_dir("../onlyoffice/build_tools/packaging/docbuilder/resources", "python")
+  utils.copy_dir("../tuneoffice/build_tools/packaging/docbuilder/resources", "python")
   utils.copy_dir(builder_dir, "python/docbuilder/lib", True, True)
 
-  desktop_dir = "../desktop-apps/macos/build/ONLYOFFICE.app/Contents/Resources/converter"
+  desktop_dir = "../desktop-apps/macos/build/TUNEOFFICE.app/Contents/Resources/converter"
   if utils.is_macos() and "desktop" in common.targets and utils.is_exist(desktop_dir):
     for f in utils.glob_path(desktop_dir + "/*.dylib") + [desktop_dir + "/x2t"]:
       utils.copy_file(f, builder_dir + "/" + utils.get_basename(f))

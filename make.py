@@ -85,12 +85,12 @@ make_common.make()
 
 # build updmodule for desktop (only for windows version)
 if config.check_option("module", "desktop"):
-  config.extend_option("qmake_addon", "URL_WEBAPPS_HELP=https://download.onlyoffice.com/install/desktop/editors/help/v" + base.get_env('PRODUCT_VERSION') + "/apps")
+  config.extend_option("qmake_addon", "URL_WEBAPPS_HELP=https://download.tuneoffice.com/install/desktop/editors/help/v" + base.get_env('PRODUCT_VERSION') + "/apps")
 
   if "windows" == base.host_platform():
     config.extend_option("config", "updmodule")
-    base.set_env("DESKTOP_URL_UPDATES_MAIN_CHANNEL", "https://download.onlyoffice.com/install/desktop/editors/windows/onlyoffice/appcast.json")
-    base.set_env("DESKTOP_URL_UPDATES_DEV_CHANNEL", "https://download.onlyoffice.com/install/desktop/editors/windows/onlyoffice/appcastdev.json")
+    base.set_env("DESKTOP_URL_UPDATES_MAIN_CHANNEL", "https://download.tuneoffice.com/install/desktop/editors/windows/tuneoffice/appcast.json")
+    base.set_env("DESKTOP_URL_UPDATES_DEV_CHANNEL", "https://download.tuneoffice.com/install/desktop/editors/windows/tuneoffice/appcastdev.json")
 
 # build
 build_sln.make()

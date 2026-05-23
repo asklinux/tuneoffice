@@ -33,7 +33,7 @@ use the following commands:
 ### Clone development environment to the working directory
 
 ```bash
-git clone https://github.com/ONLYOFFICE/build_tools.git
+git clone https://github.com/TUNEOFFICE/build_tools.git
 ```
 
 ### Build Docker Image
@@ -44,14 +44,14 @@ show how to use docker without sudo.
 
 ```bash
 cd build_tools/develop
-docker build --no-cache --build-arg DOCUMENTSERVER_IMAGE=onlyoffice/documentserver:latest --build-arg BUILDTOOLS_BRANCH=master -t documentserver-develop .
+docker build --no-cache --build-arg DOCUMENTSERVER_IMAGE=tuneoffice/documentserver:latest --build-arg BUILDTOOLS_BRANCH=master -t documentserver-develop .
 ```
 
 **Note**: The dot at the end is required.
 
 **Note**: For a versioned development image, use the matching Document Server
 image and build_tools branch, for example
-`DOCUMENTSERVER_IMAGE=onlyoffice/documentserver:9.4.0` and
+`DOCUMENTSERVER_IMAGE=tuneoffice/documentserver:9.4.0` and
 `BUILDTOOLS_BRANCH=release/v9.4.0`.
 
 **Note**: On container startup, the build_tools branch is detected from the
@@ -64,14 +64,14 @@ including FileConverter binaries.
 
 Clone development modules to the working directory.
 
-* `sdkjs` repo is located [here](https://github.com/ONLYOFFICE/sdkjs/)
-* `web-apps` repo is located [here](https://github.com/ONLYOFFICE/web-apps/)
-* `server` repo is located [here](https://github.com/ONLYOFFICE/server/)
+* `sdkjs` repo is located [here](https://github.com/TUNEOFFICE/sdkjs/)
+* `web-apps` repo is located [here](https://github.com/TUNEOFFICE/web-apps/)
+* `server` repo is located [here](https://github.com/TUNEOFFICE/server/)
 
 ```bash
-git clone https://github.com/ONLYOFFICE/sdkjs.git
-git clone https://github.com/ONLYOFFICE/web-apps.git
-git clone https://github.com/ONLYOFFICE/server.git
+git clone https://github.com/TUNEOFFICE/sdkjs.git
+git clone https://github.com/TUNEOFFICE/web-apps.git
+git clone https://github.com/TUNEOFFICE/server.git
 ```
 
 ## Start server with external folders
@@ -85,7 +85,7 @@ The folder `server` is optional.
 **Note**: Run the command with the current working directory
 containing `sdkjs`, `web-apps`...
 
-**Note**: ONLYOFFICE server uses port 80.
+**Note**: TUNEOFFICE server uses port 80.
 Look for another application using port 80 and stop it.
 
 **Note**: Starting the server with `sdkjs` and `web-apps` takes 15 minutes,
@@ -99,19 +99,19 @@ node_modules.
 Run with `sdkjs` and `web-apps`
 
 ```powershell
-docker run -i -t -p 80:80 --restart=always -e ALLOW_PRIVATE_IP_ADDRESS=true -v $pwd/sdkjs:/var/www/onlyoffice/documentserver/sdkjs -v $pwd/web-apps:/var/www/onlyoffice/documentserver/web-apps documentserver-develop
+docker run -i -t -p 80:80 --restart=always -e ALLOW_PRIVATE_IP_ADDRESS=true -v $pwd/sdkjs:/var/www/tuneoffice/documentserver/sdkjs -v $pwd/web-apps:/var/www/tuneoffice/documentserver/web-apps documentserver-develop
 ```
 
 Or run with `sdkjs`, `web-apps`, and `server`
 
 ```powershell
-docker run -i -t -p 80:80 --restart=always -e ALLOW_PRIVATE_IP_ADDRESS=true -v $pwd/sdkjs:/var/www/onlyoffice/documentserver/sdkjs -v $pwd/web-apps:/var/www/onlyoffice/documentserver/web-apps -v $pwd/server:/var/www/onlyoffice/documentserver/server documentserver-develop
+docker run -i -t -p 80:80 --restart=always -e ALLOW_PRIVATE_IP_ADDRESS=true -v $pwd/sdkjs:/var/www/tuneoffice/documentserver/sdkjs -v $pwd/web-apps:/var/www/tuneoffice/documentserver/web-apps -v $pwd/server:/var/www/tuneoffice/documentserver/server documentserver-develop
 ```
 
 **Note**: If using Git Bash instead of PowerShell, you may need to quote the paths:
 
 ```bash
-docker run -i -t -p 80:80 --restart=always -e ALLOW_PRIVATE_IP_ADDRESS=true -v "$(pwd)/sdkjs":/var/www/onlyoffice/documentserver/sdkjs -v "$(pwd)/web-apps":/var/www/onlyoffice/documentserver/web-apps documentserver-develop
+docker run -i -t -p 80:80 --restart=always -e ALLOW_PRIVATE_IP_ADDRESS=true -v "$(pwd)/sdkjs":/var/www/tuneoffice/documentserver/sdkjs -v "$(pwd)/web-apps":/var/www/tuneoffice/documentserver/web-apps documentserver-develop
 ```
 
 ### docker run on Linux or macOS
@@ -119,13 +119,13 @@ docker run -i -t -p 80:80 --restart=always -e ALLOW_PRIVATE_IP_ADDRESS=true -v "
 Run with `sdkjs` and `web-apps`
 
 ```bash
-docker run -i -t -p 80:80 --restart=always -e ALLOW_PRIVATE_IP_ADDRESS=true -v $(pwd)/sdkjs:/var/www/onlyoffice/documentserver/sdkjs -v $(pwd)/web-apps:/var/www/onlyoffice/documentserver/web-apps documentserver-develop
+docker run -i -t -p 80:80 --restart=always -e ALLOW_PRIVATE_IP_ADDRESS=true -v $(pwd)/sdkjs:/var/www/tuneoffice/documentserver/sdkjs -v $(pwd)/web-apps:/var/www/tuneoffice/documentserver/web-apps documentserver-develop
 ```
 
 Or run with `sdkjs`, `web-apps`, and `server`
 
 ```bash
-docker run -i -t -p 80:80 --restart=always -e ALLOW_PRIVATE_IP_ADDRESS=true -v $(pwd)/sdkjs:/var/www/onlyoffice/documentserver/sdkjs -v $(pwd)/web-apps:/var/www/onlyoffice/documentserver/web-apps -v $(pwd)/server:/var/www/onlyoffice/documentserver/server documentserver-develop
+docker run -i -t -p 80:80 --restart=always -e ALLOW_PRIVATE_IP_ADDRESS=true -v $(pwd)/sdkjs:/var/www/tuneoffice/documentserver/sdkjs -v $(pwd)/web-apps:/var/www/tuneoffice/documentserver/web-apps -v $(pwd)/server:/var/www/tuneoffice/documentserver/server documentserver-develop
 ```
 
 ## Open editor
@@ -221,7 +221,7 @@ docker exec -it CONTAINER_ID supervisorctl restart all
 To get additional functionality and branding, you need to connect a branding folder,
 additional addon folders, and pass command line arguments.
 
-For example, run with `onlyoffice` branding and
+For example, run with `tuneoffice` branding and
 addons: `sdkjs-forms`, `sdkjs-ooxml`, `web-apps-mobile`.
 
 ### docker run on Windows (PowerShell) with branding
@@ -231,16 +231,16 @@ node_modules.
 
 ```powershell
 docker run -i -t -p 80:80 --restart=always -e ALLOW_PRIVATE_IP_ADDRESS=true `
-    -v $pwd/sdkjs:/var/www/onlyoffice/documentserver/sdkjs -v $pwd/web-apps:/var/www/onlyoffice/documentserver/web-apps `
-    -v $pwd/onlyoffice:/var/www/onlyoffice/documentserver/onlyoffice -v $pwd/sdkjs-ooxml:/var/www/onlyoffice/documentserver/sdkjs-ooxml -v $pwd/sdkjs-forms:/var/www/onlyoffice/documentserver/sdkjs-forms -v $pwd/web-apps-mobile:/var/www/onlyoffice/documentserver/web-apps-mobile `
-    documentserver-develop args --branding onlyoffice --branding-url 'https://github.com/ONLYOFFICE/onlyoffice.git' --siteUrl localhost
+    -v $pwd/sdkjs:/var/www/tuneoffice/documentserver/sdkjs -v $pwd/web-apps:/var/www/tuneoffice/documentserver/web-apps `
+    -v $pwd/tuneoffice:/var/www/tuneoffice/documentserver/tuneoffice -v $pwd/sdkjs-ooxml:/var/www/tuneoffice/documentserver/sdkjs-ooxml -v $pwd/sdkjs-forms:/var/www/tuneoffice/documentserver/sdkjs-forms -v $pwd/web-apps-mobile:/var/www/tuneoffice/documentserver/web-apps-mobile `
+    documentserver-develop args --branding tuneoffice --branding-url 'https://github.com/TUNEOFFICE/tuneoffice.git' --siteUrl localhost
 ```
 
 ### docker run on Linux or macOS with branding
 
 ```bash
 docker run -i -t -p 80:80 --restart=always -e ALLOW_PRIVATE_IP_ADDRESS=true \
-    -v $(pwd)/sdkjs:/var/www/onlyoffice/documentserver/sdkjs -v $(pwd)/web-apps:/var/www/onlyoffice/documentserver/web-apps \
-    -v $(pwd)/onlyoffice:/var/www/onlyoffice/documentserver/onlyoffice -v $(pwd)/sdkjs-ooxml:/var/www/onlyoffice/documentserver/sdkjs-ooxml -v $(pwd)/sdkjs-forms:/var/www/onlyoffice/documentserver/sdkjs-forms -v $(pwd)/web-apps-mobile:/var/www/onlyoffice/documentserver/web-apps-mobile \
-    documentserver-develop args --branding onlyoffice --branding-url 'https://github.com/ONLYOFFICE/onlyoffice.git' --siteUrl localhost
+    -v $(pwd)/sdkjs:/var/www/tuneoffice/documentserver/sdkjs -v $(pwd)/web-apps:/var/www/tuneoffice/documentserver/web-apps \
+    -v $(pwd)/tuneoffice:/var/www/tuneoffice/documentserver/tuneoffice -v $(pwd)/sdkjs-ooxml:/var/www/tuneoffice/documentserver/sdkjs-ooxml -v $(pwd)/sdkjs-forms:/var/www/tuneoffice/documentserver/sdkjs-forms -v $(pwd)/web-apps-mobile:/var/www/tuneoffice/documentserver/web-apps-mobile \
+    documentserver-develop args --branding tuneoffice --branding-url 'https://github.com/TUNEOFFICE/tuneoffice.git' --siteUrl localhost
 ```

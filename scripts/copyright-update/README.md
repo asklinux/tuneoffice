@@ -8,7 +8,7 @@ small Python 3 script with no external dependencies.
 
 ## 1. Overview
 
-ONLYOFFICE source files carry a long C-style `/* ... */` copyright block at
+TUNEOFFICE source files carry a long C-style `/* ... */` copyright block at
 the top. When the legal text changes, those blocks need to be updated
 across repositories. A simple year bump is not enough when wording, address,
 URLs, or license clauses also change.
@@ -44,7 +44,7 @@ inputs:
 
 | Input          | Required | Description |
 |----------------|----------|-------------|
-| `repositories` | yes      | One target repository per line. Accepts `owner/repo` or bare `repo` (owner defaults to `ONLYOFFICE`). |
+| `repositories` | yes      | One target repository per line. Accepts `owner/repo` or bare `repo` (owner defaults to `TUNEOFFICE`). |
 | `base_branch`  | no       | Branch **name** (e.g. `master`, `release/v9.4.0`). Branch names only -- tags, arbitrary refs, and commit SHAs are not supported. Empty means each repo's default branch. |
 
 ### 2.2 Push-driven runs via `config.json`
@@ -61,13 +61,13 @@ YAML stays free of config-shape logic.
   "base_branch": "release/v9.4.0",
   "repositories": [
     "sdkjs",
-    "ONLYOFFICE/server"
+    "TUNEOFFICE/server"
   ]
 }
 ```
 
 - `repositories` -- `owner/repo` or bare `repo` names. Bare names get the
-  same `ONLYOFFICE` default owner as the dispatch input. An empty or
+  same `TUNEOFFICE` default owner as the dispatch input. An empty or
   missing list flips the workflow's `enabled` output to `false`, and the
   per-repo step is skipped via its `if:` guard rather than running with
   an empty matrix.
@@ -293,7 +293,7 @@ one subdirectory per target repository:
 
 ```text
 reports/
-  ONLYOFFICE-server/
+  TUNEOFFICE-server/
     report.txt    -- per-file outcomes + totals (everything, plain text)
     summary.md    -- the per-repo summary block (same as in the Job Summary)
 ```

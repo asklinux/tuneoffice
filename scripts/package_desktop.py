@@ -59,7 +59,7 @@ def make_windows():
 
   if make_prepare():
     make_zip()
-    if branding.onlyoffice:
+    if branding.tuneoffice:
       make_inno()
       make_inno("standalone")
       make_advinst()
@@ -69,7 +69,7 @@ def make_windows():
     utils.set_summary("desktop inno standalone build", False)
     utils.set_summary("desktop advinst opensource build", False)
 
-  if branding.onlyoffice and make_prepare("commercial"):
+  if branding.tuneoffice and make_prepare("commercial"):
     make_zip("commercial")
     make_inno("commercial")
     make_advinst("commercial")
@@ -193,7 +193,7 @@ def make_macos():
   utils.log_h2("build")
   source_dir = "%s/build_tools/out/%s/%s" \
     % (common.workspace_dir, common.prefix, branding.company_name)
-  if branding.onlyoffice:
+  if branding.tuneoffice:
     for path in utils.glob_path(source_dir \
         + "/desktopeditors/editors/web-apps/apps/*/main/resources/help"):
       utils.delete_dir(path)
@@ -202,7 +202,7 @@ def make_macos():
     sparkle_updates = True
     released_updates_dir = "%s/%s/_updates" % (utils.get_env("ARCHIVES_DIR"), scheme)
     plistbuddy = "/usr/libexec/PlistBuddy"
-    plist_path = "%s/%s/ONLYOFFICE/Resources/%s-%s/Info.plist" \
+    plist_path = "%s/%s/TUNEOFFICE/Resources/%s-%s/Info.plist" \
         % (common.workspace_dir, branding_dir, package_name, suffix)
 
     appcast = utils.sh_output('%s -c "Print :SUFeedURL" %s' \
@@ -216,7 +216,7 @@ def make_macos():
         'xmllint --xpath "/rss/channel/item[1]/*[name()=\'sparkle:version\']/text()" ' + appcast,
         verbose=True).rstrip()
     bundle_version = str(int(release_version) + 1)
-    help_url = "https://download.onlyoffice.com/install/desktop/editors/help/v" + common.version + "/apps"
+    help_url = "https://download.tuneoffice.com/install/desktop/editors/help/v" + common.version + "/apps"
 
     utils.sh('%s -c "Set :CFBundleShortVersionString %s" %s' \
         % (plistbuddy, common.version, plist_path), verbose=True)
@@ -317,7 +317,7 @@ def make_linux():
       make_args.append("PACKAGE_EDITION=commercial")
     if common.platform == "linux_aarch64":
       make_args.append("UNAME_M=aarch64")
-    if not branding.onlyoffice:
+    if not branding.tuneoffice:
       make_args.append("BRANDING_DIR=../../" + common.branding + "/desktop-apps/package")
     ret = utils.sh("make clean && make " + " ".join(make_args), verbose=True)
     utils.set_summary("desktop " + edition + " build", ret)

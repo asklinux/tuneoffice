@@ -591,20 +591,20 @@ def git_is_ssh():
   if (git_protocol == "ssh"):
     return True
   origin = git_get_origin()
-  if (git_protocol == "auto") and (origin.find(":ONLYOFFICE/") != -1):
+  if (git_protocol == "auto") and (origin.find(":TUNEOFFICE/") != -1):
     return True
   return False
 
 def get_ssh_base_url():
   cur_origin = git_get_origin()
-  ind = cur_origin.find(":ONLYOFFICE/")
+  ind = cur_origin.find(":TUNEOFFICE/")
   if (ind == -1):
-    return "git@github.com:ONLYOFFICE/"
+    return "git@github.com:TUNEOFFICE/"
   return cur_origin[:ind+12]
 
 def git_update(repo, is_no_errors=False, is_current_dir=False, git_owner=""):
   print("[git] update: " + repo)
-  owner = git_owner if git_owner else "ONLYOFFICE"
+  owner = git_owner if git_owner else "TUNEOFFICE"
   url = git_get_base_url() + owner + "/" + repo + ".git"
   if git_is_ssh():
     url = get_ssh_base_url() + repo + ".git"
@@ -638,7 +638,7 @@ def get_repositories():
   result["core"] = [False, False]
   result["sdkjs"] = [False, False]
   result.update(get_sdkjs_addons())
-  result["onlyoffice.github.io"] = [False, False]
+  result["tuneoffice.github.io"] = [False, False]
   result["web-apps"] = [False, False]
   result["dictionaries"] = [False, False]
   result["core-fonts"] = [False, False]
@@ -678,7 +678,7 @@ def get_branding_repositories(checker):
 
 def create_pull_request(branches_to, repo, is_no_errors=False, is_current_dir=False):
   print("[git] create pull request: " + repo)
-  url = git_get_base_url() + "ONLYOFFICE/" + repo + ".git"
+  url = git_get_base_url() + "TUNEOFFICE/" + repo + ".git"
   if git_is_ssh():
     url = get_ssh_base_url() + repo + ".git"
   folder = get_script_dir() + "/../../" + repo
@@ -1061,7 +1061,7 @@ def generate_doctrenderer_config(path, root, product, vendor = "", dictionaries 
   return
 
 def generate_plist(file, platform):
-  bundle_id_url = "com.onlyoffice."
+  bundle_id_url = "com.tuneoffice."
   if ("" != get_env("PUBLISHER_BUNDLE_ID")):
     bundle_id_url = get_env("PUBLISHER_BUNDLE_ID")
   bundle_creator = "Ascensio System SIA"
@@ -1470,9 +1470,9 @@ def mac_correct_rpath_desktop(dir):
   copy_file("./editors_helper (Renderer).app/Contents/MacOS/editors_helper", "./editors_helper (Renderer).app/Contents/MacOS/editors_helper (Renderer)")
   delete_file("./editors_helper (Renderer).app/Contents/MacOS/editors_helper")
   replaceInFile("./editors_helper (GPU).app/Contents/Info.plist", "<string>editors_helper</string>", "<string>editors_helper (GPU)</string>")
-  replaceInFile("./editors_helper (GPU).app/Contents/Info.plist", "<string>asc.onlyoffice.editors-helper</string>", "<string>asc.onlyoffice.editors-helper-gpu</string>")
+  replaceInFile("./editors_helper (GPU).app/Contents/Info.plist", "<string>asc.tuneoffice.editors-helper</string>", "<string>asc.tuneoffice.editors-helper-gpu</string>")
   replaceInFile("./editors_helper (Renderer).app/Contents/Info.plist", "<string>editors_helper</string>", "<string>editors_helper (Renderer)</string>")
-  replaceInFile("./editors_helper (Renderer).app/Contents/Info.plist", "<string>asc.onlyoffice.editors-helper</string>", "<string>asc.onlyoffice.editors-helper-renderer</string>")
+  replaceInFile("./editors_helper (Renderer).app/Contents/Info.plist", "<string>asc.tuneoffice.editors-helper</string>", "<string>asc.tuneoffice.editors-helper-renderer</string>")
   os.chdir(cur_dir)
   return
 
@@ -1515,7 +1515,7 @@ def copy_sdkjs_plugin(src_dir, dst_dir, name, is_name_as_guid=False, is_desktop_
     copy_dir_content(src_dir_path, dst_dir_path, "", ".git")
     if is_desktop_local:
       for file in glob.glob(dst_dir_path + "/*.html"):
-        replaceInFile(file, "https://onlyoffice.github.io/sdkjs-plugins/", "../")
+        replaceInFile(file, "https://tuneoffice.github.io/sdkjs-plugins/", "../")
     return
   if not is_file(src_dir_path + "/config.json"):
     return
@@ -1532,7 +1532,7 @@ def copy_sdkjs_plugin(src_dir, dst_dir, name, is_name_as_guid=False, is_desktop_
   copy_dir_content(src_dir_path, dst_dir_path, "", ".git")
   if is_desktop_local:
     for file in glob.glob(dst_dir_path + "/*.html"):
-      replaceInFile(file, "https://onlyoffice.github.io/sdkjs-plugins/", "../")
+      replaceInFile(file, "https://tuneoffice.github.io/sdkjs-plugins/", "../")
   dst_deploy_dir = dst_dir_path + "/deploy"
   if is_dir(dst_deploy_dir):
     delete_dir(dst_deploy_dir)
@@ -1544,7 +1544,7 @@ def copy_marketplace_plugin(dst_dir, is_name_as_guid=False, is_desktop_local=Fal
     # old version
     copy_sdkjs_plugin(git_dir + "/desktop-sdk/ChromiumBasedEditors/plugins", dst_dir, "manager", is_name_as_guid, is_desktop_local)
     return
-  src_dir_path = git_dir + "/onlyoffice.github.io/store/plugin"
+  src_dir_path = git_dir + "/tuneoffice.github.io/store/plugin"
   name = "marketplace"
   if is_name_as_guid:
     name = "{AA2EA9B6-9EC2-415F-9762-634EE8D9A95E}"
@@ -1557,16 +1557,16 @@ def copy_marketplace_plugin(dst_dir, is_name_as_guid=False, is_desktop_local=Fal
   copy_dir_content(src_dir_path, dst_dir_path)
   if is_desktop_local:
     for file in glob.glob(dst_dir_path + "/*.html"):
-      replaceInFile(file, "https://onlyoffice.github.io/sdkjs-plugins/", "../")
+      replaceInFile(file, "https://tuneoffice.github.io/sdkjs-plugins/", "../")
 
   if is_store_copy:
-    copy_dir(git_dir + "/onlyoffice.github.io/store", dst_dir_path + "/store")
+    copy_dir(git_dir + "/tuneoffice.github.io/store", dst_dir_path + "/store")
     delete_dir(dst_dir_path + "/store/plugin")
     delete_dir(dst_dir_path + "/store/plugin-dev")
   return
 
 def copy_sdkjs_plugins(dst_dir, is_name_as_guid=False, is_desktop_local=False, isXp=False):
-  plugins_dir = __file__script__path__ + "/../../onlyoffice.github.io/sdkjs-plugins/content"
+  plugins_dir = __file__script__path__ + "/../../tuneoffice.github.io/sdkjs-plugins/content"
   plugins_list_config = config.option("sdkjs-plugin")
   if isXp:
     plugins_list_config="photoeditor, highlightcode, doc2md"
@@ -1578,7 +1578,7 @@ def copy_sdkjs_plugins(dst_dir, is_name_as_guid=False, is_desktop_local=False, i
   return
 
 def copy_sdkjs_plugins_server(dst_dir, is_name_as_guid=False, is_desktop_local=False):
-  plugins_dir = __file__script__path__ + "/../../onlyoffice.github.io/sdkjs-plugins/content"
+  plugins_dir = __file__script__path__ + "/../../tuneoffice.github.io/sdkjs-plugins/content"
   plugins_list_config = config.option("sdkjs-plugin-server")
   if ("" == plugins_list_config):
     return
@@ -1590,9 +1590,9 @@ def copy_sdkjs_plugins_server(dst_dir, is_name_as_guid=False, is_desktop_local=F
 def support_old_versions_plugins(out_dir):
   if is_file(out_dir + "/pluginBase.js"):
     return
-  download("https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js", out_dir + "/plugins.js")
-  download("https://onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.js", out_dir + "/plugins-ui.js")
-  download("https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css", out_dir + "/plugins.css")
+  download("https://tuneoffice.github.io/sdkjs-plugins/v1/plugins.js", out_dir + "/plugins.js")
+  download("https://tuneoffice.github.io/sdkjs-plugins/v1/plugins-ui.js", out_dir + "/plugins-ui.js")
+  download("https://tuneoffice.github.io/sdkjs-plugins/v1/plugins.css", out_dir + "/plugins.css")
   content_plugin_base = ""
   with open(get_path(out_dir + "/plugins.js"), "r") as file:
     content_plugin_base += file.read()
@@ -1745,12 +1745,12 @@ def copy_v8_files(core_dir, deploy_dir, platform, is_xp=False):
 def clone_marketplace_plugin(out_dir, is_name_as_guid=False, is_replace_paths=False, is_delete_git_dir=True, git_owner=""):
   old_cur = os.getcwd()
   os.chdir(out_dir)
-  git_update("onlyoffice.github.io", False, True, git_owner)
+  git_update("tuneoffice.github.io", False, True, git_owner)
   os.chdir(old_cur)
 
   dst_dir_name = "marketplace"
   if is_name_as_guid:
-    config_content = readFile(out_dir + "/onlyoffice.github.io/store/plugin/config.json")
+    config_content = readFile(out_dir + "/tuneoffice.github.io/store/plugin/config.json")
     index_start = config_content.find("\"asc.{")
     index_start += 5
     index_end = config_content.find("}", index_start)
@@ -1762,14 +1762,14 @@ def clone_marketplace_plugin(out_dir, is_name_as_guid=False, is_replace_paths=Fa
 
   if is_dir(dst_dir_path):
     delete_dir(dst_dir_path)
-  copy_dir(out_dir + "/onlyoffice.github.io/store/plugin", dst_dir_path)
+  copy_dir(out_dir + "/tuneoffice.github.io/store/plugin", dst_dir_path)
 
   if is_replace_paths:
     for file in glob.glob(dst_dir_path + "/*.html"):
-      replaceInFile(file, "https://onlyoffice.github.io/sdkjs-plugins/", "../")
+      replaceInFile(file, "https://tuneoffice.github.io/sdkjs-plugins/", "../")
 
   if is_delete_git_dir:
-    delete_dir_with_access_error(out_dir + "/onlyoffice.github.io")
+    delete_dir_with_access_error(out_dir + "/tuneoffice.github.io")
   return
 
 def correctPathForBuilder(path):
@@ -1986,8 +1986,8 @@ def check_python():
   directory_bin = __file__script__path__ + "/../tools/linux/python3/bin"
 
   if not is_dir(directory + "/python3"):
-    download('https://github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/python/python3.tar.gz', directory + "/python3.tar.gz")
-    download('https://github.com/ONLYOFFICE-data/build_tools_data/raw/refs/heads/master/python/extract.sh', directory + "/extract.sh")
+    download('https://github.com/TUNEOFFICE-data/build_tools_data/raw/refs/heads/master/python/python3.tar.gz', directory + "/python3.tar.gz")
+    download('https://github.com/TUNEOFFICE-data/build_tools_data/raw/refs/heads/master/python/extract.sh', directory + "/extract.sh")
     cmd_in_dir(directory, "chmod", ["+x", "./extract.sh"])
     cmd_in_dir(directory, "./extract.sh")
   directory_bin = directory_bin.replace(" ", "\\ ")
@@ -2044,7 +2044,7 @@ def get_autobuild_version(product, platform="", branch="", build=""):
     download_branch = "develop"
 
   download_addon = download_branch + "/" + download_build + "/" + product + "-" + download_platform + ".7z"
-  return "http://repo-doc-onlyoffice-com.s3.amazonaws.com/archive/" + download_addon
+  return "http://repo-doc-tuneoffice-com.s3.amazonaws.com/archive/" + download_addon
 
 def is_use_create_artifacts_qemu_any_platform():
   if config.check_option("platform", "win_arm64") and not is_os_arm():
@@ -2092,7 +2092,7 @@ def create_x2t_js_cache(dir, product, platform):
 
 def setup_local_qmake(dir_qmake):
   dir_base = os.path.dirname(dir_qmake)
-  writeFile(dir_base + "/onlyoffice_qt.conf", "Prefix = " + dir_base)
+  writeFile(dir_base + "/tuneoffice_qt.conf", "Prefix = " + dir_base)
   return
 
 def deploy_icu(core_dir, dst_dir, platform):

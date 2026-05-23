@@ -26,6 +26,20 @@ LINUX_CUSTOM_SYSROOT_TOOLCHAIN_FILE = base.get_script_dir() + "/../tools/linux/s
 
 OLD_ENV = dict()
 
+def prefer_host_runtime_for_cmake():
+  if "linux" != base.host_platform():
+    return
+
+  host_runtime_dirs = [
+    "/lib/x86_64-linux-gnu",
+    "/usr/lib/x86_64-linux-gnu",
+    "/lib64",
+    "/usr/lib64"
+  ]
+  host_runtime_dirs = [path for path in host_runtime_dirs if base.is_dir(path)]
+  current = base.get_env("LD_LIBRARY_PATH")
+  os.environ["LD_LIBRARY_PATH"] = ":".join(host_runtime_dirs + ([current] if current else []))
+
 def get_vs_version():
   vs_version = "14 2015"
   if config.option("vs-version") == "2019":
@@ -113,6 +127,7 @@ def build_with_cmake(platform, cmake_args, build_type):
   # env setup for custom sysroot
   if config.option("sysroot") != "":
     base.set_sysroot_env(platform)
+    prefer_host_runtime_for_cmake()
 
   # run cmake
   base.cmd("cmake", cmake_args + cmake_args_ext)

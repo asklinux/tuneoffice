@@ -99,9 +99,9 @@ def make(platform, project, qmake_config_addon="", is_no_errors=False):
 
   # non windows platform
   if not base.is_windows():
-    if base.is_file(qt_dir + "/onlyoffice_qt.conf"):
+    if base.is_file(qt_dir + "/tuneoffice_qt.conf"):
       build_params.append("-qtconf")
-      build_params.append(qt_dir + "/onlyoffice_qt.conf")
+      build_params.append(qt_dir + "/tuneoffice_qt.conf")
     if "1" == config.option("use-clang"):
       build_params.append("-spec")
       build_params.append("linux-clang-libc++")

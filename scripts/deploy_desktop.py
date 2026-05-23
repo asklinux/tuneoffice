@@ -29,7 +29,7 @@ def make():
     if not native_platform in config.platforms:
       continue
 
-    root_dir = base_dir + ("/" + native_platform + "/" + branding + ("/DesktopEditors" if base.is_windows() else "/desktopeditors"))
+    root_dir = base_dir + ("/" + native_platform + "/" + branding + ("/TuneOffice" if base.is_windows() else "/tuneoffice"))
     if (base.is_dir(root_dir)):
       base.delete_dir(root_dir)
     base.create_dir(root_dir)
@@ -184,13 +184,13 @@ def make():
           base.copy_files(base.get_env("QT_DEPLOY") + "/../lib/libqgsttools_p.so*", root_dir)
 
       if (0 == platform.find("win")):
-        base.copy_file(git_dir + "/desktop-apps/win-linux/extras/projicons/" + apps_postfix + "/projicons.exe", root_dir + "/DesktopEditors.exe")
+        base.copy_file(git_dir + "/desktop-apps/win-linux/extras/projicons/" + apps_postfix + "/projicons.exe", root_dir + "/TuneOffice.exe")
         if not isWindowsXP:
           base.copy_file(git_dir + "/desktop-apps/win-linux/extras/update-daemon/" + apps_postfix + "/updatesvc.exe", root_dir + "/updatesvc.exe")
-        base.copy_file(git_dir + "/desktop-apps/win-linux/" + apps_postfix + "/DesktopEditors.exe", root_dir + "/editors.exe")
-        base.copy_file(git_dir + "/desktop-apps/win-linux/res/icons/desktopeditors.ico", root_dir + "/app.ico")
+        base.copy_file(git_dir + "/desktop-apps/win-linux/" + apps_postfix + "/TuneOffice.exe", root_dir + "/tuneoffice.exe")
+        base.copy_file(git_dir + "/desktop-apps/win-linux/res/icons/tuneoffice.ico", root_dir + "/app.ico")
       elif (0 == platform.find("linux")):
-        base.copy_file(git_dir + "/desktop-apps/win-linux/" + apps_postfix + "/DesktopEditors", root_dir + "/DesktopEditors")
+        base.copy_file(git_dir + "/desktop-apps/win-linux/" + apps_postfix + "/TuneOffice", root_dir + "/TuneOffice")
 
       if base.check_congig_option_with_platfom(platform, "libvlc"):
         vlc_dir = git_dir + "/core/Common/3dParty/libvlc/build/" + platform + "/lib"
@@ -233,9 +233,9 @@ def make():
 
     # io
     base.create_dir(root_dir + "/editors/sdkjs-plugins/v1")
-    base.download("https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js", root_dir + "/editors/sdkjs-plugins/v1/plugins.js")
-    base.download("https://onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.js", root_dir + "/editors/sdkjs-plugins/v1/plugins-ui.js")
-    base.download("https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css", root_dir + "/editors/sdkjs-plugins/v1/plugins.css")
+    base.download("https://tuneoffice.github.io/sdkjs-plugins/v1/plugins.js", root_dir + "/editors/sdkjs-plugins/v1/plugins.js")
+    base.download("https://tuneoffice.github.io/sdkjs-plugins/v1/plugins-ui.js", root_dir + "/editors/sdkjs-plugins/v1/plugins-ui.js")
+    base.download("https://tuneoffice.github.io/sdkjs-plugins/v1/plugins.css", root_dir + "/editors/sdkjs-plugins/v1/plugins.css")
     base.support_old_versions_plugins(root_dir + "/editors/sdkjs-plugins")
 
     base.copy_sdkjs_plugin(git_dir + "/desktop-sdk/ChromiumBasedEditors/plugins/encrypt", root_dir + "/editors/sdkjs-plugins", "advanced2", True)
@@ -264,7 +264,7 @@ def make():
 
     if isWindowsXP:
       base.create_dir(root_dir + "/providers")
-      base.copy_dir(git_dir + "/desktop-apps/common/loginpage/providers/onlyoffice", root_dir + "/providers/onlyoffice")
+      base.copy_dir(git_dir + "/desktop-apps/common/loginpage/providers/tuneoffice", root_dir + "/providers/tuneoffice")
     else:
       base.copy_dir(git_dir + "/desktop-apps/common/loginpage/providers", root_dir + "/providers")
 

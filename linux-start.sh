@@ -9,7 +9,7 @@ sudo apt-get install git-lfs
 git config --global credential.helper store
 
 # clone build_tools
-git clone https://git.onlyoffice.com/ONLYOFFICE/build_tools.git
+git clone https://git.tuneoffice.com/TUNEOFFICE/build_tools.git
 
 # deps =========================================
 
