@@ -2,8 +2,8 @@
     [System.Version]$Version = "0.0.0.0",
     [string]$Arch = "x64",
     [string]$Target,
-    [string]$CompanyName = "ONLYOFFICE",
-    [string]$ProductName = "DesktopEditors",
+    [string]$CompanyName = "TuneOffice",
+    [string]$ProductName = "TuneOffice",
     [string]$BuildDir
 )
 

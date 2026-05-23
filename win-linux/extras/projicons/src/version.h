@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -68,11 +68,11 @@
 #define VER_LANG_ID                 0x0409
 #define VER_CHARSET_ID              1252
 
-#define VER_FILEDESCRIPTION_STR     "ONLYOFFICE Editors\0"
-#define VER_PRODUCTNAME_STR         "ONLYOFFICE Editors\0"
-#define VER_COMPANYNAME_STR         "Ascensio System SIA\0"
-#define VER_LEGALCOPYRIGHT_STR      "© Ascensio System SIA " TO_STR(COPYRIGHT_YEAR) ". All rights reserved.\0"
-#define VER_COMPANYDOMAIN_STR       "www.onlyoffice.com\0"
+#define VER_FILEDESCRIPTION_STR     "Tune Office Editors\0"
+#define VER_PRODUCTNAME_STR         "Tune Office Editors\0"
+#define VER_COMPANYNAME_STR         "Tune Office\0"
+#define VER_LEGALCOPYRIGHT_STR      "© Tune Office " TO_STR(COPYRIGHT_YEAR) ". All rights reserved.\0"
+#define VER_COMPANYDOMAIN_STR       "tuneoffice.local\0"
 
 #define VER_INTERNALNAME_STR        "AppIcons\0"
 #define VER_LEGALTRADEMARKS1_STR    "All rights reserved\0"
@@ -84,4 +84,3 @@
 #endif
 
 #endif
-

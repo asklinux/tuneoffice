@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -41,35 +41,35 @@
 #define reUserName          "([^\\.]+)\\.?([^\\.]+)?"
 #define reCmdLang           "--(keep)?lang[:|=](\\w{2,5})"
 
-#define APP_NAME "DesktopEditors"
-#define APP_TITLE "ONLYOFFICE"
+#define APP_NAME "TuneOffice"
+#define APP_TITLE "Tune Office"
 #ifdef __linux
-# define APP_DATA_PATH "/onlyoffice/desktopeditors"
-# define REG_GROUP_KEY "onlyoffice"
-# define APP_MUTEX_NAME "asc:editors"
-# define DESKTOP_FILE_NAME "onlyoffice-desktopeditors"
+# define APP_DATA_PATH "/tuneoffice/tuneoffice"
+# define REG_GROUP_KEY "tuneoffice"
+# define APP_MUTEX_NAME "tuneoffice:editors"
+# define DESKTOP_FILE_NAME "tuneoffice"
 #else
-# define APP_DATA_PATH "/ONLYOFFICE/DesktopEditors"
-# define APP_REG_NAME  "ONLYOFFICE"
-# define REG_GROUP_KEY "ONLYOFFICE"
-# define REG_UNINST_KEY "ONLYOFFICE Desktop Editors"
-# define APP_MUTEX_NAME "TEAMLAB"
+# define APP_DATA_PATH "/TuneOffice/TuneOffice"
+# define APP_REG_NAME  "Tune Office"
+# define REG_GROUP_KEY "TuneOffice"
+# define REG_UNINST_KEY "Tune Office"
+# define APP_MUTEX_NAME "TUNEOFFICE"
 #endif
 
-#define WINDOW_NAME "ONLYOFFICE"
+#define WINDOW_NAME "Tune Office"
 #define WINDOW_TITLE WINDOW_NAME
-#define WINDOW_CLASS_NAME L"DocEditorsWindowClass"
+#define WINDOW_CLASS_NAME L"TuneOfficeWindowClass"
 #define WINDOW_EDITOR_CLASS_NAME L"SingleWindowClass"
-#define REG_APP_NAME "DesktopEditors"
+#define REG_APP_NAME "TuneOffice"
 #define APP_DEFAULT_LOCALE "en-US"
 #define APP_DEFAULT_SYSTEM_LOCALE 1
-#define APP_USER_MODEL_ID "ASC.Documents.5"
-#define APP_SIMPLE_WINDOW_TITLE "ONLYOFFICE Editor"
-#define APP_PROTOCOL "oo-office"
-#define FILE_PREFIX "onlyoffice_"
+#define APP_USER_MODEL_ID "TuneOffice.Documents"
+#define APP_SIMPLE_WINDOW_TITLE "Tune Office Editor"
+#define APP_PROTOCOL "tune-office"
+#define FILE_PREFIX "tuneoffice_"
 
-#define URL_SITE                "http://www.onlyoffice.com"
-#define URL_SIGNUP              "https://onlyoffice.com/registration.aspx?desktop=true"
+#define URL_SITE                "https://tuneoffice.local"
+#define URL_SIGNUP              "https://tuneoffice.local/registration"
 
 #define GET_REGISTRY_USER(variable) \
     QSettings variable(QSettings::NativeFormat, QSettings::UserScope, REG_GROUP_KEY, REG_APP_NAME);
@@ -83,8 +83,8 @@
 #define ACTIONPANEL_ACTIVATE    ACTIONPANEL_CONNECT + 1
 
 #define URL_AGPL "https://www.gnu.org/licenses/agpl-3.0.en.html"
-#define DOWNLOAD_PAGE "https://www.onlyoffice.com/en/download-desktop.aspx"
-#define RELEASE_NOTES "https://github.com/ONLYOFFICE/DesktopEditors/blob/master/CHANGELOG.md"
+#define DOWNLOAD_PAGE "https://tuneoffice.local/download"
+#define RELEASE_NOTES "https://tuneoffice.local/changelog"
 
 #ifdef __linux
 typedef unsigned char BYTE;
@@ -113,4 +113,3 @@ typedef unsigned char BYTE;
 #include "defines_p.h"
 
 #endif // DEFINES_H
-

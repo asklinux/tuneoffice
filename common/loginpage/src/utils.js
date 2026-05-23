@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -238,8 +238,8 @@ utils.defines.FileFormat = {
 
 utils.defines.DBLCLICK_LOCK_TIMEOUT = 800;
 utils.defines.links = {
-    regnew: 'https://www.onlyoffice.com/registration.aspx?app=desktop',
-    restorepass: 'https://www.onlyoffice.com/signin.aspx'
+    regnew: 'https://www.tuneoffice.com/registration.aspx?app=desktop',
+    restorepass: 'https://www.tuneoffice.com/signin.aspx'
 };
 
 utils.formatToEditor = function(f) {
@@ -524,8 +524,8 @@ utils.fn.needUseSvg = function () {
 utils.fn.sortProviders = function(list) {
     return (list || []).slice().sort((a, b) => {
 
-        if (a.provider === 'onlyoffice' && b.provider !== 'onlyoffice') return -1;
-        if (b.provider === 'onlyoffice' && a.provider !== 'onlyoffice') return 1;
+        if (a.provider === 'tuneoffice' && b.provider !== 'tuneoffice') return -1;
+        if (b.provider === 'tuneoffice' && a.provider !== 'tuneoffice') return 1;
 
         const aNoOrder = (a.order === undefined || a.order === null || a.order === '');
         const bNoOrder = (b.order === undefined || b.order === null || b.order === '');

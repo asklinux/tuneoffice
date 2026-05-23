@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -51,12 +51,12 @@
 #include <QApplication>
 #include <QJsonParseError>
 #ifdef _WIN32
-# define APP_LAUNCH_NAME "\\DesktopEditors.exe"
+# define APP_LAUNCH_NAME "\\TuneOffice.exe"
 # define RESTART_BATCH "/apprestart.bat"
 #else
 # include "platform_linux/xcbutils.h"
 # include <QProcess>
-# define APP_LAUNCH_NAME "/DesktopEditors"
+# define APP_LAUNCH_NAME "/TuneOffice"
 # define RESTART_BATCH "/apprestart.sh"
 #endif
 

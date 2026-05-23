@@ -2,9 +2,9 @@
     "provider": "liferay",
     "name": "Liferay",
     "check": {
-        "url": "/o/onlyoffice/status",
+        "url": "/o/tuneoffice/status",
     },
-    "editorPage" : "regex:[?&]p_p_id=com_onlyoffice_liferay_docs_portlet_editorportlet.*",
+    "editorPage" : "regex:[?&]p_p_id=com_tuneoffice_liferay_docs_portlet_editorportlet.*",
     "cryptoSupport" : "true",
     "order": 6,
     "icons": {
@@ -17,5 +17,5 @@
             "buttonLogo": "./assets/buttonlogo_dark.svg"
         }
     },
-    "startPage": "/o/onlyoffice/desktop/login"
+    "startPage": "/o/tuneoffice/desktop/login"
 }

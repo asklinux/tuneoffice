@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -44,7 +44,7 @@
 
 # define VER_COMPANYNAME_STR        "Novie kommunikacionnie tehnologii JSC\0"
 # define VER_LEGALCOPYRIGHT_STR     "Novie kommunikacionnie tehnologii JSC, 2017\0"
-# define VER_COMPANYDOMAIN_STR      "www.onlyoffice.ru\0"
+# define VER_COMPANYDOMAIN_STR      "www.tuneoffice.ru\0"
 # define ABOUT_COPYRIGHT_STR        VER_LEGALCOPYRIGHT_STR
 #endif
 

@@ -1,7 +1,7 @@
 {
     "provider": "dropbox",
     "name": "Dropbox",
-    "entryPage": "https://dropbox.onlyoffice.com/app",
+    "entryPage": "https://dropbox.tuneoffice.com/app",
     "extraLogout": "https://www.dropbox.com",
     "editorPage": "regex:\/(convert|editor)",
     "order": 1,

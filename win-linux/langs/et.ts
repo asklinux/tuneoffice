@@ -286,12 +286,12 @@
     </message>
     <message>
         <source>OFORM Document (*.oform)</source>
-        <translation type="vanished">ONLYOFFICE täidetav veebivorm (*.oform)</translation>
+        <translation type="vanished">TUNEOFFICE täidetav veebivorm (*.oform)</translation>
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="83"/>
         <source>DOCXF Document (*.docxf)</source>
-        <translation>ONLYOFFICE dokumendi vormi mall (*.docxf)</translation>
+        <translation>TUNEOFFICE dokumendi vormi mall (*.docxf)</translation>
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="85"/>
@@ -361,7 +361,7 @@
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="82"/>
-        <source>ONLYOFFICE Form Document (*.pdf)</source>
+        <source>TUNEOFFICE Form Document (*.pdf)</source>
         <translation>PDF vorm (*.pdf)</translation>
     </message>
     <message>

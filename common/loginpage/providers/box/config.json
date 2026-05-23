@@ -1,9 +1,9 @@
 {
     "provider": "box",
     "name": "Box",
-    "entryPage": "https://box.onlyoffice.com/app",
+    "entryPage": "https://box.tuneoffice.com/app",
     "extraLogout": "https://box.com",
-    "editorPage": "regex:execute.*onlyoffice_personal",
+    "editorPage": "regex:execute.*tuneoffice_personal",
     "order": 0,
     "icons": {
         "themeLight":{

@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -54,7 +54,7 @@
 # include <Windows.h>
 # include <WinInet.h>
 # include <shlwapi.h>
-# define APP_LAUNCH_NAME  L"/DesktopEditors.exe"
+# define APP_LAUNCH_NAME  L"/TuneOffice.exe"
 # define APP_LAUNCH_NAME2 L"/editors.exe"
 # define APP_HELPER       L"/editors_helper.exe"
 # define DAEMON_NAME      L"/updatesvc.exe"
@@ -70,7 +70,7 @@
 # include <unistd.h>
 # include <fnmatch.h>
 # include <uuid/uuid.h>
-# define APP_LAUNCH_NAME  "/DesktopEditors"
+# define APP_LAUNCH_NAME  "/TuneOffice"
 # define APP_HELPER       "/editors_helper"
 # define DAEMON_NAME      "/updatesvc"
 # define DAEMON_NAME_OLD  "/~updatesvc"

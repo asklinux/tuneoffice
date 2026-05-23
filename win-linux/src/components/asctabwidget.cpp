@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -395,7 +395,7 @@ int CAscTabWidget::addPortal(const QString& url, const QString& name, const QStr
     // setProperty("empty", false);
 
     QString args, _url = url;
-    if ( provider == "onlyoffice" && !_url.contains(QRegularExpression("desktop=true")) )
+    if ( provider == "tuneoffice" && !_url.contains(QRegularExpression("desktop=true")) )
         args.append("/?desktop=true");
     else {
         QRegularExpression _re("^((?:https?:\\/{2})?[^\\s\\?]+)(\\?[^\\s]+)?", QRegularExpression::CaseInsensitiveOption);
@@ -451,7 +451,7 @@ int CAscTabWidget::addOAuthPortal(const QString& portal, const QString& type, co
         pView->cef()->SetExternalCloud(service.toStdWString());
 
         QString _postfix;
-        if (service == "onlyoffice") _postfix = "/?desktop=true";
+        if (service == "tuneoffice") _postfix = "/?desktop=true";
         pView->cef()->load((portal + entrypage + _postfix).toStdWString());
     }
 
@@ -769,7 +769,7 @@ int CAscTabWidget::newPortal(const QString& url, const QString& name)
 {
     int tabIndex = tabIndexByEditorType(etNewPortal);
     if ( tabIndex < 0 ) {
-        if ( !((tabIndex = addPortal(url, name, "onlyoffice")) < 0) ) {
+        if ( !((tabIndex = addPortal(url, name, "tuneoffice")) < 0) ) {
             panel(tabIndex)->data()->setContentType(etNewPortal);
         }
     }

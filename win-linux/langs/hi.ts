@@ -361,7 +361,7 @@
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="82"/>
-        <source>ONLYOFFICE Form Document (*.pdf)</source>
+        <source>TUNEOFFICE Form Document (*.pdf)</source>
         <translation>पीडीएफ फॉर्म (*.pdf)</translation>
     </message>
     <message>

@@ -1,6 +1,6 @@
-$PackageName = "ONLYOFFICE Desktop Editors"
+$PackageName = "Tune Office"
 $BuildDir = "build"
-$DesktopDir = "DesktopEditors"
+$DesktopDir = "TuneOffice"
 
 Function BrandingAdvInstConfig {
     return `

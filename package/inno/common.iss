@@ -115,7 +115,7 @@ Compression=lzma2/ultra64
 LZMAUseSeparateProcess=yes
 
 [Languages]
-#ifdef _ONLYOFFICE
+#ifdef _TUNEOFFICE
 Name: en; MessagesFile: compiler:Default.isl;
 Name: ru; MessagesFile: compiler:Languages\Russian.isl;
 #else
@@ -225,14 +225,14 @@ Name: {group}\{cm:Uninstall}; IconFilename: {app}\{#iconsExe}; IconIndex: 25; Fi
 Name: "{group}\{cm:jumpDOCX}"; IconFilename: "{app}\{#iconsExe}"; IconIndex: 14; Filename: "{app}\{#iconsExe}"; Parameters: "--new:word";
 Name: "{group}\{cm:jumpXLSX}"; IconFilename: "{app}\{#iconsExe}"; IconIndex: 15; Filename: "{app}\{#iconsExe}"; Parameters: "--new:cell";
 Name: "{group}\{cm:jumpPPTX}"; IconFilename: "{app}\{#iconsExe}"; IconIndex: 16; Filename: "{app}\{#iconsExe}"; Parameters: "--new:slide";
-#ifdef _ONLYOFFICE
+#ifdef _TUNEOFFICE
 Name: "{group}\{cm:jumpDOCXF}"; IconFilename: "{app}\{#iconsExe}"; IconIndex: 17; Filename: "{app}\{#iconsExe}"; Parameters: "--new:form";
 #endif
 
 [Run]
 ;Filename: {app}\{#NAME_EXE_OUT}; Description: {cm:Launch,{#sAppName}}; Flags: postinstall nowait skipifsilent;
 Filename: {app}\{#iconsExe}; Description: {cm:Launch,{#sAppName}}; Flags: postinstall nowait skipifsilent runasoriginaluser;
-;Filename: http://www.onlyoffice.com/remove-portal-feedback-form.aspx; Description: Visit website; Flags: postinstall shellexec nowait
+;Filename: http://www.tuneoffice.com/remove-portal-feedback-form.aspx; Description: Visit website; Flags: postinstall shellexec nowait
 ;Filename: ms-settings:defaultapps; Description: {cm:runOpenDefaultApps}; Flags:postinstall shellexec nowait unchecked; MinVersion: 10.0.10240;
 
 [Registry]
@@ -251,7 +251,7 @@ Root: HKLM; Subkey: Software\Classes\{#ASSOC_PROG_ID}\DefaultIcon;          Valu
 Root: HKLM; Subkey: Software\Classes\{#ASSOC_PROG_ID}\shell\open\command;   ValueType: string; ValueName:; ValueData: """{app}\{#iconsExe}"" ""%1""";
 Root: HKLM; Subkey: Software\Classes\{#ASSOC_PROG_ID}\shell\open;           ValueType: string; ValueName: FriendlyAppName; ValueData: {#ASSOC_APP_FRIENDLY_NAME};
 
-#ifdef _ONLYOFFICE
+#ifdef _TUNEOFFICE
 Root: HKLM; Subkey: "SOFTWARE\Classes\{#sAppProtocol}"; ValueType: "string"; ValueData: "URL:{#sAppName} Protocol"; Flags: uninsdeletekey;
 Root: HKLM; Subkey: "SOFTWARE\Classes\{#sAppProtocol}"; ValueType: "string"; ValueName: "URL Protocol"; ValueData: "";
 Root: HKLM; Subkey: "SOFTWARE\Classes\{#sAppProtocol}\DefaultIcon"; ValueType: "string"; ValueData: "{app}\{#iconsExe},0";

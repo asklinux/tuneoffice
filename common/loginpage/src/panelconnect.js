@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -179,7 +179,7 @@
                 if ( !!item.icons && !!item.icons.themeLight ) {
                     const btn = provider_button_template(item.provider, item.name, item.icons);
 
-                    item.provider != 'onlyoffice' ? $box.append(btn) :
+                    item.provider != 'tuneoffice' ? $box.append(btn) :
                             html_empty_panel.find('#box-providers-premium-button').append(btn);
                 }
             });
@@ -298,7 +298,7 @@
 
                 function _create_icon_id(provider) {
                     switch ( provider ) {
-                    case 'onlyoffice':
+                    case 'tuneoffice':
                     case 'asc': return 'icon__asc';
                     case 'owncloud': return 'icon__ownc';
                     case 'nextcloud': return 'icon__nextc';
@@ -459,7 +459,7 @@
                     if ( model.email == obj.email ) {
                         if ( !model.get('logged') ) {
                             model.set('logged', true);
-                            if (model.provider != 'onlyoffice')
+                            if (model.provider != 'tuneoffice')
                                 _write_portal_cookie(obj.domain);
 
                             if ( model.get('removed') ) {
@@ -489,7 +489,7 @@
                 }
 
 
-                !obj.provider && (obj.provider = 'onlyoffice');
+                !obj.provider && (obj.provider = 'tuneoffice');
                 if ( !config.portals.checklist.find(i => i.provider == obj.provider) ) {
                     let _p = config.portals.checklist.find(i => i.name.toLowerCase() == obj.provider.toLowerCase());
                     if ( _p )
@@ -512,7 +512,7 @@
 
                 PortalsStore.keep(info);
                 sdk.oncloudchanged(info, 'added')
-                if ( obj.provider != 'onlyoffice' ) {
+                if ( obj.provider != 'tuneoffice' ) {
                     // sdk.setCookie(info.portal, utils.skipUrlProtocol(info.portal), "/", "asc_auth_key", utils.fn.uuid());
                     _write_portal_cookie(info.portal);
 

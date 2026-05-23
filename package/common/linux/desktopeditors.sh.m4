@@ -326,4 +326,4 @@ done
 
 APP_PATH=/opt/M4_DESKTOPEDITORS_PREFIX
 export LD_LIBRARY_PATH=$APP_PATH${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}
-exec $APP_PATH/DesktopEditors "$@"
+exec $APP_PATH/TuneOffice "$@"

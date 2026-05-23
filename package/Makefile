@@ -1,6 +1,6 @@
 PWD := $(shell pwd)
 
-COMPANY_NAME ?= ONLYOFFICE
+COMPANY_NAME ?= TUNEOFFICE
 PRODUCT_NAME ?= Desktop Editors
 PRODUCT_NAME_SHORT ?= $(subst $(empty) $(empty),,$(PRODUCT_NAME))
 
@@ -8,9 +8,9 @@ COMPANY_NAME_LOW = $(shell echo $(COMPANY_NAME) | tr A-Z a-z)
 PRODUCT_NAME_LOW = $(shell echo $(PRODUCT_NAME_SHORT) | tr A-Z a-z)
 
 PUBLISHER_NAME ?= Ascensio System SIA
-PUBLISHER_URL ?= http://onlyoffice.com
-SUPPORT_URL ?= http://support.onlyoffice.com
-SUPPORT_MAIL ?= support@onlyoffice.com
+PUBLISHER_URL ?= http://tuneoffice.com
+SUPPORT_URL ?= http://support.tuneoffice.com
+SUPPORT_MAIL ?= support@tuneoffice.com
 SCHEME_HANDLER ?= oo-office
 
 PRODUCT_VERSION ?= 0.0.0
@@ -86,7 +86,10 @@ DEB_DEPS += deb/build/debian/$(PACKAGE_NAME).links
 DEB_DEPS += deb/build/debian/$(PACKAGE_NAME)-help.install
 DEB_DEPS += deb/build/package.config
 
-SOURCE_DIR := ../../build_tools/out/$(PLATFORM)/$(COMPANY_NAME_LOW)
+SOURCE_VENDOR_DIR ?= $(COMPANY_NAME_LOW)
+SOURCE_APP_DIR ?= desktopeditors
+DESKTOPEDITORS_BINARY ?= DesktopEditors
+SOURCE_DIR := ../../build_tools/out/$(PLATFORM)/$(SOURCE_VENDOR_DIR)
 
 M4_PARAMS += -D M4_COMPANY_NAME='$(COMPANY_NAME)'
 M4_PARAMS += -D M4_COMPANY_NAME_LOW='$(COMPANY_NAME_LOW)'
@@ -160,8 +163,8 @@ clean :
 
 build : $(LINUX_DEPS)
 	mkdir -p $@/main/opt/$(DESKTOPEDITORS_PREFIX)
-	cp -rft $@/main/opt/$(DESKTOPEDITORS_PREFIX) $(SOURCE_DIR)/desktopeditors/*
-	chmod 755 $@/main/opt/$(DESKTOPEDITORS_PREFIX)/DesktopEditors
+	cp -rft $@/main/opt/$(DESKTOPEDITORS_PREFIX) $(SOURCE_DIR)/$(SOURCE_APP_DIR)/*
+	chmod 755 $@/main/opt/$(DESKTOPEDITORS_PREFIX)/$(DESKTOPEDITORS_BINARY)
 
 ifneq ($(PACKAGE_EDITION), commercial)
 	cp -f $(BRANDING_DIR)/common/license/$(PACKAGE_EDITION)/LICENSE.txt \

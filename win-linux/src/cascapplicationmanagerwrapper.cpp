@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -516,7 +516,7 @@ bool CAscApplicationManagerWrapper::processCommonEvent(NSEditorApi::CAscCefMenuE
                 if ( _json_to_open.isEmpty() ) {
                     QString _templates_url{QString::fromStdWString(InputArgs::argument_value(L"--templates-url"))};
                     if ( _templates_url.isEmpty() )
-                        _templates_url = "https://templates.onlyoffice.com/?desktop=true";
+                        _templates_url = "https://templates.tuneoffice.com/?desktop=true";
 
                     QJsonObject _json_obj{
                         {"portal", _templates_url},

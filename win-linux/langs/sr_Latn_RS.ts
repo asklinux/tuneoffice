@@ -282,12 +282,12 @@
     </message>
     <message>
         <source>OFORM Document (*.oform)</source>
-        <translation type="vanished">ONLYOFFICE Popunjujući Onlajn Formular (*.oform)</translation>
+        <translation type="vanished">TUNEOFFICE Popunjujući Onlajn Formular (*.oform)</translation>
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="83"/>
         <source>DOCXF Document (*.docxf)</source>
-        <translation>ONLYOFFICE formular šablon (*.docxf)</translation>
+        <translation>TUNEOFFICE formular šablon (*.docxf)</translation>
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="85"/>
@@ -353,7 +353,7 @@
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="82"/>
-        <source>ONLYOFFICE Form Document (*.pdf)</source>
+        <source>TUNEOFFICE Form Document (*.pdf)</source>
         <translation>PDF obrazac (*.pdf)</translation>
     </message>
     <message>

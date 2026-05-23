@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -1439,7 +1439,7 @@ void CMainWindow::onPortalOpen(QString json)
         QString _portal = objRoot["portal"].toString(),
                 _entry = objRoot["entrypage"].toString();
         if (!_portal.isEmpty()) {
-            int res = m_pTabs->openPortal(_portal, objRoot["provider"].toString("onlyoffice"), _entry);
+            int res = m_pTabs->openPortal(_portal, objRoot["provider"].toString("tuneoffice"), _entry);
             if (!(res < 0)) {
                 toggleButtonMain(false, true);
                 m_pTabs->setCurrentIndex(res);

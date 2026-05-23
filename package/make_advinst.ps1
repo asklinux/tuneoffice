@@ -2,8 +2,8 @@
     [System.Version]$Version = "0.0.0.0",
     [string]$Arch = "x64",
     [string]$Target,
-    [string]$CompanyName = "ONLYOFFICE",
-    [string]$ProductName = "DesktopEditors",
+    [string]$CompanyName = "TuneOffice",
+    [string]$ProductName = "TuneOffice",
     [string]$BuildDir,
     [switch]$Sign,
     [switch]$Debug
@@ -145,7 +145,7 @@ $AdvInstConfig += `
     "SetProperty Version=$VersionShort", `
     "SetVersion $Version -noprodcode", `
     "SetCurrentFeature MainFeature", `
-    "UpdateFile APPDIR\DesktopEditors.exe ..\$BuildDir\desktop\DesktopEditors.exe", `
+    "UpdateFile APPDIR\TuneOffice.exe ..\$BuildDir\desktop\TuneOffice.exe", `
     "UpdateFile APPDIR\updatesvc.exe ..\$BuildDir\desktop\updatesvc.exe", `
     "NewSync APPDIR ..\$BuildDir\desktop -existingfiles keep -feature Files", `
     "NewSync APPDIR\$PluginManagerPath ..\$BuildDir\desktop\$PluginManagerPath -existingfiles delete -feature PluginManager", `
@@ -172,15 +172,15 @@ $AdvInstConfig += `
     "Rebuild -buildslist $MsiBuild"
 $AdvInstConfig = ";aic", $AdvInstConfig
 $AdvInstConfig
-Write-Output $AdvInstConfig | Out-File -Encoding UTF8 "DesktopEditors.aic"
+Write-Output $AdvInstConfig | Out-File -Encoding UTF8 "TuneOffice.aic"
 
 ####
 
 Write-Host "`n[ Build Advanced Installer project ]"
 
-Write-Host "AdvancedInstaller.com /execute DesktopEditors.aip DesktopEditors.aic"
+Write-Host "AdvancedInstaller.com /execute TuneOffice.aip TuneOffice.aic"
 & AdvancedInstaller.com /? | Select-Object -First 1
-& AdvancedInstaller.com /execute DesktopEditors.aip DesktopEditors.aic
+& AdvancedInstaller.com /execute TuneOffice.aip TuneOffice.aic
 if ($LastExitCode -ne 0) { throw }
 
 ####

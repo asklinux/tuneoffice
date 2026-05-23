@@ -302,12 +302,12 @@
     </message>
     <message>
         <source>OFORM Document (*.oform)</source>
-        <translation type="vanished">ONLYOFFICE記入可能なオンライン フォーム(*.oform)</translation>
+        <translation type="vanished">TUNEOFFICE記入可能なオンライン フォーム(*.oform)</translation>
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="83"/>
         <source>DOCXF Document (*.docxf)</source>
-        <translation>ONLYOFFICE フォーム テンプレート (*.docxf)</translation>
+        <translation>TUNEOFFICE フォーム テンプレート (*.docxf)</translation>
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="85"/>
@@ -381,7 +381,7 @@
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="82"/>
-        <source>ONLYOFFICE Form Document (*.pdf)</source>
+        <source>TUNEOFFICE Form Document (*.pdf)</source>
         <translation>PDFフォーム (*.pdf)</translation>
     </message>
     <message>

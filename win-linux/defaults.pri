@@ -269,7 +269,7 @@ core_windows {
                $$PWD/src/platform_win/filechooser.cpp \
                $$PWD/src/platform_win/printdialog.cpp
 
-    OTHER_FILES += $$PWD/res/manifest/DesktopEditors.exe.manifest
+    OTHER_FILES += $$PWD/res/manifest/TuneOffice.exe.manifest
 
     updmodule:!build_xp {
         INCLUDEPATH += $$PWD/extras/update-daemon/src/classes

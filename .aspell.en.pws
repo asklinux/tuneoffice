@@ -118,7 +118,7 @@ OdfFormatWriter
 OdfFormatwriter
 odt
 onDocumentStateChange
-ONLYOFFICE
+TUNEOFFICE
 onRequestInsertImage
 onRequestMailMergeRecipients
 onRequestSaveAs

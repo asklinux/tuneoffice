@@ -2,8 +2,8 @@
     [System.Version]$Version = "0.0.0.0",
     [string]$Arch = "x64",
     [string]$Target,
-    [string]$CompanyName = "ONLYOFFICE",
-    [string]$ProductName = "DesktopEditors",
+    [string]$CompanyName = "TuneOffice",
+    [string]$ProductName = "TuneOffice",
     [string]$BuildDir,
     [string]$BrandingDir,
     [switch]$Sign,
@@ -103,8 +103,8 @@ $InnoArgs = "/DVERSION=$Version",
 if ($BrandingDir) {
     $InnoArgs += "/DBRANDING_DIR=$BrandingDir"
 }
-if ($CompanyName -eq "onlyoffice") {
-    $InnoArgs += "/D_ONLYOFFICE"
+if ($CompanyName -eq "tuneoffice") {
+    $InnoArgs += "/D_TUNEOFFICE"
 }
 switch ($Target) {
     "commercial" {

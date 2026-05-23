@@ -5,12 +5,12 @@ set -e
 case "$1" in
   purge)
     rm -fr /home/*/.local/share/M4_DESKTOPEDITORS_PREFIX
-    rm -fr /home/*/.config/M4_COMPANY_NAME_LOW/DesktopEditors.conf
+    rm -fr /home/*/.config/M4_COMPANY_NAME_LOW/TuneOffice.conf
   ;;
 
   remove|upgrade)
-    rm -f /usr/share/mime/packages/onlyoffice-docxf.xml
-    rm -f /usr/share/mime/packages/onlyoffice-oform.xml
+    rm -f /usr/share/mime/packages/tuneoffice-docxf.xml
+    rm -f /usr/share/mime/packages/tuneoffice-oform.xml
   ;;
 
   failed-upgrade|abort-install|abort-upgrade|disappear)

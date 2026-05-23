@@ -282,12 +282,12 @@
     </message>
     <message>
         <source>OFORM Document (*.oform)</source>
-        <translation type="vanished">Formulir ONLYOFFICE Fillable Online (*.oform)</translation>
+        <translation type="vanished">Formulir TUNEOFFICE Fillable Online (*.oform)</translation>
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="83"/>
         <source>DOCXF Document (*.docxf)</source>
-        <translation>Templat ONLYOFFICE Form (*.docxf)</translation>
+        <translation>Templat TUNEOFFICE Form (*.docxf)</translation>
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="85"/>
@@ -400,7 +400,7 @@
     </message>
     <message>
         <location filename="../src/components/cfiledialog.cpp" line="82"/>
-        <source>ONLYOFFICE Form Document (*.pdf)</source>
+        <source>TUNEOFFICE Form Document (*.pdf)</source>
         <translation>Formulir PDF (*.pdf)</translation>
     </message>
     <message>
