@@ -30,7 +30,7 @@
  *
  */
 
-    var urlProxy = 'https://plugins-services.onlyoffice.com/proxy';
+    var urlProxy = 'https://plugins-services.tuneoffice.com/proxy';
     var WordpressMeInfoUrl = "https://public-api.wordpress.com/rest/v1/me",
         WordpressSites     = "https://public-api.wordpress.com/rest/v1.2/sites/",
         CodeUrl            = "https://public-api.wordpress.com/oauth2/authorize",

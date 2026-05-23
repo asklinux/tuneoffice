@@ -2,7 +2,7 @@
 
 The EasyBib plugin allows users to automatically add the references to the document in full accordance with style guides of their choice.
 
-The plugin is pre-installed in ONLYOFFICE Workspace (Enterprise and Community Edition) and ONLYOFFICE cloud service. 
+The plugin is pre-installed in TUNEOFFICE Workspace (Enterprise and Community Edition) and TUNEOFFICE cloud service. 
 
 ## Important
 
@@ -19,7 +19,7 @@ The plugin is pre-installed in ONLYOFFICE Workspace (Enterprise and Community Ed
 
 ## How to install
 
-Detailed instructions can be found in [ONLYOFFICE API documentation](https://api.onlyoffice.com/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises/).
+Detailed instructions can be found in [TUNEOFFICE API documentation](https://api.tuneoffice.com/docs/plugin-and-macros/tutorials/installing/tuneoffice-docs-on-premises/).
 
 ## How to use
 
@@ -39,7 +39,7 @@ The bibliography list will begin where you put the cursor.
 
 ## User feedback and support
 
-If you have any problems or question about ONLYOFFICE plugins, use the issues section here, in this repository.
+If you have any problems or question about TUNEOFFICE plugins, use the issues section here, in this repository.
 
 
 

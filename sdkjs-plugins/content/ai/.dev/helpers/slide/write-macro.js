@@ -33,7 +33,7 @@
 	let func = new RegisteredFunction({
 		"name": "writeMacro",
 		"text": "Run Macro",
-		"description": `Executes a JavaScript macro using the OnlyOffice Presentation API.
+		"description": `Executes a JavaScript macro using the TuneOffice Presentation API.
 Use this tool to perform any presentation operation when no other specialized tool is available.
 This tool can also be used to READ/GET data from the presentation — make the last expression in the script be the value you want to retrieve, and it will be returned as the tool result.
 For example, to get the number of slides, write: Api.GetPresentation().GetSlidesCount()
@@ -43,8 +43,8 @@ The return value of the last expression will be the tool's output.`,
 			"properties": {
 				"code": {
 					"type": "string",
-					"description": `Valid JavaScript code using the OnlyOffice Presentation API to execute directly via eval. Rules:
-- Use only the OnlyOffice Presentation API (Api, Api.GetPresentation(), etc.)
+					"description": `Valid JavaScript code using the TuneOffice Presentation API to execute directly via eval. Rules:
+- Use only the TuneOffice Presentation API (Api, Api.GetPresentation(), etc.)
 - Do NOT wrap the code in a function or IIFE — output only the statements to execute directly
 - Do NOT include any explanation, comments, or markdown — output raw JavaScript only
 - To get the presentation object: let oPresentation = Api.GetPresentation()
@@ -140,19 +140,19 @@ oSlide.SetBackground(oFill);`
 			try {
 				var __result = eval(Asc.scope.macroCode);
 				if (__result !== undefined && __result !== null) {
-					return { onlyoffice_id_result: __result };
+					return { tuneoffice_id_result: __result };
 				}
 			} catch(e) {
-				return { onlyoffice_id_error_message: e.name + ": " + e.message };
+				return { tuneoffice_id_error_message: e.name + ": " + e.message };
 			}
 		});
 
-		if (returnValue && returnValue.onlyoffice_id_error_message) {
-			throw new window.AgentState.ToolError(returnValue.onlyoffice_id_error_message);
+		if (returnValue && returnValue.tuneoffice_id_error_message) {
+			throw new window.AgentState.ToolError(returnValue.tuneoffice_id_error_message);
 		}
 
-		if (returnValue && returnValue.onlyoffice_id_result !== undefined) {
-			return returnValue.onlyoffice_id_result;
+		if (returnValue && returnValue.tuneoffice_id_result !== undefined) {
+			return returnValue.tuneoffice_id_result;
 		}
 	};
 

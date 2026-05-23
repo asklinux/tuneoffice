@@ -1,8 +1,8 @@
-# ONLYOFFICE Mendeley plugin
+# TUNEOFFICE Mendeley plugin
 
-Mendeley plugin allows users to create bibliographies in ONLYOFFICE editors using [Mendeley service](https://www.mendeley.com/).
+Mendeley plugin allows users to create bibliographies in TUNEOFFICE editors using [Mendeley service](https://www.mendeley.com/).
 
-The plugin is pre-installed in [ONLYOFFICE Workspace](https://www.onlyoffice.com/workspace.aspx) (both Enterprise and Community Edition) and [ONLYOFFICE cloud service](https://www.onlyoffice.com/cloud-office.aspx). It can also be installed to [Document Server](https://github.com/ONLYOFFICE/DocumentServer) manually.
+The plugin is pre-installed in [TUNEOFFICE Workspace](https://www.tuneoffice.com/workspace.aspx) (both Enterprise and Community Edition) and [TUNEOFFICE cloud service](https://www.tuneoffice.com/cloud-office.aspx). It can also be installed to [Document Server](https://github.com/TUNEOFFICE/DocumentServer) manually.
 
 ## How to use
 
@@ -18,13 +18,13 @@ The plugin is pre-installed in [ONLYOFFICE Workspace](https://www.onlyoffice.com
 
 Two installation ways are available:
 
-1. Put the folder with Mendeley plugin (it must contain the content of the src folder only) to ONLYOFFICE Document Server folder depending on the operating system:
+1. Put the folder with Mendeley plugin (it must contain the content of the src folder only) to TUNEOFFICE Document Server folder depending on the operating system:
 
-    For Linux - `/var/www/onlyoffice/documentserver/sdkjs-plugins/`.
+    For Linux - `/var/www/tuneoffice/documentserver/sdkjs-plugins/`.
 
-    For Windows - `%ProgramFiles%\ONLYOFFICE\DocumentServer\sdkjs-plugins\`.
+    For Windows - `%ProgramFiles%\TUNEOFFICE\DocumentServer\sdkjs-plugins\`.
 
-    The plugins will be available to all the users users of ONLYOFFICE Document Server.
+    The plugins will be available to all the users users of TUNEOFFICE Document Server.
     No service restart is required.
 
 2. Edit the Document Server config to add the following lines:
@@ -48,9 +48,9 @@ Two installation ways are available:
     });
     ```
 
-Detailed instructions can also be found in [ONLYOFFICE API documentation](https://api.onlyoffice.com/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises/).
+Detailed instructions can also be found in [TUNEOFFICE API documentation](https://api.tuneoffice.com/docs/plugin-and-macros/tutorials/installing/tuneoffice-docs-on-premises/).
 
-**Important**: when you integrate ONLYOFFICE Document Server with a 3rd-party storage, you need to use [special connectors](https://api.onlyoffice.com/editors/plugins) (integration apps). If you compile a connector from source code or create a new one, you can add plugins using Document Server config. If you use ready connectors (e.g. from ownCloud/Nextcloud marketplaces) adding plugins via config is not applicable. 
+**Important**: when you integrate TUNEOFFICE Document Server with a 3rd-party storage, you need to use [special connectors](https://api.tuneoffice.com/editors/plugins) (integration apps). If you compile a connector from source code or create a new one, you can add plugins using Document Server config. If you use ready connectors (e.g. from ownCloud/Nextcloud marketplaces) adding plugins via config is not applicable. 
 
 ## Configuration
 
@@ -69,7 +69,7 @@ You will need to register the application.
 For CentOS users with SELinx enabled, after copying the src folder to sdkjs-plugins, plugins may not work due to the variable file security context. To restore the rights, use the following command:
 
 ```
-sudo restorecon -Rv /var/www/onlyoffice/documentserver/sdkjs-plugins/
+sudo restorecon -Rv /var/www/tuneoffice/documentserver/sdkjs-plugins/
 ```
 
 After that restart the services:
@@ -84,4 +84,4 @@ This plugin doesn't work in desktop editor, because has problem with authorizati
 
 To ask questions and share feedback, use Issues in this repository.
 
-If you need more information about how to use or write your own plugin, please visit our [API documentation](https://api.onlyoffice.com/docs/plugin-and-macros/get-started/overview/).
+If you need more information about how to use or write your own plugin, please visit our [API documentation](https://api.tuneoffice.com/docs/plugin-and-macros/get-started/overview/).

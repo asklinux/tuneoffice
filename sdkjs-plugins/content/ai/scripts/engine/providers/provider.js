@@ -659,7 +659,7 @@
 
 	}
 	
-	window.AI.externalModelPrefix = "[onlyoffice_external]";
+	window.AI.externalModelPrefix = "[tuneoffice_external]";
 	window.AI.Provider = Provider;
 	
 })();

@@ -1,4 +1,4 @@
-import{n as e}from"./chunk-BneVvdWh.js";var t,n,r,i;e((()=>{t={title:`Components/Input`,tags:[`autodocs`],parameters:{docs:{description:{component:`Various styled inputs from ONLYOFFICE plugin UI.`}}}},n=()=>`
+import{n as e}from"./chunk-BneVvdWh.js";var t,n,r,i;e((()=>{t={title:`Components/Input`,tags:[`autodocs`],parameters:{docs:{description:{component:`Various styled inputs from TUNEOFFICE plugin UI.`}}}},n=()=>`
   <textarea
     style="height:45px;width: 100%;"
     class="form-control"

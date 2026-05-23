@@ -19,7 +19,7 @@ class PluginPacker:
     DEFAULT_EXCLUDES = ['deploy/*', 'node_modules/*', '.dev/*']
     MAX_RETRIES = 3
     RETRY_DELAY = 1
-    OLD_PATH_PATTERN = r'https://onlyoffice\.github\.io/sdkjs-plugins/v1/[\w\-\./\*]*'
+    OLD_PATH_PATTERN = r'https://tuneoffice\.github\.io/sdkjs-plugins/v1/[\w\-\./\*]*'
     NEW_PATH = './../v1/'
     
     def __init__(self, old_mode=False):

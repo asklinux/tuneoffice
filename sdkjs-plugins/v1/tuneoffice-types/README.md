@@ -1,11 +1,11 @@
-# OnlyOffice Plugin API Types
+# TuneOffice Plugin API Types
 
-TypeScript type definitions for OnlyOffice plugins.
+TypeScript type definitions for TuneOffice plugins.
 
 ## Installation
 
 ```bash
-npm install @types/onlyoffice-plugins-api
+npm install @types/tuneoffice-plugins-api
 ```
 
 ## Usage
@@ -17,7 +17,7 @@ Add to your `tsconfig.json`:
 ```json
 {
   "compilerOptions": {
-    "types": ["types-onlyoffice-plugins-api"]
+    "types": ["types-tuneoffice-plugins-api"]
   }
 }
 ```
@@ -25,7 +25,7 @@ Add to your `tsconfig.json`:
 Or reference directly in your TypeScript files:
 
 ```typescript
-/// <reference types="types-onlyoffice-plugins-api" />
+/// <reference types="types-tuneoffice-plugins-api" />
 ```
 
 ### Example Plugin
@@ -70,12 +70,12 @@ Run the generation script to update the Office API types:
 npm run generate
 ```
 
-This fetches the latest API definitions from `ONLYOFFICE/office-js-api-declarations`.
+This fetches the latest API definitions from `TUNEOFFICE/office-js-api-declarations`.
 
 ## Project Structure
 
 ```
-onlyoffice-types/
+tuneoffice-types/
 ├── index.d.ts          # Main plugin API types
 ├── src/generated/      # Auto-generated Office API types
 │   ├── word.ts

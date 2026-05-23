@@ -1,4 +1,4 @@
 # Authors
 
-* Ascensio System SIA: <integration@onlyoffice.com>
+* Ascensio System SIA: <integration@tuneoffice.com>
 

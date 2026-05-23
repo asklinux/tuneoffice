@@ -1,4 +1,4 @@
-import{n as e}from"./chunk-BneVvdWh.js";var t,n,r,i;e((()=>{t={title:`Components/Label`,tags:[`autodocs`],parameters:{docs:{description:{component:`Various styled labels from ONLYOFFICE plugin UI.`}}}},n=()=>`
+import{n as e}from"./chunk-BneVvdWh.js";var t,n,r,i;e((()=>{t={title:`Components/Label`,tags:[`autodocs`],parameters:{docs:{description:{component:`Various styled labels from TUNEOFFICE plugin UI.`}}}},n=()=>`
   <label class="header">Header label</label>
 `,n.storyName=`Header Label`,r=()=>`
   <label class="link">Link label</label>

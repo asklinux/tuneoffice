@@ -1,10 +1,10 @@
 // @ts-check
 
 /// <reference path="../types-global.js" />
-/// <reference path="../../../../../v1/onlyoffice-types/index.d.ts" /> 
+/// <reference path="../../../../../v1/tuneoffice-types/index.d.ts" /> 
 
-/** @typedef {import("../../../../../v1/onlyoffice-types").PluginWindow} PluginWindow */
-/** @typedef {import("../../../../../v1/onlyoffice-types").VariationConfig} VariationConfig */
+/** @typedef {import("../../../../../v1/tuneoffice-types").PluginWindow} PluginWindow */
+/** @typedef {import("../../../../../v1/tuneoffice-types").VariationConfig} VariationConfig */
 
 class AdditionalWindow {
     /** @type {PluginWindow | null} */

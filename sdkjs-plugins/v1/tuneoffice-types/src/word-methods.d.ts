@@ -1,6 +1,6 @@
 /**
- * ONLYOFFICE Text Document API Methods Type Definitions
- * Source: https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/
+ * TUNEOFFICE Text Document API Methods Type Definitions
+ * Source: https://api.tuneoffice.com/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/
  */
 
 interface CommentData {

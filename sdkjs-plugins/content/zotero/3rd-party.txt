@@ -1,4 +1,4 @@
-Zotero ONLYOFFICE integration plugin uses code from the following 3rd party projects:
+Zotero TUNEOFFICE integration plugin uses code from the following 3rd party projects:
 
 
 1. citeproc-js - A JavaScript implementation of the Citation Style Language (CSL) citation formatting language. (https://github.com/Juris-M/citeproc-js)

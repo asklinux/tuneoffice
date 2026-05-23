@@ -145,7 +145,7 @@ Available functions:\n";
 			return actions;
 		};
 
-		var actions_key = "onlyoffice_ai_actions_key";
+		var actions_key = "tuneoffice_ai_actions_key";
 		AI.ActionsSave = function()
 		{
 			try
@@ -451,7 +451,7 @@ Available functions:\n";
 
 	window.Asc.plugin.onTranslate = function()
 	{
-		document.getElementById("header").innerHTML = window.Asc.plugin.tr("ONLYOFFICE AI Agent");
+		document.getElementById("header").innerHTML = window.Asc.plugin.tr("TUNEOFFICE AI Agent");
 		document.getElementById("chatInput").placeholder = window.Asc.plugin.tr("Enter message") + "...";
 		document.getElementById("goId").innerHTML = window.Asc.plugin.tr("Go");
 	};

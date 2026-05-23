@@ -308,7 +308,7 @@ function fetchExternal(url, options, isStreaming) {
 
 	AI.TmpProviderForModels = null;
 
-	AI.PROXY_URL = "https://plugins-services.onlyoffice.com/proxy";
+	AI.PROXY_URL = "https://plugins-services.tuneoffice.com/proxy";
 
 	AI._getHeaders = function(_provider) {
 		let provider = _provider.createInstance ? _provider : AI.Storage.getProvider(_provider.name);

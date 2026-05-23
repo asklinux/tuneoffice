@@ -30,7 +30,7 @@
  *
  */
 
-var urlProxy         = 'https://plugins-services.onlyoffice.com/proxy';
+var urlProxy         = 'https://plugins-services.tuneoffice.com/proxy';
 var searchBookUrl    = "https://worldcat.citation-api.com/query?search=",
     searchJournalUrl = "https://crossref.citation-api.com/query?search=",
     searchWebSiteUrl = "https://web.citation-api.com/query?search=",

@@ -1,11 +1,11 @@
 {
-  "name": "@types/onlyoffice-plugins-api",
+  "name": "@types/tuneoffice-plugins-api",
   "version": "0.1.0",
   "types": "index.d.ts",
-  "description": "TypeScript definitions for OnlyOffice plugins",
+  "description": "TypeScript definitions for TuneOffice plugins",
   "license": "MIT",
   "keywords": [
-    "onlyoffice",
+    "tuneoffice",
     "plugin",
     "typescript",
     "types"

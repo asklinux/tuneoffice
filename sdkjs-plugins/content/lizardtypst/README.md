@@ -1,12 +1,12 @@
 # LizardTypst Plugin
 
-A simple plugin for ONLYOFFICE that allows you to insert Typst mathematical formulas as high-quality SVG images, powered by the `typst.ts` library.
+A simple plugin for TUNEOFFICE that allows you to insert Typst mathematical formulas as high-quality SVG images, powered by the `typst.ts` library.
 
-This plugin is compatible with [self-hosted](https://github.com/ONLYOFFICE/DocumentServer) and [desktop](https://github.com/ONLYOFFICE/DesktopEditors) versions of ONLYOFFICE editors. It can be added to ONLYOFFICE instances manually.
+This plugin is compatible with [self-hosted](https://github.com/TUNEOFFICE/DocumentServer) and [desktop](https://github.com/TUNEOFFICE/DesktopEditors) versions of TUNEOFFICE editors. It can be added to TUNEOFFICE instances manually.
 
 ## Motivation
 
-The LizardTypst plugin draws inspiration from the existing **Iguana LaTeX** plugin. Our goal is to provide a modern and accessible solution for Typst users by leveraging the benefits of Typst directly within ONLYOFFICE, without requiring complex local setups.
+The LizardTypst plugin draws inspiration from the existing **Iguana LaTeX** plugin. Our goal is to provide a modern and accessible solution for Typst users by leveraging the benefits of Typst directly within TUNEOFFICE, without requiring complex local setups.
 
 ## Features
 
@@ -25,14 +25,14 @@ This plugin uses a vendored (self-hosted) version of `typst.ts` to ensure offlin
 
 ## How to use
 
-1. Go to the **Plugins** tab in the ONLYOFFICE editor.
+1. Go to the **Plugins** tab in the TUNEOFFICE editor.
 2. Click on the **LizardTypst** icon to open the plugin window.
 3. Enter your Typst code in the input area on the left. A preview will be generated on the right.
 4. Once you are satisfied with the result, click the **Insert** button to place the image into your document.
 
 ## How to install
 
-Detailed instructions for plugin installation can be found in the official [ONLYOFFICE API documentation](https://api.onlyoffice.com/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises/).
+Detailed instructions for plugin installation can be found in the official [TUNEOFFICE API documentation](https://api.tuneoffice.com/docs/plugin-and-macros/tutorials/installing/tuneoffice-docs-on-premises/).
 
 ## User feedback and support
 

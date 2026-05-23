@@ -37,8 +37,8 @@ let isPluginLoading = false;                                         // flag plu
 let isOnline = true;                                                 // flag internet connection
 isLocal && checkInternet();                                          // check internet connection (only for desktop)
 let interval = null;                                                 // interval for checking internet connection (if it doesn't work on launch)
-const OOMarketplaceUrl = 'https://onlyoffice.github.io/';            // url to oficial store (for local version store in desktop)
-const OOIO = 'https://github.com/ONLYOFFICE/onlyoffice.github.io/';  // url to oficial github repository (for links and discussions)
+const OOMarketplaceUrl = 'https://tuneoffice.github.io/';            // url to oficial store (for local version store in desktop)
+const OOIO = 'https://github.com/TUNEOFFICE/tuneoffice.github.io/';  // url to oficial github repository (for links and discussions)
 const discussionsUrl = OOIO + 'discussions/';                        // discussions url
 let searchTimeout = null;                                            // timeot for search
 let founded = [];                                                    // last founded elemens (for not to redraw if a result is the same)
@@ -65,7 +65,7 @@ let isResizeOnStart = false;                                         // flag for
 let slideIndex = 1;                                                  // index for slides
 let PsMain = null;                                                   // scroll for list of plugins
 let PsChangelog = null;                                               // scroll for changelog preview
-const proxyUrl = 'https://plugins-services.onlyoffice.com/proxy';    // url to proxy for getting rating
+const proxyUrl = 'https://plugins-services.tuneoffice.com/proxy';    // url to proxy for getting rating
 const supportedScaleValues = [1, 1.25, 1.5, 1.75, 2];                // supported scale
 let scale = {                                                        // current scale
 	percent  : "100%",                                               // current scale in percent
@@ -1621,7 +1621,7 @@ function toogleView(current, oldEl, text, bAll, bForce) {
 				filterByCategory(document.getElementById('select_categories').value);
 			}
 		}
-		elements.linkNewPlugin.href = bAll ? (OOIO + "pulls") : "https://api.onlyoffice.com/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises/";
+		elements.linkNewPlugin.href = bAll ? (OOIO + "pulls") : "https://api.tuneoffice.com/docs/plugin-and-macros/tutorials/installing/tuneoffice-docs-on-premises/";
 
 		if (isLocal && !bAll) {
 			elements.linkNewPlugin.href = "#";
@@ -1791,7 +1791,7 @@ function changeAfterInstallOrRemove(bInstall, guid, bHasLocal) {
 
 function checkInternet() {
 	// url for check internet connection
-	let url = 'https://onlyoffice.github.io/store/translations/langs.json';
+	let url = 'https://tuneoffice.github.io/store/translations/langs.json';
 	makeRequest(url, 'GET', null, null, true).then(
 		function() {
 			isOnline = true;

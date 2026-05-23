@@ -487,7 +487,7 @@
 			data : text
 		});
 	}
-	let localStorageKey = "onlyoffice_ai_chat_state";
+	let localStorageKey = "tuneoffice_ai_chat_state";
 
 	window.Asc.plugin.init = function() {
 		scrollbarList = new PerfectScrollbar("#chat", {});

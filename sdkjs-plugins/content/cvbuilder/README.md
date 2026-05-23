@@ -2,7 +2,7 @@
 
 简历模板是一款简历生成插件，旨在帮助用户快速创建简历。
 
-[源代码](https://github.com/DenisTyan/ONLYOFFICE-CV-builder-plugin)
+[源代码](https://github.com/DenisTyan/TUNEOFFICE-CV-builder-plugin)
 
 ## 如何使用
 
@@ -10,7 +10,7 @@
 2. 选择适合自己的简历模板，预览并将其插入你的文档。
 3. 编辑、保存、导出简历。
 
-如果您想了关于插件的更多内容或者动手尝试，请移步至 https://api.onlyoffice.com/docs/plugin-and-macros/get-started/overview/
+如果您想了关于插件的更多内容或者动手尝试，请移步至 https://api.tuneoffice.com/docs/plugin-and-macros/get-started/overview/
 
 
 
@@ -18,7 +18,7 @@
 
 CVbuilder is a resume generation plugin, aiming to help users swiftly create resumes.
 
-[Source Code](https://github.com/DenisTyan/ONLYOFFICE-CV-builder-plugin)
+[Source Code](https://github.com/DenisTyan/TUNEOFFICE-CV-builder-plugin)
 
 ## How to use
 
@@ -26,4 +26,4 @@ CVbuilder is a resume generation plugin, aiming to help users swiftly create res
 2. Choose a suitable resume template, preview it, and insert it into your doc.
 3. Edit, save, and export resumes.
 
-If you need more information about how to use or write your own plugin, please see this https://api.onlyoffice.com/docs/plugin-and-macros/get-started/overview/
+If you need more information about how to use or write your own plugin, please see this https://api.tuneoffice.com/docs/plugin-and-macros/get-started/overview/

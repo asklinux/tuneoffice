@@ -46,7 +46,7 @@
 	let BPluginReady = false;
 	let editorVersion = null;
 	let marketplaceURl = null;
-	const OOMarketplaceUrl = isLocal ? './store/index.html' : 'https://onlyoffice.github.io/store/index.html';
+	const OOMarketplaceUrl = isLocal ? './store/index.html' : 'https://tuneoffice.github.io/store/index.html';
 	try {
 		// for incognito mode
 		marketplaceURl = localStorage.getItem('DeveloperMarketplaceUrl') || OOMarketplaceUrl;
@@ -201,7 +201,7 @@
 	function checkInternet(bSetTimeout) {
 		try {
 			let xhr = new XMLHttpRequest();
-			let url = 'https://onlyoffice.github.io/store/translations/langs.json';
+			let url = 'https://tuneoffice.github.io/store/translations/langs.json';
 			xhr.open('GET', url, true);
 			
 			xhr.onload = function () {

@@ -30,7 +30,7 @@
  *
  */
 
-const externalModelPrefix = "[onlyoffice_external]";
+const externalModelPrefix = "[tuneoffice_external]";
 let aiModelsList = new ListView(document.getElementById('ai-models-list'), {
 	renderItem: function(model) {
 		var createdEl = document.createElement('div');

@@ -1,4 +1,4 @@
-import{n as e}from"./chunk-BneVvdWh.js";var t,n,r,i,a,o;e((()=>{t={title:`Components/Button`,tags:[`autodocs`],parameters:{docs:{description:{component:`Various styled buttons from ONLYOFFICE plugin UI.`}}}},n=()=>`
+import{n as e}from"./chunk-BneVvdWh.js";var t,n,r,i,a,o;e((()=>{t={title:`Components/Button`,tags:[`autodocs`],parameters:{docs:{description:{component:`Various styled buttons from TUNEOFFICE plugin UI.`}}}},n=()=>`
   <button class="btn-text-default" style="width:75px;">Button 1</button>
 `,n.storyName=`Default Button`,r=()=>`
   <button class="btn-text-default submit primary" style="width:75px;">Button 2</button>

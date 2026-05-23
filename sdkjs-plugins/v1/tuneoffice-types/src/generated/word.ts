@@ -1,6 +1,6 @@
 export {};
 
-// Auto-generated from ONLYOFFICE/office-js-api-declarations
+// Auto-generated from TUNEOFFICE/office-js-api-declarations
 // Editor type: word
 
 /** Base class */

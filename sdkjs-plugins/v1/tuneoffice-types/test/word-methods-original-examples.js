@@ -2,8 +2,8 @@
 /// <reference path="../index.d.ts" />
 
 /**
- * ONLYOFFICE Text Document API - Original Examples from Documentation
- * Source: https://api.onlyoffice.com/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/
+ * TUNEOFFICE Text Document API - Original Examples from Documentation
+ * Source: https://api.tuneoffice.com/docs/plugin-and-macros/interacting-with-editors/text-document-api/Methods/
  * 
  * This file contains EXACT copies of examples from the official documentation.
  * All examples are taken from <pre> tags inside sections with id="example".
@@ -413,7 +413,7 @@ window.Asc.plugin.executeMethod ("GetVersion", [], function (version) {
 // ============================================================================
 // InputText
 // ============================================================================
-window.Asc.plugin.executeMethod ("InputText", ["ONLYOFFICE Plugins", "ONLYOFFICE for developers"]);
+window.Asc.plugin.executeMethod ("InputText", ["TUNEOFFICE Plugins", "TUNEOFFICE for developers"]);
 
 // ============================================================================
 // InsertAndReplaceContentControls
@@ -492,7 +492,7 @@ window.Asc.plugin.executeMethod ("PasteHtml", ["&lt;p&gt;&lt;b&gt;Plugin methods
 // ============================================================================
 // PasteText
 // ============================================================================
-window.Asc.plugin.executeMethod ("PasteText", ["ONLYOFFICE for developers"]);
+window.Asc.plugin.executeMethod ("PasteText", ["TUNEOFFICE for developers"]);
 
 // ============================================================================
 // PutImageDataToSelection
@@ -582,12 +582,12 @@ window.Asc.plugin.executeMethod ("RemoveSelectedContent");
 // ============================================================================
 // ReplaceCurrentSentence
 // ============================================================================
-window.Asc.plugin.executeMethod ("ReplaceCurrentSentence", ["ONLYOFFICE", "entirely"]);
+window.Asc.plugin.executeMethod ("ReplaceCurrentSentence", ["TUNEOFFICE", "entirely"]);
 
 // ============================================================================
 // ReplaceCurrentWord
 // ============================================================================
-window.Asc.plugin.executeMethod ("ReplaceCurrentWord", ["ONLYOFFICE", "entirely"]);
+window.Asc.plugin.executeMethod ("ReplaceCurrentWord", ["TUNEOFFICE", "entirely"]);
 
 // ============================================================================
 // ReplaceTextSmart
@@ -695,7 +695,7 @@ var initSettings = {
             "111" : {
                 "text" : "Text in form with tag 111",
                 "checkBox" : "true",
-                "picture" : "https://upload.wikimedia.org/wikipedia/commons/9/91/ONLYOFFICE_logo.png",
+                "picture" : "https://upload.wikimedia.org/wikipedia/commons/9/91/TUNEOFFICE_logo.png",
                 "comboBox" : "item1"
             },
             "222" : {
@@ -704,7 +704,7 @@ var initSettings = {
                 "comboBox" : "item2"
             },
             "333" : {
-                "text" : "OnlyOffice"
+                "text" : "TuneOffice"
             }
         }
     })

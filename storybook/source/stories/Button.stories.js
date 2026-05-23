@@ -4,7 +4,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Various styled buttons from ONLYOFFICE plugin UI.'
+        component: 'Various styled buttons from TUNEOFFICE plugin UI.'
       }
     }
   }

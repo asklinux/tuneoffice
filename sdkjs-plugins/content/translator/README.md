@@ -2,9 +2,9 @@
 
 Translate the selected text into other languages.
 
-The plugin uses Google Translate API. All the languages supported by the service are supported by the ONLYOFFICE plugin.
+The plugin uses Google Translate API. All the languages supported by the service are supported by the TUNEOFFICE plugin.
 
-It is installed by default in cloud, [self-hosted](https://github.com/ONLYOFFICE/DocumentServer) and [desktop version](https://github.com/ONLYOFFICE/DesktopEditors) of ONLYOFFICE editors. 
+It is installed by default in cloud, [self-hosted](https://github.com/TUNEOFFICE/DocumentServer) and [desktop version](https://github.com/TUNEOFFICE/DesktopEditors) of TUNEOFFICE editors. 
 
 ## How to use
 
@@ -12,7 +12,7 @@ It is installed by default in cloud, [self-hosted](https://github.com/ONLYOFFICE
 2. Open the Plugins tab and press Translator.
 3. Select the language you wan’t your text to be translated to.
 
-If you need more information about how to use or write your own plugin, please see this https://api.onlyoffice.com/docs/plugin-and-macros/get-started/overview/
+If you need more information about how to use or write your own plugin, please see this https://api.tuneoffice.com/docs/plugin-and-macros/get-started/overview/
 
 ## Known issues
 

@@ -38,7 +38,7 @@
 
 
 (function (window) {
-    const LOCAL_STORAGE_KEY = "onlyoffice_ai_saved_assistants";
+    const LOCAL_STORAGE_KEY = "tuneoffice_ai_saved_assistants";
     /** @type {any} */
     let selectType = null;
     const { form, textarea, inputId, inputName } = initFormElements();

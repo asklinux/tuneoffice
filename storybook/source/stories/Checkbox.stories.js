@@ -4,7 +4,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Checkbox from ONLYOFFICE plugin UI.'
+        component: 'Checkbox from TUNEOFFICE plugin UI.'
       }
     }
   }

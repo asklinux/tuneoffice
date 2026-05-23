@@ -1,4 +1,4 @@
-import{n as e}from"./chunk-BneVvdWh.js";var t,n,r;e((()=>{t={title:`Components/ComboBox`,tags:[`autodocs`],parameters:{docs:{description:{component:`ComboBox from ONLYOFFICE plugin UI.`}}}},n=()=>`
+import{n as e}from"./chunk-BneVvdWh.js";var t,n,r;e((()=>{t={title:`Components/ComboBox`,tags:[`autodocs`],parameters:{docs:{description:{component:`ComboBox from TUNEOFFICE plugin UI.`}}}},n=()=>`
   <label class="header" for="select_example">ComboBox</label>
   <select id="select_example" class="">
     <option value="1">Item 1</option>

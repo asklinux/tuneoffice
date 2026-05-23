@@ -9,7 +9,7 @@
         return window.AscSimpleRequest && window.AscSimpleRequest.createRequest;
     }
 
-    // Custom fetch using AscSimpleRequest (ONLYOFFICE SDK) to bypass CORS
+    // Custom fetch using AscSimpleRequest (TUNEOFFICE SDK) to bypass CORS
     // Falls back to public CORS proxy for browser mode
     function odataFetch(url, options) {
         options = options || {};
@@ -17,7 +17,7 @@
         var headers = options.headers || {};
 
         return new Promise(function(resolve, reject) {
-            // Try AscSimpleRequest first (available in onlyoffice:// protocol - desktop mode)
+            // Try AscSimpleRequest first (available in tuneoffice:// protocol - desktop mode)
             if (isDesktopMode()) {
                 window.AscSimpleRequest.createRequest({
                     url: url,
@@ -546,7 +546,7 @@
         });
     }
 
-    // Insert data into ONLYOFFICE spreadsheet
+    // Insert data into TUNEOFFICE spreadsheet
     function insertDataIntoSpreadsheet(allData) {
         var tableNames = Object.keys(allData);
 
@@ -591,7 +591,7 @@
             window.Asc.scope.tableData = dataArray;
             window.Asc.scope.tableName = tableName;
 
-            // Call ONLYOFFICE API to insert data
+            // Call TUNEOFFICE API to insert data
             window.Asc.plugin.callCommand(function() {
                 var data = Asc.scope.tableData;
                 var tableName = Asc.scope.tableName;

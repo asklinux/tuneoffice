@@ -1,4 +1,4 @@
-SIGNATURE_SERVER = "https://plugins-services.onlyoffice.com/sign";
+SIGNATURE_SERVER = "https://plugins-services.tuneoffice.com/sign";
 
 window.addEventListener('DOMContentLoaded', function(event) {
   console.log('DOM fully loaded and parsed');

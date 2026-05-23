@@ -2,7 +2,7 @@
 
 The Zoom plugin allows users to schedule meetings and make calls.
 
-It is compatible with [self-hosted](https://github.com/ONLYOFFICE/DocumentServer) version of ONLYOFFICE editors. It can be added to ONLYOFFICE instances manually.
+It is compatible with [self-hosted](https://github.com/TUNEOFFICE/DocumentServer) version of TUNEOFFICE editors. It can be added to TUNEOFFICE instances manually.
 
 ## How to use
 
@@ -11,7 +11,7 @@ It is compatible with [self-hosted](https://github.com/ONLYOFFICE/DocumentServer
 
 ## How to install
 
-Detailed instructions can be found in [ONLYOFFICE API documentation](https://api.onlyoffice.com/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises/).
+Detailed instructions can be found in [TUNEOFFICE API documentation](https://api.tuneoffice.com/docs/plugin-and-macros/tutorials/installing/tuneoffice-docs-on-premises/).
 
 ## Configuration
 

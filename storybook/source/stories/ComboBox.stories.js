@@ -4,7 +4,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'ComboBox from ONLYOFFICE plugin UI.'
+        component: 'ComboBox from TUNEOFFICE plugin UI.'
       }
     }
   }

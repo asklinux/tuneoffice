@@ -33,7 +33,7 @@
 // @ts-check
 
 /**
- * @typedef {import("../../../../v1/onlyoffice-types").AscTheme} AscTheme
+ * @typedef {import("../../../../v1/tuneoffice-types").AscTheme} AscTheme
  */
 
 const Theme = {

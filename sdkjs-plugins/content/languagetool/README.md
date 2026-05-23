@@ -4,7 +4,7 @@ Find and correct grammar and style mistakes.
 
 The plugin uses [LanguageTool](https://languagetool.org/), multilingual grammar and style checker.
 
-It is compatible with [self-hosted](https://github.com/ONLYOFFICE/DocumentServer) and [desktop](https://github.com/ONLYOFFICE/DesktopEditors) versions of ONLYOFFICE editors. It can be added to ONLYOFFICE instances manually.
+It is compatible with [self-hosted](https://github.com/TUNEOFFICE/DocumentServer) and [desktop](https://github.com/TUNEOFFICE/DesktopEditors) versions of TUNEOFFICE editors. It can be added to TUNEOFFICE instances manually.
 
 ## How to use
 
@@ -17,7 +17,7 @@ It is compatible with [self-hosted](https://github.com/ONLYOFFICE/DocumentServer
 
 ## How to install
 
-Detailed instructions can be found in [ONLYOFFICE API documentation](https://api.onlyoffice.com/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises/).
+Detailed instructions can be found in [TUNEOFFICE API documentation](https://api.tuneoffice.com/docs/plugin-and-macros/tutorials/installing/tuneoffice-docs-on-premises/).
 
 ## Using your service
 

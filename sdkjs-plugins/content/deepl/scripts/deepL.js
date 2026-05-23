@@ -39,7 +39,7 @@ var API_URL_CURRENT = API_URL_FREE;
 var API_KEY = "";
 var API_KEY_STORAGE_NAME = "DEEPL_API_INFO";
 
-var PROXY_URL = "https://plugins-services.onlyoffice.com/proxy";
+var PROXY_URL = "https://plugins-services.tuneoffice.com/proxy";
 
 const isIE = checkInternetExplorer();	//check IE
 function checkInternetExplorer(){

@@ -3,7 +3,7 @@ const path = require('path');
 const https = require('https');
 
 const OUTPUT_DIR = path.join(__dirname, '..', 'src', 'generated');
-const API_REPO = 'ONLYOFFICE/office-js-api-declarations';
+const API_REPO = 'TUNEOFFICE/office-js-api-declarations';
 const API_BRANCH = 'master';
 const API_FILES = ['word.json', 'cell.json', 'slide.json'];
 const FILE_MAP = {

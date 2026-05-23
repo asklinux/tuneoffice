@@ -63,7 +63,7 @@ async function registerButtons(window, undefined)
 		if (!requestEngine)
 			return;
 
-		let panelPlace = window.localStorage.getItem("onlyoffice_ai_chat_placement") || "window";
+		let panelPlace = window.localStorage.getItem("tuneoffice_ai_chat_placement") || "window";
 		if (panelPlace === "panel")
 			panelPlace = "panelRight";
 
@@ -387,7 +387,7 @@ async function registerButtons(window, undefined)
 			}
 		});	
 		chatWindow.attachEvent("onDockedChanged", async function(type) {
-			window.localStorage.setItem("onlyoffice_ai_chat_placement", type);
+			window.localStorage.setItem("tuneoffice_ai_chat_placement", type);
 
 			async function waitSaveSettings()
 			{
@@ -889,7 +889,7 @@ async function registerButtons(window, undefined)
 			if (!requestEngine)
 				return;
 
-			const ls_lang_key = "onlyoffice_ai_plugin_translate_lang";
+			const ls_lang_key = "tuneoffice_ai_plugin_translate_lang";
 			const currLang = window.localStorage.getItem(ls_lang_key);
 
 			let lang = !!currLang ? currLang : "english";
@@ -973,7 +973,7 @@ async function registerButtons(window, undefined)
 				customAssistantWindowShow();
 			});
 			const savedAssistants = JSON.parse(
-				localStorage.getItem("onlyoffice_ai_saved_assistants") || "[]"
+				localStorage.getItem("tuneoffice_ai_saved_assistants") || "[]"
 			);
 
 			savedAssistants.forEach(element => {
@@ -1060,7 +1060,7 @@ async function registerButtons(window, undefined)
 		return actions;
 	};
 
-	var actions_key = "onlyoffice_ai_actions_key";
+	var actions_key = "tuneoffice_ai_actions_key";
 	AI.ActionsSave = function()
 	{
 		try

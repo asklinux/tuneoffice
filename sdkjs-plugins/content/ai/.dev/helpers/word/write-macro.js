@@ -33,7 +33,7 @@
 	let func = new RegisteredFunction({
 		"name": "writeMacro",
 		"text": "Run Macro",
-		"description": `Executes a JavaScript macro using the OnlyOffice Document API (text documents / Word).
+		"description": `Executes a JavaScript macro using the TuneOffice Document API (text documents / Word).
 Use this tool to perform any document operation when no other specialized tool is available.
 This tool can also be used to READ/GET data from the document — make the last expression in the script be the value you want to retrieve, and it will be returned as the tool result.
 For example, to get the text of the first paragraph, write: Api.GetDocument().GetElement(0).GetText()
@@ -43,8 +43,8 @@ The return value of the last expression will be the tool's output.`,
 			"properties": {
 				"code": {
 					"type": "string",
-					"description": `Valid JavaScript code using the OnlyOffice Document API to execute directly via eval. Rules:
-- Use only the OnlyOffice Document API (Api, ApiDocument, ApiParagraph, ApiRun, ApiTable, etc.)
+					"description": `Valid JavaScript code using the TuneOffice Document API to execute directly via eval. Rules:
+- Use only the TuneOffice Document API (Api, ApiDocument, ApiParagraph, ApiRun, ApiTable, etc.)
 - Do NOT wrap the code in a function or IIFE — output only the statements to execute directly
 - Do NOT include any explanation, comments, or markdown — output raw JavaScript only
 - To GET/READ data: make the last expression the value you want to return (e.g. oDoc.GetElement(0).GetText())
@@ -140,19 +140,19 @@ text.join('\\n');`
 			try {
 				var __result = eval(Asc.scope.macroCode);
 				if (__result !== undefined && __result !== null) {
-					return { onlyoffice_id_result: __result };
+					return { tuneoffice_id_result: __result };
 				}
 			} catch(e) {
-				return { onlyoffice_id_error_message : e.name + ": " + e.message };
+				return { tuneoffice_id_error_message : e.name + ": " + e.message };
 			}
 		});
 
-		if (returnValue && returnValue.onlyoffice_id_error_message) {
-			throw new window.AgentState.ToolError(returnValue.onlyoffice_id_error_message);
+		if (returnValue && returnValue.tuneoffice_id_error_message) {
+			throw new window.AgentState.ToolError(returnValue.tuneoffice_id_error_message);
 		}
 
-		if (returnValue && returnValue.onlyoffice_id_result !== undefined) {
-			return returnValue.onlyoffice_id_result;
+		if (returnValue && returnValue.tuneoffice_id_result !== undefined) {
+			return returnValue.tuneoffice_id_result;
 		}
 	};
 

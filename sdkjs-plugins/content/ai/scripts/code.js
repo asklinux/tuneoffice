@@ -168,7 +168,7 @@ async function initAssistants() {
 	spellchecker = new SpellChecker(textAnnotatorPopup);
 	grammar = new GrammarChecker(textAnnotatorPopup);
 	JSON.parse(
-			localStorage.getItem("onlyoffice_ai_saved_assistants") || "[]"
+			localStorage.getItem("tuneoffice_ai_saved_assistants") || "[]"
 		).forEach(assistantData => {
 			customAssistantManager.createAssistant(assistantData);
 		});
@@ -666,7 +666,7 @@ async function initWithTranslate(counter) {
 }
 
 function clearChatState() {
-	let key = 'onlyoffice_ai_chat_state';
+	let key = 'tuneoffice_ai_chat_state';
 	if (window.localStorage.getItem(key))
 		window.localStorage.removeItem(key);
 }
@@ -1041,7 +1041,7 @@ if (window.customAssistantWindow) {
 	}
 
 	const savedAssistants = JSON.parse(
-		localStorage.getItem("onlyoffice_ai_saved_assistants") || "[]"
+		localStorage.getItem("tuneoffice_ai_saved_assistants") || "[]"
 	);
 	const index = savedAssistants.findIndex((item) => item.id === assistantId);
 	const assistant = savedAssistants[index];
@@ -1081,7 +1081,7 @@ if (window.customAssistantWindow) {
 				if (index !== -1) {
 					savedAssistants.splice(index, 1);
 					localStorage.setItem(
-						"onlyoffice_ai_saved_assistants",
+						"tuneoffice_ai_saved_assistants",
 						JSON.stringify(savedAssistants)
 					);
 					if (buttonAssistant) {

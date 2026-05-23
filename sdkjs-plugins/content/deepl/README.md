@@ -4,7 +4,7 @@ Translate the selected text into other languages.
 
 The plugin uses [DeepL Translator](https://www.deepl.com/translator), a free neural machine translation service.
 
-DeepL is compatible with [self-hosted](https://github.com/ONLYOFFICE/DocumentServer) and [desktop](https://github.com/ONLYOFFICE/DesktopEditors) versions of ONLYOFFICE editors. It can be added to ONLYOFFICE instances manually.
+DeepL is compatible with [self-hosted](https://github.com/TUNEOFFICE/DocumentServer) and [desktop](https://github.com/TUNEOFFICE/DesktopEditors) versions of TUNEOFFICE editors. It can be added to TUNEOFFICE instances manually.
 
 ## How to use
 
@@ -20,7 +20,7 @@ DeepL is compatible with [self-hosted](https://github.com/ONLYOFFICE/DocumentSer
 
 ## How to install
 
-Detailed instructions can be found in [ONLYOFFICE API documentation](https://api.onlyoffice.com/docs/plugin-and-macros/tutorials/installing/onlyoffice-docs-on-premises/).
+Detailed instructions can be found in [TUNEOFFICE API documentation](https://api.tuneoffice.com/docs/plugin-and-macros/tutorials/installing/tuneoffice-docs-on-premises/).
 
 ## Configuration
 

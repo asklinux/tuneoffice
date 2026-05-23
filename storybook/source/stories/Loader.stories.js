@@ -4,7 +4,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Loader from ONLYOFFICE plugin UI.'
+        component: 'Loader from TUNEOFFICE plugin UI.'
       }
     }
   }
@@ -23,8 +23,8 @@ export const InteractiveLoader = () => {
 
     (async () => {
       await loadScript('https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js');
-      await loadScript('https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.js');
-      await loadScript('https://onlyoffice.github.io/sdkjs-plugins/v1/plugins-ui.js');
+      await loadScript('https://tuneoffice.github.io/sdkjs-plugins/v1/plugins.js');
+      await loadScript('https://tuneoffice.github.io/sdkjs-plugins/v1/plugins-ui.js');
 
       const $ = window.jQuery;
       let loader;

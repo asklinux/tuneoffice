@@ -32,7 +32,7 @@
 (function (window, undefined) {
     var wordpress = null;
     var post = null;
-    var urlProxy = 'https://plugins-services.onlyoffice.com/proxy';
+    var urlProxy = 'https://plugins-services.tuneoffice.com/proxy';
 
     OAuthError = function(error, ttt) {
         console.log(arguments);

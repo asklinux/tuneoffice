@@ -39,7 +39,7 @@
 
 	AI.DEFAULT_DESKTOP_MODEL = null;
 	
-	var localStorageKey = "onlyoffice_ai_plugin_storage_key";
+	var localStorageKey = "tuneoffice_ai_plugin_storage_key";
 
 	AI.Providers = {};
 	

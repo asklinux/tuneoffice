@@ -52,7 +52,7 @@
 		if (AI.isLocalDesktop)
 			return true;
 
-		if (window.location && window.location.protocol == "onlyoffice:")
+		if (window.location && window.location.protocol == "tuneoffice:")
 			return true;
 
 		return false;

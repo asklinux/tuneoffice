@@ -32,7 +32,7 @@ export const decorators = [
     // Apply the theme as a data attribute
     document.documentElement.setAttribute('data-theme', theme);
     
-    // Set window.Asc.plugin.theme for OnlyOffice plugin compatibility
+    // Set window.Asc.plugin.theme for TuneOffice plugin compatibility
     if (!window.Asc) {
       window.Asc = {};
     }
@@ -49,7 +49,7 @@ export const decorators = [
 
 const link = document.createElement('link');
 link.rel = 'stylesheet';
-link.href = 'https://onlyoffice.github.io/sdkjs-plugins/v1/plugins.css';
+link.href = 'https://tuneoffice.github.io/sdkjs-plugins/v1/plugins.css';
 document.head.appendChild(link);
 
 export default preview;

@@ -4,7 +4,7 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: 'Various styled labels from ONLYOFFICE plugin UI.'
+        component: 'Various styled labels from TUNEOFFICE plugin UI.'
       }
     }
   }

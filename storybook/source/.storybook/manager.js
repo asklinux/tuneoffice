@@ -5,6 +5,6 @@ addons.setConfig({
   theme: {
     ...themes.normal,
     brandImage: './logo.svg',
-    brandUrl: 'https://onlyoffice.github.io/',
+    brandUrl: 'https://tuneoffice.github.io/',
   },
 });

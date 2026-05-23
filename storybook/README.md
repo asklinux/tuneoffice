@@ -1,10 +1,10 @@
-# ONLYOFFICE Storybook
+# TUNEOFFICE Storybook
 
-A comprehensive component library documentation for ONLYOFFICE plugin UI components, built with Storybook.
+A comprehensive component library documentation for TUNEOFFICE plugin UI components, built with Storybook.
 
 ## Overview
 
-This Storybook project showcases and documents the UI components used in ONLYOFFICE plugins. It provides an interactive environment for developers to explore, test, and understand the available components and their various states.
+This Storybook project showcases and documents the UI components used in TUNEOFFICE plugins. It provides an interactive environment for developers to explore, test, and understand the available components and their various states.
 
 ## Components
 
@@ -29,8 +29,8 @@ The following components are documented in this Storybook:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ONLYOFFICE/onlyoffice.github.io.git
-cd onlyoffice.github.io/storybook
+git clone https://github.com/TUNEOFFICE/tuneoffice.github.io.git
+cd tuneoffice.github.io/storybook
 ```
 
 2. Navigate to the source directory:
@@ -139,12 +139,12 @@ This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENS
 
 ## Links
 
-- [ONLYOFFICE Website](https://www.onlyoffice.com/)
-- [ONLYOFFICE GitHub](https://github.com/ONLYOFFICE)
+- [TUNEOFFICE Website](https://www.tuneoffice.com/)
+- [TUNEOFFICE GitHub](https://github.com/TUNEOFFICE)
 - [Storybook Documentation](https://storybook.js.org/docs)
 
 ## Support
 
-For questions and support regarding ONLYOFFICE plugins and components, please visit:
-- [ONLYOFFICE Forum](https://forum.onlyoffice.com/)
-- [GitHub Issues](https://github.com/ONLYOFFICE/onlyoffice.github.io/issues)
+For questions and support regarding TUNEOFFICE plugins and components, please visit:
+- [TUNEOFFICE Forum](https://forum.tuneoffice.com/)
+- [GitHub Issues](https://github.com/TUNEOFFICE/tuneoffice.github.io/issues)
