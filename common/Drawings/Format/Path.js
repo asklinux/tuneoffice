@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -910,7 +910,7 @@ function (window, undefined) {
 
 					// check if command arguments are wrong. Wrong arguments may refer to huge ellipse. It editor it can
 					// break scroll bars. So as visio does let's transform elliptical arc to line.
-					// see bug https://bugzilla.onlyoffice.com/show_bug.cgi?id=75317
+					// see bug https://bugzilla.tuneoffice.com/show_bug.cgi?id=75317
 					// files from 4 to 6 should not be caught
 
 					// three points on one line refers to bad arguments

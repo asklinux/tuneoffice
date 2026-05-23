@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -626,7 +626,7 @@ function isAllowPasteLink(pastedWb) {
 		this.model.setDefaultHeight(AscCommonExcel.oDefaultMetrics.RowHeight);
 
 		// Initialize the number of columns and rows (on open). Need to add 1 more
-		// to be able to show the last row/column (http://bugzilla.onlyoffice.com/show_bug.cgi?id=23513)
+		// to be able to show the last row/column (http://bugzilla.tuneoffice.com/show_bug.cgi?id=23513)
 		this._initRowsCount();
 		this._initColsCount();
 
@@ -9351,7 +9351,7 @@ function isAllowPasteLink(pastedWb) {
 
         if (null !== firstUpdateRow || this.isChanged) {
             // Removed this from _calcCellsTextMetrics, since call was for each sector (caused slowdowns: bug 20388)
-            // Code needed for bug http://bugzilla.onlyoffice.com/show_bug.cgi?id=13875
+            // Code needed for bug http://bugzilla.tuneoffice.com/show_bug.cgi?id=13875
             this._updateRowPositions();
             this._calcVisibleRows();
 
@@ -10926,7 +10926,7 @@ function isAllowPasteLink(pastedWb) {
         if (moveHeight > 0) {
             ctx.drawImage(ctx.getCanvas(), x, y, oldW, moveHeight, x + dx, y - dy, oldW, moveHeight);
 
-            // Stub for safari (http://bugzilla.onlyoffice.com/show_bug.cgi?id=25546). 'copy' mode first erases, then
+            // Stub for safari (http://bugzilla.tuneoffice.com/show_bug.cgi?id=25546). 'copy' mode first erases, then
             // draws (and since we draw on ourselves, the image will be empty)
             if (AscBrowser.isSafari) {
                 this.drawingGraphicCtx.moveImageDataSafari(x, y, oldW, moveHeight, x + dx, y - dy);
@@ -11322,7 +11322,7 @@ function isAllowPasteLink(pastedWb) {
         if (moveWidth > 0) {
             this._drawImage(ctx, ctx.getCanvas(), x + this.getRightToLeftOffset(), y, moveWidth, ctxH, x - dx + this.getRightToLeftOffset(), y, moveWidth, ctxH);
 
-            // Stub for safari (http://bugzilla.onlyoffice.com/show_bug.cgi?id=25546). 'copy' mode first erases, then
+            // Stub for safari (http://bugzilla.tuneoffice.com/show_bug.cgi?id=25546). 'copy' mode first erases, then
             // draws (and since we draw on ourselves, the image will be empty)
 
 			this._moveImageData(x, y, moveWidth, ctxH, x - dx, y, moveWidth, ctxH);
@@ -13390,7 +13390,7 @@ function isAllowPasteLink(pastedWb) {
 				var numFormat = t.model.getRange3(activeCell.row, activeCell.col,
 					activeCell.row, activeCell.col).getNumFormat();
 				if (Asc.c_oAscNumFormatType.Time === numFormat.getType()) {
-					// For time we need to return in format [h]:mm:ss (http://bugzilla.onlyoffice.com/show_bug.cgi?id=26271)
+					// For time we need to return in format [h]:mm:ss (http://bugzilla.tuneoffice.com/show_bug.cgi?id=26271)
 					numFormat = AscCommon.oNumFormatCache.get('[h]:mm:ss');
 				}
 
@@ -16220,7 +16220,7 @@ function isAllowPasteLink(pastedWb) {
 
 				// Selection will be drawn here
 				wsTo.draw();
-				// Call just in case, since we may have already updated due to formulas ToDo possibly remove this in the future (but formula refactoring is needed) - http://bugzilla.onlyoffice.com/show_bug.cgi?id=24505
+				// Call just in case, since we may have already updated due to formulas ToDo possibly remove this in the future (but formula refactoring is needed) - http://bugzilla.tuneoffice.com/show_bug.cgi?id=24505
 				wsTo._updateSelectionNameAndInfo();
 
 				if (hasMerged && false !== t.model.autoFilters._intersectionRangeWithTableParts(arnTo)) {
@@ -18371,7 +18371,7 @@ function isAllowPasteLink(pastedWb) {
                         break;
                     }
                     if (lastHeight === tm.height) {
-                        // Situation when the text won't fit by height (http://bugzilla.onlyoffice.com/show_bug.cgi?id=19974)
+                        // Situation when the text won't fit by height (http://bugzilla.tuneoffice.com/show_bug.cgi?id=19974)
                         tm.width = oldWidth;
                         break;
                     }

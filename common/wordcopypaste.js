@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -2874,7 +2874,7 @@ function PasteProcessor(api, bUploadImage, bUploadFonts, bNested, pasteInExcel, 
         "mso-border-left-alt": 1, "mso-border-top-alt": 1, "mso-border-right-alt": 1, "mso-border-bottom-alt": 1, "mso-border-between": 1, "mso-list": 1,
 		"mso-comment-reference": 1, "mso-comment-date": 1, "mso-comment-continuation": 1, "mso-data-placement": 1, "mso-table-layout-alt": 1, "mso-table-left": 1,
 		"mso-table-top": 1, "mso-ignore": 1};
-	this.OnlyOfficeStyles = {"oo-latex": 1}
+	this.TuneOfficeStyles = {"oo-latex": 1}
     this.oBorderCache = {};
 
 	this.msoListMap = [];
@@ -9736,7 +9736,7 @@ PasteProcessor.prototype =
 					var prop_value = trimString(aPair[1]);
 					if (null != this.MsoStyles[prop_name]) {
 						pPr[prop_name] = prop_value;
-					} else if (null != this.OnlyOfficeStyles[prop_name]) {
+					} else if (null != this.TuneOfficeStyles[prop_name]) {
 						pPr[prop_name] = prop_value;
 					}
 				}
@@ -13836,7 +13836,7 @@ PasteProcessor.prototype =
 
 function CheckDefaultFontFamily(val, api)
 {
-	return "onlyofficeDefaultFont" === val && api && api.getDefaultFontFamily ? api.getDefaultFontFamily() : val;
+	return "tuneofficeDefaultFont" === val && api && api.getDefaultFontFamily ? api.getDefaultFontFamily() : val;
 }
 
 function CheckDefaultFontSize(val, api)

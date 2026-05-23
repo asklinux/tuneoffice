@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -447,9 +447,9 @@ window["UpdateInstallPlugins"] = function()
 			_pluginsCur["pluginsData"][i]["baseUrl"] = _pluginsCur["url"] + _pluginsCur["pluginsData"][i]["guid"].substring(4) + "/";
 			_plugins["pluginsData"].push(_pluginsCur["pluginsData"][i]);
 
-			if (_pluginsCur["pluginsData"][i]["onlyofficeScheme"])
+			if (_pluginsCur["pluginsData"][i]["tuneofficeScheme"])
 			{
-				_pluginsCur["pluginsData"][i]["baseUrl"] = "onlyoffice://plugin/" + _pluginsCur["pluginsData"][i]["baseUrl"];
+				_pluginsCur["pluginsData"][i]["baseUrl"] = "tuneoffice://plugin/" + _pluginsCur["pluginsData"][i]["baseUrl"];
 			}
 		}
 	}

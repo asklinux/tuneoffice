@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -408,7 +408,7 @@ var editor;
 		}
 
       /* Need to close the editor (before setting the canSave flag, because we must send
-       asc_onDocumentModifiedChanged for assembly subscription in time) Bug http://bugzilla.onlyoffice.com/show_bug.cgi?id=28331 */
+       asc_onDocumentModifiedChanged for assembly subscription in time) Bug http://bugzilla.tuneoffice.com/show_bug.cgi?id=28331 */
 		if (!this.asc_closeCellEditor()) {
 			if (isIdle) {
 				this.asc_closeCellEditor(true);
@@ -1455,7 +1455,7 @@ var editor;
 		}
 	} else {
 		if (t.handlers.hasTrigger("asc_onAdvancedOptions")) {
-			// ToDo delimiter is only "," for now http://bugzilla.onlyoffice.com/show_bug.cgi?id=31009
+			// ToDo delimiter is only "," for now http://bugzilla.tuneoffice.com/show_bug.cgi?id=31009
 			var cp = {
 				'codepage': AscCommon.c_oAscCodePageNone, "delimiter": AscCommon.c_oAscCsvDelimiter.Comma,
 				'encodings': AscCommon.getEncodingParams()

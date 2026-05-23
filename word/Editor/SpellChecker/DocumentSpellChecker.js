@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -41,7 +41,7 @@
 	const DOCUMENT_SPELLING_MAX_ERRORS     = 2000; // максимальное количество ошибок, которые отрисовываются
 
 	const DOCUMENT_SPELLING_EXCEPTIONAL_WORDS = {
-		"Teamlab" : true, "teamlab" : true, "OnlyOffice" : true, "ONLYOFFICE" : true, "API" : true
+		"Teamlab" : true, "teamlab" : true, "TuneOffice" : true, "TUNEOFFICE" : true, "API" : true
 	};
 
 

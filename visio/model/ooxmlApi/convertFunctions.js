@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -224,7 +224,7 @@
 			// calculate variation before pattern bcs pattern can make NoFillUniFill object without color
 			// use quickStyleVariation only if themes exist in file.
 			// Default theme which come to visioDocument.themes[0] should not be considered.
-			// See bug https://bugzilla.onlyoffice.com/show_bug.cgi?id=76044
+			// See bug https://bugzilla.tuneoffice.com/show_bug.cgi?id=76044
 			if (this.calculateColorThemeIndex(pageInfo) !== 0) {
 				let newFills = handleQuickStyleVariation(lineUniFillNoGradient, uniFillForegndNoGradient,
 						this, themeValWasUsedFor, pageInfo, visioDocument.themes);
@@ -1020,7 +1020,7 @@
 				//  because there is an issue with visio THEMEVAL it sometimes return 0 sometimes 1 on empty effectStyleLst
 				//  where shadow data should be
 				//  see files: offsets shadow properties themeval type 1.vsdx and offsets shadow properties themeval type 0.vsdx
-				//  in https://bugzilla.onlyoffice.com/show_bug.cgi?id=75884
+				//  in https://bugzilla.tuneoffice.com/show_bug.cgi?id=75884
 				let shadowType = shadowTypeCell && shadowTypeCell.calculateValue(shape, pageInfo,visioDocument.themes);
 
 				let shadowOffsetX_inch;
@@ -2048,7 +2048,7 @@
 			// set default settings
 			// see sdkjs/common/Drawings/CommonController.js createTextArt: function (nStyle, bWord, wsModel, sStartString)
 			// for examples
-			// https://api.onlyoffice.com/docbuilder/textdocumentapi just some related info
+			// https://api.tuneoffice.com/docbuilder/textdocumentapi just some related info
 			let bWord = false;
 			textCShape.setWordShape(bWord);
 			textCShape.setBDeleted(false);
@@ -2062,7 +2062,7 @@
 
 
 			// instead of AscFormat.AddToContentFromString(oContent, sText);
-			// use https://api.onlyoffice.com/docbuilder/presentationapi/apishape api implementation code
+			// use https://api.tuneoffice.com/docbuilder/presentationapi/apishape api implementation code
 			// to work with text separated into ParaRuns to split properties use
 
 			// read propsCommonObjects
@@ -2831,7 +2831,7 @@
 				let subShapes = this.getSubshapes();
 
 				/**
-				 * see bug for Del attribute handle: https://bugzilla.onlyoffice.com/show_bug.cgi?id=76050
+				 * see bug for Del attribute handle: https://bugzilla.tuneoffice.com/show_bug.cgi?id=76050
 				 * let's collect dels first and then traverse through all the group again in groupShape.deleteShapes().
 				 * Dels appear rarely so it is ok.
 				 * @type {number[]}

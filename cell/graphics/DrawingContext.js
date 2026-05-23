@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -449,7 +449,7 @@
 
 		/** @type AscCommonExcel.Font */
 		this.font = undefined !== settings.font ? settings.font : null;
-		// Font must be provided (it's shared across all DrawingContexts, as issues like bug http://bugzilla.onlyoffice.com/show_bug.cgi?id=19784 can occur)
+		// Font must be provided (it's shared across all DrawingContexts, as issues like bug http://bugzilla.tuneoffice.com/show_bug.cgi?id=19784 can occur)
 		if (null === this.font) {
 			throw "Can not set font in DrawingContext";
 		}

@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -776,11 +776,11 @@
 		person: {dir: "../persons", filename: "person.xml", contentType: "application/vnd.ms-excel.person+xml", relationType: "http://schemas.microsoft.com/office/2017/10/relationships/person"},
 		ctrlProp: {dir: "../ctrlProps", filename: "ctrlProp[N].xml", contentType: "application/vnd.ms-excel.controlproperties+xml", relationType: "http://schemas.openxmlformats.org/officeDocument/2006/relationships/ctrlProp"},
 		namedSheetViews: {dir: "../namedSheetViews", filename: "namedSheetView[N].xml", contentType: "application/vnd.ms-excel.namedsheetviews+xml", relationType: "http://schemas.microsoft.com/office/2019/04/relationships/namedSheetView"},
-		workbookComment: {dir: "", filename: "workbookComments.bin", contentType: "application/octet-stream", relationType: "http://schemas.onlyoffice.com/workbookComments"},
+		workbookComment: {dir: "", filename: "workbookComments.bin", contentType: "application/octet-stream", relationType: "http://schemas.tuneoffice.com/workbookComments"},
 		timelines: {dir: "../timelines", filename: "timeline[N].xml", contentType: "application/vnd.ms-excel.timeline+xml", relationType: "http://schemas.microsoft.com/office/2011/relationships/timeline"},
 		timelineCaches: {dir: "timelineCaches", filename: "timelineCache[N].xml", contentType: "application/vnd.ms-excel.timelineCache+xml", relationType: "http://schemas.microsoft.com/office/2011/relationships/timelineCache"},
 
-		jsaProject: {dir: "", filename: "jsaProject.bin", contentType: "application/octet-stream", relationType: "http://schemas.onlyoffice.com/jsaProject"},
+		jsaProject: {dir: "", filename: "jsaProject.bin", contentType: "application/octet-stream", relationType: "http://schemas.tuneoffice.com/jsaProject"},
 		vbaProject: {dir: "", filename: "vbaProject.bin", contentType: "application/octet-stream", relationType: "http://schemas.microsoft.com/office/2006/relationships/vbaProject"},
 
 
@@ -793,12 +793,12 @@
 
 
 		//onlyf
-		oformMain: {dir: "oform", filename: "main.xml", contentType: "application/vnd.openxmlformats-package.onlyf+xml", relationType: "https://schemas.onlyoffice.com/relationships/oform-main"},
-		oformDefaultUserMaster: {dir: "oform/userMasters", filename: "default.xml", contentType: "application/vnd.openxmlformats-package.onlyf-default-userMaster+xml", relationType: "https://schemas.onlyoffice.com/relationships/oform-default-userMaster"},
-		oformUserMaster: {dir: "oform/userMasters", filename: "userMaster[N].xml", contentType: "application/vnd.openxmlformats-package.onlyf-userMaster+xml", relationType: "https://schemas.onlyoffice.com/relationships/oform-userMaster"},
-		oformUser: {dir: "oform/users", filename: "user[N].xml", /*contentType: "application/vnd.openxmlformats-package.onlyf-user+xml",*/ relationType: "https://schemas.onlyoffice.com/relationships/oform-user"},
-		oformField: {dir: "oform/fields", filename: "field[N].xml", /*contentType: "application/vnd.openxmlformats-package.onlyf-field+xml",*/ relationType: "https://schemas.onlyoffice.com/relationships/oform-field"},
-		oformFieldMaster: {dir: "oform/fieldMasters", filename: "fieldMaster[N].xml", contentType: "application/vnd.openxmlformats-package.onlyf-fieldMaster+xml", relationType: "https://schemas.onlyoffice.com/relationships/oform-fieldMaster"},
+		oformMain: {dir: "oform", filename: "main.xml", contentType: "application/vnd.openxmlformats-package.onlyf+xml", relationType: "https://schemas.tuneoffice.com/relationships/oform-main"},
+		oformDefaultUserMaster: {dir: "oform/userMasters", filename: "default.xml", contentType: "application/vnd.openxmlformats-package.onlyf-default-userMaster+xml", relationType: "https://schemas.tuneoffice.com/relationships/oform-default-userMaster"},
+		oformUserMaster: {dir: "oform/userMasters", filename: "userMaster[N].xml", contentType: "application/vnd.openxmlformats-package.onlyf-userMaster+xml", relationType: "https://schemas.tuneoffice.com/relationships/oform-userMaster"},
+		oformUser: {dir: "oform/users", filename: "user[N].xml", /*contentType: "application/vnd.openxmlformats-package.onlyf-user+xml",*/ relationType: "https://schemas.tuneoffice.com/relationships/oform-user"},
+		oformField: {dir: "oform/fields", filename: "field[N].xml", /*contentType: "application/vnd.openxmlformats-package.onlyf-field+xml",*/ relationType: "https://schemas.tuneoffice.com/relationships/oform-field"},
+		oformFieldMaster: {dir: "oform/fieldMasters", filename: "fieldMaster[N].xml", contentType: "application/vnd.openxmlformats-package.onlyf-fieldMaster+xml", relationType: "https://schemas.tuneoffice.com/relationships/oform-fieldMaster"},
 
 		//visio
 		visioDocument: {dir: "visio", filename: "document.xml", contentType: "application/vnd.ms-visio.drawing.main+xml", relationType: "http://schemas.microsoft.com/visio/2010/relationships/document"},
@@ -822,7 +822,7 @@
 		external: "External"
 	};
 	openXml.IsEqualRelationshipType = function(relationshipType1, relationshipType2) {
-		//https://github.com/ONLYOFFICE/core/blob/7a822494aabb1edce441a12e44aa05c3a6501766/OOXML/DocxFormat/FileType.h#L95
+		//https://github.com/TUNEOFFICE/core/blob/7a822494aabb1edce441a12e44aa05c3a6501766/OOXML/DocxFormat/FileType.h#L95
 		//RelationType
 		//http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument
 		//http://purl.oclc.org/ooxml/officeDocument/relationships/officeDocument

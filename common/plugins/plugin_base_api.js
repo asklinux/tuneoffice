@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -368,9 +368,9 @@ window.startPluginApi = function() {
 	 * 
 	 * The *callback* is the result that the command returns. It is an optional parameter. In case it is missing, the window.Asc.plugin.onCommandCallback function will be used to return the result of the command execution.
 	 * 
-	 * The second parameter is the JavaScript code for working with <b>ONLYOFFICE Document Builder</b> API 
+	 * The second parameter is the JavaScript code for working with <b>TUNEOFFICE Document Builder</b> API 
 	 * that allows the plugin to send structured data inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).
-	 * <note><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor
+	 * <note><b>TUNEOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor
 	 * (using the *Api.GetDocument().InsertContent(...)*). This limitation exists due to the co-editing feature in the online editors.
 	 * If it is necessary to create a plugin for the desktop editors to work with local files, no such limitation is applied.</note>
 	 * 
@@ -383,7 +383,7 @@ window.startPluginApi = function() {
 	 * The *command* is used to execute the command and leave the window open waiting for the next command.
      * @param {string} data - Defines the command written in JavaScript code which purpose is to form the structured data which can be inserted to the resulting document file
 	 * (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors.
-	 * The command must be compatible with {@link /docbuilder/basic ONLYOFFICE Document Builder} syntax.
+	 * The command must be compatible with {@link /docbuilder/basic TUNEOFFICE Document Builder} syntax.
      * @param {Function} callback - The result that the method returns.
 	 */
 	Plugin.executeCommand = function(type, data, callback)
@@ -510,13 +510,13 @@ window.startPluginApi = function() {
 	 * It allows the plugin to send structured data that can be inserted to the resulting document file (formatted paragraphs, tables, text parts, and separate words, etc.).
 	 * 
 	 * The *callback* is the result that the command returns. It is an optional parameter. In case it is missing, the {@link Plugin#onCommandCallback window.Asc.plugin.onCommandCallback} function will be used to return the result of the command execution.
-     * <note><b>ONLYOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the *Api.GetDocument().InsertContent(...)*).
+     * <note><b>TUNEOFFICE Document Builder</b> commands can be only used to create content and insert it to the document editor (using the *Api.GetDocument().InsertContent(...)*).
 	 * This limitation exists due to the co-editing feature in the online editors. If it is necessary to create a plugin for desktop editors to work with local files, no such limitation is applied.</note>
      * 
 	 * This method is executed in its own context isolated from other JavaScript data. If some parameters or other data need to be passed to this method, use {@link /plugin/scope Asc.scope} object.
 	 * @param {Function} func - Defines the command written in JavaScript which purpose is to form structured data which can be inserted to the resulting document file
 	 * (formatted paragraphs, tables, text parts, and separate words, etc.). Then the data is sent to the editors.
-	 * The command must be compatible with {@link /docbuilder/basic ONLYOFFICE Document Builder} syntax.
+	 * The command must be compatible with {@link /docbuilder/basic TUNEOFFICE Document Builder} syntax.
 	 * @param {boolean} isClose - Defines whether the plugin window must be closed after the code is executed or left open waiting for another command or action.
 	 * The *true* value is used to close the plugin window after executing the function in the *func* parameter.
 	 * The *false* value is used to execute the command and leave the window open waiting for the next command.

@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -9540,7 +9540,7 @@ ParaRun.prototype.ApplyFontFamily = function(sFontName)
 	// if (nFontSlot & AscWord.fontslot_EastAsia)
 	// 	this.SetRFontsEastAsia({Name : sFontName, Index : -1});
 	
-	// https://bugzilla.onlyoffice.com/show_bug.cgi?id=60106
+	// https://bugzilla.tuneoffice.com/show_bug.cgi?id=60106
 	// Пока мы не можем разруливать как в MSWord, потому что у нас нет возможности получать текущую раскладку
 	// и нет события о смене раскладки
 	this.SetRFontsEastAsia({Name : sFontName, Index : -1});

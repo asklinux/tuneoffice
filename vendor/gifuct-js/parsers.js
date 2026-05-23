@@ -3,7 +3,7 @@
  * Copyright (c) 2015 Matt Way
  * Licensed under the MIT License
  *
- * Modified for ONLYOFFICE: wrapped in IIFE, added GIFUCT namespace
+ * Modified for TUNEOFFICE: wrapped in IIFE, added GIFUCT namespace
  */
 
 'use strict';

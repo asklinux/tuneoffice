@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -5352,11 +5352,11 @@ background-repeat: no-repeat;\
 		this.m_sTime = undefined !== v && null !== v ? v : "";
 		this.m_nTimeZoneBias = new Date().getTimezoneOffset();
 	};
-	asc_CCommentDataSlide.prototype.asc_getOnlyOfficeTime         = function()
+	asc_CCommentDataSlide.prototype.asc_getTuneOfficeTime         = function()
 	{
 		return this.m_sOOTime;
 	};
-	asc_CCommentDataSlide.prototype.asc_putOnlyOfficeTime         = function(v)
+	asc_CCommentDataSlide.prototype.asc_putTuneOfficeTime         = function(v)
 	{
 		this.m_sOOTime = undefined !== v && null !== v ? v : "";
 	};
@@ -10186,8 +10186,8 @@ background-repeat: no-repeat;\
 	asc_CCommentDataSlide.prototype['asc_putText']           = asc_CCommentDataSlide.prototype.asc_putText;
 	asc_CCommentDataSlide.prototype['asc_getTime']           = asc_CCommentDataSlide.prototype.asc_getTime;
 	asc_CCommentDataSlide.prototype['asc_putTime']           = asc_CCommentDataSlide.prototype.asc_putTime;
-	asc_CCommentDataSlide.prototype['asc_getOnlyOfficeTime'] = asc_CCommentDataSlide.prototype.asc_getOnlyOfficeTime;
-	asc_CCommentDataSlide.prototype['asc_putOnlyOfficeTime'] = asc_CCommentDataSlide.prototype.asc_putOnlyOfficeTime;
+	asc_CCommentDataSlide.prototype['asc_getTuneOfficeTime'] = asc_CCommentDataSlide.prototype.asc_getTuneOfficeTime;
+	asc_CCommentDataSlide.prototype['asc_putTuneOfficeTime'] = asc_CCommentDataSlide.prototype.asc_putTuneOfficeTime;
 	asc_CCommentDataSlide.prototype['asc_getUserId']         = asc_CCommentDataSlide.prototype.asc_getUserId;
 	asc_CCommentDataSlide.prototype['asc_putUserId']         = asc_CCommentDataSlide.prototype.asc_putUserId;
 	asc_CCommentDataSlide.prototype['asc_getUserName']       = asc_CCommentDataSlide.prototype.asc_getUserName;

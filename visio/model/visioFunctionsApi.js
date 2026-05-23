@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -39,7 +39,7 @@
 {
 
 	/**
-	 * accepts visio shadow and common parameters, return OnlyOffice api objects of different types.
+	 * accepts visio shadow and common parameters, return TuneOffice api objects of different types.
 	 * So for foreground color it return Unifill and for stroke Unifill too. For font color returns CUniColor.
 	 * In the end Calculate() is called for colors to calculate their exact value on theme
 	 * https://learn.microsoft.com/ru-ru/office/client-developer/visio/themeval-function.

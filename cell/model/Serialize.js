@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -7010,7 +7010,7 @@
                 this.memory.WriteByte(c_oSer_CommentData.Time);
                 this.memory.WriteString2(new Date(sTime - 0).toISOString().slice(0, 19) + 'Z');
             }
-            var sOOTime = oCommentData.asc_getOnlyOfficeTime();
+            var sOOTime = oCommentData.asc_getTuneOfficeTime();
             if(null != sOOTime && "" !== sOOTime)
             {
                 this.memory.WriteByte(c_oSer_CommentData.OOTime);
@@ -7061,7 +7061,7 @@
         {
             var oThis = this;
             var i;
-            var sOOTime = oCommentData.asc_getOnlyOfficeTime();
+            var sOOTime = oCommentData.asc_getTuneOfficeTime();
             if (sOOTime) {
                 this.bs.WriteItem( c_oSer_ThreadedComment.dT, function(){oThis.memory.WriteString3(new Date(sOOTime - 0).toISOString().slice(0, 22) + "Z");});
             }
@@ -12791,7 +12791,7 @@
             {
                 var dateMs = AscCommon.getTimeISO8601(this.stream.GetString2LE(length));
                 if(!isNaN(dateMs))
-                    oCommentData.asc_putOnlyOfficeTime(dateMs + "");
+                    oCommentData.asc_putTuneOfficeTime(dateMs + "");
             }
             else if ( c_oSer_CommentData.UserId == type )
                 oCommentData.asc_putUserId(this.stream.GetString2LE(length));
@@ -13504,7 +13504,7 @@
                 oCommentData.asc_putTime("");
                 var dateMs =  AscCommon.getTimeISO8601(this.stream.GetString2LE(length));
                 if(!isNaN(dateMs))
-                    oCommentData.asc_putOnlyOfficeTime(dateMs + "");
+                    oCommentData.asc_putTuneOfficeTime(dateMs + "");
             } else if ( c_oSer_ThreadedComment.personId === type ) {
                 let personGuid = this.stream.GetString2LE(length);
                 var person = this.personList[personGuid.toUpperCase()];

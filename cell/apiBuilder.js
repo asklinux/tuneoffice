@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -653,7 +653,7 @@
 	 * The passed function can be asynchronous (async function or function returning a Promise).
 	 * Inside the passed function, you can access the current cell address where the calculation is performed using *this.address*.
 	 * You can also access the addresses of function arguments using *this.args[0].address*, *this.args[1].address*, etc.
-	 * This method is not used in ONLYOFFICE Document Builder. Use AddCustomFunctionLibrary instead.
+	 * This method is not used in TUNEOFFICE Document Builder. Use AddCustomFunctionLibrary instead.
 	 * @memberof Api
 	 * @typeofeditors ["CSE"]
 	 * @param {Function} fCustom - A new function for calculating. Can be synchronous or asynchronous.
@@ -9169,7 +9169,7 @@
 	 * <note>Please note that the horizontal and vertical offsets are calculated within the limits of the specified column and
 	 * row cells only. If this value exceeds the cell width or height, another vertical/horizontal position will be set.</note>
 	 * :::note
-	 * Values of <em>nStyleIndex</em> outside <b>1 - 48</b> are interpreted as a chart style id from the <em>cs:chartStyle</em> element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+	 * Values of <em>nStyleIndex</em> outside <b>1 - 48</b> are interpreted as a chart style id from the <em>cs:chartStyle</em> element (e.g. 201, 215, 284) and are available only for [TUNEOFFICE Docs Enterprise](https://www.tuneoffice.com/docs-enterprise-prices.aspx?from=api) and [TUNEOFFICE Docs Developer](https://www.tuneoffice.com/developer-edition-prices.aspx?from=api).
 	 * :::
 	 * @memberof ApiWorksheet
 	 * @typeofeditors ["CSE"]
@@ -14273,7 +14273,7 @@
 	 * @see office-js-api/Examples/{Editor}/ApiComment/Methods/GetTimeUTC.js
 	 */
 	ApiComment.prototype.GetTimeUTC = function () {
-		let nTime = parseInt(this.Comment.asc_getOnlyOfficeTime());
+		let nTime = parseInt(this.Comment.asc_getTuneOfficeTime());
 		if (isNaN(nTime))
 			return 0;
 		return nTime;
@@ -14290,9 +14290,9 @@
 	ApiComment.prototype.SetTimeUTC = function (timeStamp) {
 		let nTime = parseInt(timeStamp);
 		if (isNaN(nTime))
-			this.Comment.asc_putOnlyOfficeTime("0");
+			this.Comment.asc_putTuneOfficeTime("0");
 		else
-			this.Comment.asc_putOnlyOfficeTime(String(nTime));
+			this.Comment.asc_putTuneOfficeTime(String(nTime));
 
 		this.private_OnChange();
 	};
@@ -14615,7 +14615,7 @@
 	 * @see office-js-api/Examples/{Editor}/ApiCommentReply/Methods/GetTimeUTC.js
 	 */
 	ApiCommentReply.prototype.GetTimeUTC = function () {
-		let nTime = parseInt(this.Data.asc_getOnlyOfficeTime());
+		let nTime = parseInt(this.Data.asc_getTuneOfficeTime());
 		if (isNaN(nTime))
 			return 0;
 		return nTime;
@@ -14632,9 +14632,9 @@
 	ApiCommentReply.prototype.SetTimeUTC = function (timeStamp) {
 		let nTime = parseInt(timeStamp);
 		if (isNaN(nTime))
-			this.Data.asc_putOnlyOfficeTime("0");
+			this.Data.asc_putTuneOfficeTime("0");
 		else
-			this.Data.asc_putOnlyOfficeTime(String(nTime));
+			this.Data.asc_putTuneOfficeTime(String(nTime));
 
 		this.private_OnChange();
 	};

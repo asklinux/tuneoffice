@@ -4,7 +4,7 @@ GRUNT_FLAGS = --no-color -v
 OUTPUT_DIR = deploy
 OUTPUT = $(OUTPUT_DIR)
 
-COMPANY_NAME ?= ONLYOFFICE
+COMPANY_NAME ?= TUNEOFFICE
 PRODUCT_NAME ?= DocumentServer
 
 COMPANY_NAME_LOW = $(shell echo $(COMPANY_NAME) | tr A-Z a-z)
@@ -17,7 +17,7 @@ PUBLISHER_NAME ?= Ascensio System SIA
 
 APP_COPYRIGHT ?= Copyright (C) $(PUBLISHER_NAME) 2009-$(shell date +%Y). All rights reserved
 
-PUBLISHER_URL ?= https://www.onlyoffice.com/
+PUBLISHER_URL ?= https://www.tuneoffice.com/
 
 GRUNT_ENV += PRODUCT_VERSION=$(PRODUCT_VERSION)
 GRUNT_ENV += BUILD_NUMBER=$(BUILD_NUMBER)

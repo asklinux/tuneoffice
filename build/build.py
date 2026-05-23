@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build OnlyOffice SDK JS — concatenation only, no compiler.
+"""Build TuneOffice SDK JS — concatenation only, no compiler.
 
 Usage:
     python build.py                           # build all (word, cell, slide, visio)
@@ -236,7 +236,7 @@ def write_scripts_js(sdk, name, compiled=False):
 
 def main():
     parser = argparse.ArgumentParser(
-        description='Build OnlyOffice SDK JS by concatenating sources (no compiler).',
+        description='Build TuneOffice SDK JS by concatenating sources (no compiler).',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )
@@ -290,12 +290,12 @@ def main():
         license_text = (f.read()
             .replace('@@AppCopyright', os.environ.get('APP_COPYRIGHT',
                 f'Copyright (C) Ascensio System SIA 2009-{year}. All rights reserved'))
-            .replace('@@PublisherUrl',  os.environ.get('PUBLISHER_URL', 'https://www.onlyoffice.com/'))
+            .replace('@@PublisherUrl',  os.environ.get('PUBLISHER_URL', 'https://www.tuneoffice.com/'))
             .replace('@@Version',       version)
             .replace('@@Build',         build_number))
 
     defines = {
-        'g_cCompanyName':    os.environ.get('COMPANY_NAME', 'onlyoffice'),
+        'g_cCompanyName':    os.environ.get('COMPANY_NAME', 'tuneoffice'),
         'g_cProductVersion': version,
         'g_cBuildNumber':    build_number,
         'g_cIsBeta':         args.beta,

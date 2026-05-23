@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -328,8 +328,8 @@ function (window, undefined) {
 	asc_CCommentData.prototype.asc_putTime = function(val) { this.sTime = undefined !== val && null !== val ? val : ""; };
 	asc_CCommentData.prototype.asc_getTime = function() { return this.sTime; };
 
-	asc_CCommentData.prototype.asc_putOnlyOfficeTime = function(val) { this.sOOTime = undefined !== val && null !== val ? val : ""; };
-	asc_CCommentData.prototype.asc_getOnlyOfficeTime = function() { return this.sOOTime; };
+	asc_CCommentData.prototype.asc_putTuneOfficeTime = function(val) { this.sOOTime = undefined !== val && null !== val ? val : ""; };
+	asc_CCommentData.prototype.asc_getTuneOfficeTime = function() { return this.sOOTime; };
 
 	asc_CCommentData.prototype.asc_putUserId = function(val) { this.sUserId = val; this.sProviderId = "Teamlab"; };
 	asc_CCommentData.prototype.asc_getUserId = function() { return this.sUserId; };
@@ -464,7 +464,7 @@ function (window, undefined) {
 		comment.asc_putText(value["Text"]);
 		comment.asc_putQuoteText(value["QuoteText"]);
 		comment.asc_putTime(value["Time"]);
-		comment.asc_putOnlyOfficeTime(value["OnlyOfficeTime"]);
+		comment.asc_putTuneOfficeTime(value["TuneOfficeTime"]);
 		comment.asc_putUserId(value["UserId"]);
 		comment.asc_putUserName(value["Name"]);
 		comment.asc_putProviderId(value["ProviderId"]);
@@ -492,7 +492,7 @@ function (window, undefined) {
 		value["Text"] = this.asc_getText();
 		value["QuoteText"] = this.asc_getQuoteText();
 		value["Time"] = this.asc_getTime();
-		value["OnlyOfficeTime"] = this.asc_getOnlyOfficeTime();
+		value["TuneOfficeTime"] = this.asc_getTuneOfficeTime();
 		value["UserId"] = this.asc_getUserId();
 		value["UserName"] = this.asc_getUserName();
 		value["ProviderId"] = this.asc_getProviderId();
@@ -1616,8 +1616,8 @@ CCellCommentator.prototype.Redo = function(type, data) {
 	prot["asc_getQuoteText"] = prot.asc_getQuoteText;
 	prot["asc_putTime"] = prot.asc_putTime;
 	prot["asc_getTime"] = prot.asc_getTime;
-	prot["asc_putOnlyOfficeTime"] = prot.asc_putOnlyOfficeTime;
-	prot["asc_getOnlyOfficeTime"] = prot.asc_getOnlyOfficeTime;
+	prot["asc_putTuneOfficeTime"] = prot.asc_putTuneOfficeTime;
+	prot["asc_getTuneOfficeTime"] = prot.asc_getTuneOfficeTime;
 	prot["asc_putUserId"] = prot.asc_putUserId;
 	prot["asc_getUserId"] = prot.asc_getUserId;
 	prot["asc_putUserName"] = prot.asc_putUserName;

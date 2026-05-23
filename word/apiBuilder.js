@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -4870,7 +4870,7 @@
 	/**
 	 * Creates a chart with the parameters specified.
 	 * :::note
-	 * Values of <em>styleIndex</em> outside <b>1 - 48</b> are interpreted as a chart style id from the <em>cs:chartStyle</em> element (e.g. 201, 215, 284) and are available only for [ONLYOFFICE Docs Enterprise](https://www.onlyoffice.com/docs-enterprise-prices.aspx?from=api) and [ONLYOFFICE Docs Developer](https://www.onlyoffice.com/developer-edition-prices.aspx?from=api).
+	 * Values of <em>styleIndex</em> outside <b>1 - 48</b> are interpreted as a chart style id from the <em>cs:chartStyle</em> element (e.g. 201, 215, 284) and are available only for [TUNEOFFICE Docs Enterprise](https://www.tuneoffice.com/docs-enterprise-prices.aspx?from=api) and [TUNEOFFICE Docs Developer](https://www.tuneoffice.com/developer-edition-prices.aspx?from=api).
 	 * :::
 	 * @memberof Api
 	 * @typeofeditors ["CDE"]
@@ -7622,7 +7622,7 @@
 	 *   "Mark Pottato": {
 	 *     comments: [
 	 *       { IsAnswer: false, CommentMessage: "Need to change this part", Date: 1688587967245, DateUTC: 1688569967245, QuoteText: "The quick brown fox jumps over the lazy dog" },
-	 *       { IsAnswer: false, CommentMessage: "We need to add a link", Date: 1688587967245, DateUTC: 1688569967245, QuoteText: "OnlyOffice" }
+	 *       { IsAnswer: false, CommentMessage: "We need to add a link", Date: 1688587967245, DateUTC: 1688569967245, QuoteText: "TuneOffice" }
 	 *     ]
 	 *   }
 	 * }
@@ -8154,7 +8154,7 @@
 	 * 	{
 	 * 	  "key"       : "CompanyName",
 	 * 	  "tag"       : "companyName",
-	 * 	  "value"     : "ONLYOFFICE",
+	 * 	  "value"     : "TUNEOFFICE",
 	 * 	  "type"      : "text",
 	 * 	  "role"      : "",
 	 * 	  "roleColor" : "FF0000"

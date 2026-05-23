@@ -11,7 +11,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -823,7 +823,7 @@
 
         let oMainComm = this._replies[0];
         oAscCommData.asc_putText(oMainComm.GetContents());
-        oAscCommData.asc_putOnlyOfficeTime(oMainComm.GetModDate().toString());
+        oAscCommData.asc_putTuneOfficeTime(oMainComm.GetModDate().toString());
         oAscCommData.asc_putUserId(this.GetUserId());
         oAscCommData.asc_putUserName(oMainComm.GetAuthor());
         oAscCommData.asc_putSolved(false);
