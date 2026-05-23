@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -343,7 +343,7 @@ namespace NSDoctRenderer
 	};
 
 	/**
-	 * Base class used by ONLYOFFICE Document Builder for the document file (text document, spreadsheet, presentation, form document, PDF) to be generated.
+	 * Base class used by TUNEOFFICE Document Builder for the document file (text document, spreadsheet, presentation, form document, PDF) to be generated.
 	 */
 	class CDocBuilder_Private;
 	class BUILDER_DECL CDocBuilder
@@ -397,7 +397,7 @@ namespace NSDoctRenderer
 		int SaveFile(const int& type, const wchar_t* path, const wchar_t* params = 0);
 		int SaveFile(const wchar_t* extension, const wchar_t* path, const wchar_t* params = 0);
 		/**
-		 * Closes the file to stop working with it. You can use a single ONLYOFFICE Document Builder instance
+		 * Closes the file to stop working with it. You can use a single TUNEOFFICE Document Builder instance
 		 * to work with all your files, but you need to close the previous file before you can
 		 * start working with the next one in this case.
 		 *
@@ -427,11 +427,11 @@ namespace NSDoctRenderer
 		bool ExecuteCommand(const wchar_t* command, CDocBuilderValue* retValue = 0);
 
 		/**
-		 * Runs the ONLYOFFICE Document Builder executable. If you do not want to write a C++ application,
+		 * Runs the TUNEOFFICE Document Builder executable. If you do not want to write a C++ application,
 		 * you can simply use the docbuilder.exe executable file and run it with the .docbuilder file as an argument,
 		 * where all the code for the document file creation will be written. For C++, create the CDocBuilder object
 		 * and call the Run method with the path to the executable file from the sPath parameter.
-		 * @param path The path to the ONLYOFFICE Document Builder executable.
+		 * @param path The path to the TUNEOFFICE Document Builder executable.
 		 * @return True if the operation is successful
 		 */
 		bool Run(const wchar_t* path);
@@ -450,7 +450,7 @@ namespace NSDoctRenderer
 
 		/**
 		 * Sets an argument in the UTF8 format to the builder class which can be trasferred to the program outside the CDocBuilder.ExecuteCommand method,
-		 * i.e. either as an additional property when running ONLYOFFICE Document Builder executable file or as a part of program code, but not included into the document file script.
+		 * i.e. either as an additional property when running TUNEOFFICE Document Builder executable file or as a part of program code, but not included into the document file script.
 		 * Supported properties:
 		 * --use-doctrenderer-scheme - Specifies if the doctrenderer mode is used when building a document or getting content from the editor when saving a file (true/false).
 		 * Default: false
@@ -500,8 +500,8 @@ namespace NSDoctRenderer
 		bool IsSaveWithDoctrendererMode();
 
 		/**
-		 * Returns the ONLYOFFICE Document Builder engine version.
-		 * @return The ONLYOFFICE Document Builder engine version
+		 * Returns the TUNEOFFICE Document Builder engine version.
+		 * @return The TUNEOFFICE Document Builder engine version
 		 */
 		char* GetVersion();
 
@@ -514,14 +514,14 @@ namespace NSDoctRenderer
 
 	public:
 		/**
-		 * Initializes the ONLYOFFICE Document Builder as a library for the application to be able to work with it.
+		 * Initializes the TUNEOFFICE Document Builder as a library for the application to be able to work with it.
 		 * This method just sets the directory to the main Document Builder resources (icu files, etc). If this method is not called,
 		 * the Document Builder will find resources from the current process directory.
 		 * @param directory The path to the main Document Builder resources.
 		 */
 		static void Initialize(const wchar_t* directory = 0);
 		/**
-		 * Unloads the ONLYOFFICE Document Builder from the application memory when it is no longer needed.
+		 * Unloads the TUNEOFFICE Document Builder from the application memory when it is no longer needed.
 		 * Generally, there is no need to dispose JS before exiting
 		 * the process, it should happen automatically. It should only be used if the process needs the resources taken up by JS.
 		 */
@@ -541,9 +541,9 @@ namespace NSDoctRenderer
 
 	/**
 	 * Attention!!!
-	 * If you use ONLYOFFICE Document Builder as both an application and a script, then you need to know some rules and limitations:
+	 * If you use TUNEOFFICE Document Builder as both an application and a script, then you need to know some rules and limitations:
 	 *
-	 * 1) To run ONLYOFFICE Document Builder executable in the C++ application, use the CDocBuilder.Run method in the following way:
+	 * 1) To run TUNEOFFICE Document Builder executable in the C++ application, use the CDocBuilder.Run method in the following way:
 	 * CDocBuilder::Initialize(sWorkDirectory.c_str());
 	 * CDocBuilder oBuilder;
 	 * oBuilder.Run("path-to-script.docbuilder");
@@ -553,10 +553,10 @@ namespace NSDoctRenderer
 	 * docbuilder.exe "path-to-script.docbuilder"
 	 *
 	 * 2) To set an argument to the builder class which can be trasferred to the program outside the CDocBuilder.ExecuteCommand method,
-	 * add it as an additional property when running ONLYOFFICE Document Builder executable file or as a part of program JavaScript code,
+	 * add it as an additional property when running TUNEOFFICE Document Builder executable file or as a part of program JavaScript code,
 	 * but not included into the document file script.
 	 * Sets the --argument property to CDocBuilder.Run:
-	 * docbuilder.exe "--argument={\"company\":\"ONLYOFFICE\",\"product\":\"ONLYOFFICE Document Builder\"}" "path-to-script.docbuilder"
+	 * docbuilder.exe "--argument={\"company\":\"TUNEOFFICE\",\"product\":\"TUNEOFFICE Document Builder\"}" "path-to-script.docbuilder"
 	 * Sets the --argument property using JavaScript code:
 	 * var sCompany = Argument["company"];
 	 * var sProduct = Argument["product"];

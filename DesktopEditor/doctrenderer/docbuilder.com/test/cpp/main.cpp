@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -59,17 +59,17 @@ int main(int argc, char *argv[])
 {
 	CoInitialize(NULL);
 
-	IONLYOFFICEDocBuilder* oBuilder = NULL;
-	IONLYOFFICEDocBuilderContext* oContext = NULL;
-	IONLYOFFICEDocBuilderContextScope* oScope = NULL;
+	ITUNEOFFICEDocBuilder* oBuilder = NULL;
+	ITUNEOFFICEDocBuilderContext* oContext = NULL;
+	ITUNEOFFICEDocBuilderContextScope* oScope = NULL;
 
-	IONLYOFFICEDocBuilderValue* oGlobal = NULL;
-	IONLYOFFICEDocBuilderValue* oApi = NULL;
-	IONLYOFFICEDocBuilderValue* oDocument = NULL;
-	IONLYOFFICEDocBuilderValue* oParagraph = NULL;
-	IONLYOFFICEDocBuilderValue* oContent = NULL;
+	ITUNEOFFICEDocBuilderValue* oGlobal = NULL;
+	ITUNEOFFICEDocBuilderValue* oApi = NULL;
+	ITUNEOFFICEDocBuilderValue* oDocument = NULL;
+	ITUNEOFFICEDocBuilderValue* oParagraph = NULL;
+	ITUNEOFFICEDocBuilderValue* oContent = NULL;
 
-	HRESULT hr = CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_ALL, __uuidof(IONLYOFFICEDocBuilder), (void**)&oBuilder);
+	HRESULT hr = CoCreateInstance(__uuidof(CTUNEOFFICEDocBuilder), NULL, CLSCTX_ALL, __uuidof(ITUNEOFFICEDocBuilder), (void**)&oBuilder);
 
 	if (FAILED(hr))
 	{
@@ -103,7 +103,7 @@ int main(int argc, char *argv[])
 
 	RELEASEINTERFACE(oContent);
 
-	IONLYOFFICEDocBuilderValue* oArr = NULL;
+	ITUNEOFFICEDocBuilderValue* oArr = NULL;
 	CComSafeArray<BYTE> arr;
 	arr.Add(1);
 	oContext->CreateTypedArray(ATL::CComVariant(arr), 1, &oArr);

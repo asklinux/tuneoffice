@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -47,18 +47,18 @@
 #endif
 
 /* Forward Declarations */ 
-typedef interface IONLYOFFICEDocBuilderValue IONLYOFFICEDocBuilderValue;
-typedef interface IONLYOFFICEDocBuilderContextScope IONLYOFFICEDocBuilderContextScope;
-typedef interface IONLYOFFICEDocBuilderContext IONLYOFFICEDocBuilderContext;
-typedef interface IONLYOFFICEDocBuilder IONLYOFFICEDocBuilder;
+typedef interface ITUNEOFFICEDocBuilderValue ITUNEOFFICEDocBuilderValue;
+typedef interface ITUNEOFFICEDocBuilderContextScope ITUNEOFFICEDocBuilderContextScope;
+typedef interface ITUNEOFFICEDocBuilderContext ITUNEOFFICEDocBuilderContext;
+typedef interface ITUNEOFFICEDocBuilder ITUNEOFFICEDocBuilder;
 
-typedef class CONLYOFFICEDocBuilderValue CONLYOFFICEDocBuilderValue;
-typedef class CONLYOFFICEDocBuilderContextScope CONLYOFFICEDocBuilderContextScope;
-typedef class CONLYOFFICEDocBuilderContext CONLYOFFICEDocBuilderContext;
-typedef class CONLYOFFICEDocBuilder CONLYOFFICEDocBuilder;
+typedef class CTUNEOFFICEDocBuilderValue CTUNEOFFICEDocBuilderValue;
+typedef class CTUNEOFFICEDocBuilderContextScope CTUNEOFFICEDocBuilderContextScope;
+typedef class CTUNEOFFICEDocBuilderContext CTUNEOFFICEDocBuilderContext;
+typedef class CTUNEOFFICEDocBuilder CTUNEOFFICEDocBuilder;
 
 MIDL_INTERFACE("2637FDFA-8473-4CB8-B90B-C23CB949D009")
-IONLYOFFICEDocBuilderValue : public IDispatch
+ITUNEOFFICEDocBuilderValue : public IDispatch
 {
 public:
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateInstance( 
@@ -116,19 +116,19 @@ public:
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetProperty( 
         /* [in] */ BSTR name,
-        /* [retval][out] */ IONLYOFFICEDocBuilderValue **result) = 0;
+        /* [retval][out] */ ITUNEOFFICEDocBuilderValue **result) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE Get( 
         /* [in] */ long index,
-        /* [retval][out] */ IONLYOFFICEDocBuilderValue **result) = 0;
+        /* [retval][out] */ ITUNEOFFICEDocBuilderValue **result) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE SetProperty( 
         /* [in] */ BSTR name,
-        /* [in] */ IONLYOFFICEDocBuilderValue *value) = 0;
+        /* [in] */ ITUNEOFFICEDocBuilderValue *value) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE Set( 
         /* [in] */ long index,
-        /* [in] */ IONLYOFFICEDocBuilderValue *value) = 0;
+        /* [in] */ ITUNEOFFICEDocBuilderValue *value) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE Call( 
         /* [in] */ BSTR name,
@@ -138,12 +138,12 @@ public:
         /* [optional][in] */ VARIANT val4,
         /* [optional][in] */ VARIANT val5,
         /* [optional][in] */ VARIANT val6,
-        /* [retval][out] */ IONLYOFFICEDocBuilderValue **result) = 0;
+        /* [retval][out] */ ITUNEOFFICEDocBuilderValue **result) = 0;
         
 };
 
 MIDL_INTERFACE("656ae95c-ae91-4dc0-88bf-0b770fc2d552")
-IONLYOFFICEDocBuilderContextScope : public IDispatch
+ITUNEOFFICEDocBuilderContextScope : public IDispatch
 {
 public:
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE Close( void) = 0;
@@ -151,32 +151,32 @@ public:
 };
     
 MIDL_INTERFACE("0416975a-65c3-4015-85e4-55d9dafec5fc")
-IONLYOFFICEDocBuilderContext : public IDispatch
+ITUNEOFFICEDocBuilderContext : public IDispatch
 {
 public:
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateUndefined( 
-        /* [retval][out] */ IONLYOFFICEDocBuilderValue **result) = 0;
+        /* [retval][out] */ ITUNEOFFICEDocBuilderValue **result) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateNull( 
-        /* [retval][out] */ IONLYOFFICEDocBuilderValue **result) = 0;
+        /* [retval][out] */ ITUNEOFFICEDocBuilderValue **result) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateObject( 
-        /* [retval][out] */ IONLYOFFICEDocBuilderValue **result) = 0;
+        /* [retval][out] */ ITUNEOFFICEDocBuilderValue **result) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateArray( 
         /* [in] */ long length,
-        /* [retval][out] */ IONLYOFFICEDocBuilderValue **result) = 0;
+        /* [retval][out] */ ITUNEOFFICEDocBuilderValue **result) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateTypedArray( 
         /* [in] */ VARIANT buffer,
         /* [in] */ long length,
-        /* [retval][out] */ IONLYOFFICEDocBuilderValue **result) = 0;
+        /* [retval][out] */ ITUNEOFFICEDocBuilderValue **result) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetGlobal( 
-        /* [retval][out] */ IONLYOFFICEDocBuilderValue **result) = 0;
+        /* [retval][out] */ ITUNEOFFICEDocBuilderValue **result) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateScope( 
-        /* [retval][out] */ IONLYOFFICEDocBuilderContextScope **result) = 0;
+        /* [retval][out] */ ITUNEOFFICEDocBuilderContextScope **result) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE IsError( 
         /* [retval][out] */ VARIANT_BOOL *result) = 0;
@@ -184,7 +184,7 @@ public:
 };
 
 MIDL_INTERFACE("0C07B7E7-86A4-42E1-8E42-2FA961992E0F")
-IONLYOFFICEDocBuilder : public IDispatch
+ITUNEOFFICEDocBuilder : public IDispatch
 {
 public:
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE CreateInstance( void) = 0;
@@ -226,7 +226,7 @@ public:
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE Execute( 
         /* [in] */ BSTR command,
-        /* [retval][out] */ IONLYOFFICEDocBuilderValue **result) = 0;
+        /* [retval][out] */ ITUNEOFFICEDocBuilderValue **result) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE WriteData( 
         /* [in] */ BSTR path,
@@ -237,7 +237,7 @@ public:
         /* [retval][out] */ VARIANT_BOOL *result) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE GetContext( 
-        /* [retval][out] */ IONLYOFFICEDocBuilderContext **result) = 0;
+        /* [retval][out] */ ITUNEOFFICEDocBuilderContext **result) = 0;
         
     virtual /* [id] */ HRESULT STDMETHODCALLTYPE Initialize( void) = 0;
         
@@ -246,13 +246,13 @@ public:
 };
 
 class DECLSPEC_UUID("85C41585-25D7-40F1-9CC6-FA17052650F4")
-CONLYOFFICEDocBuilderValue;
+CTUNEOFFICEDocBuilderValue;
 
 class DECLSPEC_UUID("c54e2b15-ff5b-45a2-aa15-89a02605c30c")
-CONLYOFFICEDocBuilderContextScope;
+CTUNEOFFICEDocBuilderContextScope;
 
 class DECLSPEC_UUID("299250bb-16c2-4ab4-8a49-a0c350d66bb5")
-CONLYOFFICEDocBuilderContext;
+CTUNEOFFICEDocBuilderContext;
 
 class DECLSPEC_UUID("9BF69F3C-1506-41B9-B8EE-2839948C02E9")
-CONLYOFFICEDocBuilder;
+CTUNEOFFICEDocBuilder;

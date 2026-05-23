@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -3091,7 +3091,7 @@ namespace Settings
 	}
 	std::wstring CSettingsCustom::GetSchemaUrl()
 	{
-		return L"http://schemas.onlyoffice.com/settingsCustom";
+		return L"http://schemas.tuneoffice.com/settingsCustom";
 	}
 	bool CSettingsCustom::IsEmpty()
 	{

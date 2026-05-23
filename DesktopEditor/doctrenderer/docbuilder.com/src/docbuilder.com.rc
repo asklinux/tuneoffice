@@ -61,7 +61,7 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "Ascensio System SIA 2023"
-            VALUE "FileDescription", "ONLYOFFICE docbuilder ActiveX DLL"
+            VALUE "FileDescription", "TUNEOFFICE docbuilder ActiveX DLL"
             VALUE "FileVersion", "1.0.0.1"
             VALUE "InternalName", "docbuilder.com.dll"
             VALUE "LegalCopyright", "Copyright (C) Ascensio System SIA 2023. All rights reserved."
@@ -88,7 +88,7 @@ BEGIN
 	IDS_PROJNAME					"docbuilder.com"
 END
 
-IDR_ONLYOFFICEDOCBUILDER REGISTRY "docbuilder.com.rgs"
+IDR_TUNEOFFICEDOCBUILDER REGISTRY "docbuilder.com.rgs"
 ////////////////////////////////////////////////////////////////////////////
 
 

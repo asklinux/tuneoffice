@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -234,7 +234,7 @@ public:
 		m_sReportName =		L"report.txt";
 		m_sStdoutFile =		L"stdout.txt";
 
-		m_sEditorsPath =	L"/opt/onlyoffice/desktopeditors/DesktopEditors";
+		m_sEditorsPath =	L"/opt/tuneoffice/desktopeditors/DesktopEditors";
 		m_sSuccessOutput =	L"[DesktopEditors]: start page loaded";
 
 		m_sBranch =			L"";
@@ -717,7 +717,7 @@ public:
 				{
 					sData = L"#!/bin/bash\n" \
 							L"echo \"Install DesktopEditors\"\n" \
-							L"apt purge onlyoffice-desktopeditors -y\n" \
+							L"apt purge tuneoffice-desktopeditors -y\n" \
 							L"dpkg -i ./" + sDistribFile + "\n" \
 							L"apt install -f";
 				}
@@ -732,7 +732,7 @@ public:
 				{
 					sData = L"#!/bin/bash\n" \
 							L"echo \"Install DesktopEditors\"\n" \
-							L"rpm -e onlyoffice-desktopeditors\n" \
+							L"rpm -e tuneoffice-desktopeditors\n" \
 							L"rpm -i ./" + sDistribFile;
 				}
 			}
@@ -1020,21 +1020,21 @@ public:
 					// Prepare urls
 					if ( m_sBranch.length() && m_sVersion.length() )
 					{
-						std::wstring sAmazonS3 = L"https://s3.eu-west-1.amazonaws.com/repo-doc-onlyoffice-com/desktop/linux";
+						std::wstring sAmazonS3 = L"https://s3.eu-west-1.amazonaws.com/repo-doc-tuneoffice-com/desktop/linux";
 
 						if ( m_sDebianStart.length() )
 						{
-							m_sDebianUrl = sAmazonS3 + L"/debian/onlyoffice-desktopeditors_{BRANCH}-{VERSION}_amd64.deb";
+							m_sDebianUrl = sAmazonS3 + L"/debian/tuneoffice-desktopeditors_{BRANCH}-{VERSION}_amd64.deb";
 							NSStringUtils::string_replace(m_sDebianUrl, L"{BRANCH}", m_sBranch);
 							NSStringUtils::string_replace(m_sDebianUrl, L"{VERSION}", m_sVersion);
 						}
 						if ( m_sRedHatStart.length() )
 						{
-							m_sCentosUrl = sAmazonS3 + L"/rhel/onlyoffice-desktopeditors-{BRANCH}-{VERSION}.el7.x86_64.rpm";
+							m_sCentosUrl = sAmazonS3 + L"/rhel/tuneoffice-desktopeditors-{BRANCH}-{VERSION}.el7.x86_64.rpm";
 							NSStringUtils::string_replace(m_sCentosUrl, L"{BRANCH}", m_sBranch);
 							NSStringUtils::string_replace(m_sCentosUrl, L"{VERSION}", m_sVersion);
 
-							m_sOpSuseUrl = sAmazonS3 + L"/suse/onlyoffice-desktopeditors-{BRANCH}-{VERSION}.suse12.x86_64.rpm";
+							m_sOpSuseUrl = sAmazonS3 + L"/suse/tuneoffice-desktopeditors-{BRANCH}-{VERSION}.suse12.x86_64.rpm";
 							NSStringUtils::string_replace(m_sOpSuseUrl, L"{BRANCH}", m_sBranch);
 							NSStringUtils::string_replace(m_sOpSuseUrl, L"{VERSION}", m_sVersion);
 						}

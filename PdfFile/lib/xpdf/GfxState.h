@@ -994,7 +994,7 @@ public:
   void getCMYK(Guchar *x, GfxCMYK *cmyk, GfxRenderingIntent ri);
   void getColor(Guchar *x, GfxColor *color);
 
-  // onlyoffice
+  // tuneoffice
   int getFillType();
   GfxColorComp** getLookup() { return lookup; }
 

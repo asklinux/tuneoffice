@@ -1,6 +1,6 @@
 def getKeystore() {
     def keystoreProperties = new Properties()
-    def keystorePropertiesFile = rootProject.file('Onlyoffice-keystore.properties')
+    def keystorePropertiesFile = rootProject.file('Tuneoffice-keystore.properties')
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
     return keystoreProperties
 }

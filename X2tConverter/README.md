@@ -28,7 +28,7 @@ You need to create the xml configuration file.
 	# (Required, if no extension in filename) the to convert to
 	<m_nFormatTo> </m_nFormatTo>
 
-Information about formats you can find [here](https://github.com/ONLYOFFICE/core/blob/master/Common/OfficeFileFormats.h).
+Information about formats you can find [here](https://github.com/TUNEOFFICE/core/blob/master/Common/OfficeFileFormats.h).
 
 ## Non-required fields:
 

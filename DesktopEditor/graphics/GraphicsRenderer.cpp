@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -999,9 +999,9 @@ HRESULT CGraphicsRenderer::DrawPath(const LONG& nType)
 				}
 				else if (m_oBrush.TexturePath.find(L"data:") == 0)
 				{
-					bool bIsOnlyOfficeHatch = false;
-					if (m_oBrush.TexturePath.find(L"onlyoffice_hatch") != std::wstring::npos)
-					bIsOnlyOfficeHatch = true;
+					bool bIsTuneOfficeHatch = false;
+					if (m_oBrush.TexturePath.find(L"tuneoffice_hatch") != std::wstring::npos)
+					bIsTuneOfficeHatch = true;
 
 					int countErase = (int)(m_oBrush.TexturePath.find(',') + 1);
 					int nInputSize = (int)(m_oBrush.TexturePath.length() - countErase);
@@ -1012,7 +1012,7 @@ HRESULT CGraphicsRenderer::DrawPath(const LONG& nType)
 					if (TRUE == NSBase64::Base64Decode(pInputSrc, nInputSize, pImageData, &nDecodeLen))
 					{
 						CBgraFrame oFrame;
-						if (bIsOnlyOfficeHatch)
+						if (bIsTuneOfficeHatch)
 						{
 							int nSize = (int)sqrt(nDecodeLen >> 2);
 							oFrame.put_IsRGBA(true);

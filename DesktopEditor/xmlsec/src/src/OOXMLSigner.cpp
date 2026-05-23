@@ -240,12 +240,12 @@ public:
 		std::sort(arSigs.begin(), arSigs.end());
 		for (std::vector<std::wstring>::iterator iter = arSigs.begin(); iter != arSigs.end(); iter++)
 		{
-			m_pFolder->move(folder + L"/" + *iter, folder + L"/onlyoffice_" + *iter);
+			m_pFolder->move(folder + L"/" + *iter, folder + L"/tuneoffice_" + *iter);
 		}
 		int nSigNumber = 1;
 		for (std::vector<std::wstring>::iterator iter = arSigs.begin(); iter != arSigs.end(); iter++)
 		{
-			m_pFolder->move(folder + L"/onlyoffice_" + *iter, folder + L"/sig" + std::to_wstring(nSigNumber++) + L".xml");
+			m_pFolder->move(folder + L"/tuneoffice_" + *iter, folder + L"/sig" + std::to_wstring(nSigNumber++) + L".xml");
 		}
 
 		return (int)arSigs.size();

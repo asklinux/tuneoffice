@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -79,7 +79,7 @@ void CProcessEditor::StartEditor()
 
     HKEY hKey = 0;
     HKEY hRoot = HKEY_LOCAL_MACHINE;
-    if (ERROR_SUCCESS == RegOpenKeyExW(hRoot, L"SOFTWARE\\ONLYOFFICE\\DesktopEditors", 0, KEY_READ, &hKey))
+    if (ERROR_SUCCESS == RegOpenKeyExW(hRoot, L"SOFTWARE\\TUNEOFFICE\\DesktopEditors", 0, KEY_READ, &hKey))
     {
         if (ERROR_SUCCESS == RegQueryValueExW(hKey, L"AppPath", 0, NULL, (LPBYTE)sBuffer, &dwBufferSize))
         {
@@ -95,7 +95,7 @@ void CProcessEditor::StartEditor()
 #endif
 
 #ifdef Q_OS_LINUX
-    sApplicationPath = "onlyoffice-desktopeditors";
+    sApplicationPath = "tuneoffice-desktopeditors";
 #endif
 
     start(sApplicationPath, args);

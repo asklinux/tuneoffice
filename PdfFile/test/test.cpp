@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -132,7 +132,7 @@ public:
 	{
 		std::map<std::wstring, std::wstring> properties;
 		properties.insert(std::make_pair(L"DNS", L"8.8.8.8"));
-		properties.insert(std::make_pair(L"email", L"sign@onlyoffice.com"));
+		properties.insert(std::make_pair(L"email", L"sign@tuneoffice.com"));
 
 		return NSCertificate::GenerateByAlg("ecdsa512", properties);
 	}
@@ -140,7 +140,7 @@ public:
 	{
 		std::map<std::wstring, std::wstring> properties;
 		properties.insert(std::make_pair(L"DNS", L"8.8.8.8"));
-		properties.insert(std::make_pair(L"email", L"sign@onlyoffice.com"));
+		properties.insert(std::make_pair(L"email", L"sign@tuneoffice.com"));
 
 		return NSCertificate::GenerateByAlg("rsa2048", properties);
 	}
@@ -183,10 +183,10 @@ TEST_F(CPdfFileTest, GetMetaData)
 	BYTE* pMetaData = NULL;
 	DWORD nMetaLength = 0;
 
-	if (pdfFile->GetMetaData(wsSrcFile, L"ONLYOFFICEFORM", &pMetaData, nMetaLength))
+	if (pdfFile->GetMetaData(wsSrcFile, L"TUNEOFFICEFORM", &pMetaData, nMetaLength))
 	{
 		NSFile::CFileBinary oFile;
-		if (oFile.CreateFileW(NSFile::GetProcessDirectory() + L"/ONLYOFFICEFORM.docxf"))
+		if (oFile.CreateFileW(NSFile::GetProcessDirectory() + L"/TUNEOFFICEFORM.docxf"))
 			oFile.WriteFile(pMetaData, nMetaLength);
 		oFile.CloseFile();
 
@@ -322,9 +322,9 @@ TEST_F(CPdfFileTest, SetMetaData)
 
 	BYTE* pFileData = NULL;
 	DWORD nFileSize;
-	std::wstring sFile = NSFile::GetProcessDirectory() + L"/ONLYOFFICEFORM.docxf";
+	std::wstring sFile = NSFile::GetProcessDirectory() + L"/TUNEOFFICEFORM.docxf";
 	EXPECT_TRUE(NSFile::CFileBinary::ReadAllBytes(sFile, &pFileData, nFileSize));
-	pdfFile->AddMetaData(L"ONLYOFFICEFORM", pFileData, nFileSize);
+	pdfFile->AddMetaData(L"TUNEOFFICEFORM", pFileData, nFileSize);
 	RELEASEARRAYOBJECTS(pFileData);
 
 	EXPECT_HRESULT_SUCCEEDED(pdfFile->OnlineWordToPdfFromBinary(NSFile::GetProcessDirectory() + L"/pdf.bin", wsDstFile));

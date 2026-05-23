@@ -40,8 +40,8 @@ namespace FilesSort
         }
         static void Main(string[] args)
         {
-            string input = @"D:\logs\doc.onlyoffice.com\7.3.2\files";
-            string output = @"D:\logs\doc.onlyoffice.com\7.3.2\files-sorted";
+            string input = @"D:\logs\doc.tuneoffice.com\7.3.2\files";
+            string output = @"D:\logs\doc.tuneoffice.com\7.3.2\files-sorted";
 
             DateTime start = DateTime.Now;
             Dictionary<long, long> hash = new Dictionary<long, long>();

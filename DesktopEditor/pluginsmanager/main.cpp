@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -270,15 +270,15 @@ public:
 	CPluginsManager()
 	{
 		m_sPluginsDir = L"";
-		m_sMarketplaceUrl = L"https://onlyoffice.github.io";
-		m_sMarketplaceRepo = L"https://github.com/ONLYOFFICE/onlyoffice.github.io";
+		m_sMarketplaceUrl = L"https://tuneoffice.github.io";
+		m_sMarketplaceRepo = L"https://github.com/TUNEOFFICE/tuneoffice.github.io";
 
 		m_sSettingsDir = NSSystemUtils::GetAppDataDir() + L"/pluginsmanager";
 
 #ifdef LINUX
-		// GetAppDataDir creates folder with ONLYOFFICE on Linux
+		// GetAppDataDir creates folder with TUNEOFFICE on Linux
 		// as result - two folders in lower/upper case, working with the correct folder
-		NSStringUtils::string_replace(m_sSettingsDir, L"ONLYOFFICE", L"onlyoffice");
+		NSStringUtils::string_replace(m_sSettingsDir, L"TUNEOFFICE", L"tuneoffice");
 #endif
 
 		m_sSettingsFile = m_sSettingsDir + L"/settings";
@@ -328,15 +328,15 @@ public:
 
 		if ( sUrl.length() )
 		{
-			if (0 == sUrl.find(L"https://onlyoffice.github.io"))
+			if (0 == sUrl.find(L"https://tuneoffice.github.io"))
 			{
-				m_sMarketplaceUrl = L"https://onlyoffice.github.io";
-				m_sMarketplaceRepo = L"https://github.com/ONLYOFFICE/onlyoffice.github.io";
+				m_sMarketplaceUrl = L"https://tuneoffice.github.io";
+				m_sMarketplaceRepo = L"https://github.com/TUNEOFFICE/tuneoffice.github.io";
 			}
-			else if (0 == sUrl.find(L"https://onlyoffice-plugins.github.io/onlyoffice.github.io"))
+			else if (0 == sUrl.find(L"https://tuneoffice-plugins.github.io/tuneoffice.github.io"))
 			{
-				m_sMarketplaceUrl = L"https://onlyoffice-plugins.github.io/onlyoffice.github.io";
-				m_sMarketplaceRepo = L"https://github.com/ONLYOFFICE-PLUGINS/onlyoffice.github.io";
+				m_sMarketplaceUrl = L"https://tuneoffice-plugins.github.io/tuneoffice.github.io";
+				m_sMarketplaceRepo = L"https://github.com/TUNEOFFICE-PLUGINS/tuneoffice.github.io";
 			}
 			else
 			{

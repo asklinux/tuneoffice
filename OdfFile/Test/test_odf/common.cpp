@@ -231,18 +231,18 @@
 #include <stdio.h>
 #include <tchar.h>
 
-#include "D:\ONLYOFFICE\core\Common\OfficeFileFormatChecker.h"
-#include "D:\ONLYOFFICE\core\OfficeUtils\src\OfficeUtils.h"
-#include "D:\ONLYOFFICE\core\DesktopEditor\common\Directory.h"
-#include "D:\ONLYOFFICE\core\OdfFile\Reader\Converter\ConvertOO2OOX.h"
-#include "D:\ONLYOFFICE\core\OdfFile\Common\logging.h"
+#include "D:\TUNEOFFICE\core\Common\OfficeFileFormatChecker.h"
+#include "D:\TUNEOFFICE\core\OfficeUtils\src\OfficeUtils.h"
+#include "D:\TUNEOFFICE\core\DesktopEditor\common\Directory.h"
+#include "D:\TUNEOFFICE\core\OdfFile\Reader\Converter\ConvertOO2OOX.h"
+#include "D:\TUNEOFFICE\core\OdfFile\Common\logging.h"
 
 #if defined(_WIN64)
-#pragma comment(lib, "D:/ONLYOFFICE/core/Common/3dParty/icu/win_64/build/icuuc.lib")
-#pragma comment(lib, "D:/ONLYOFFICE/core/build/lib/win_64/DEBUG/graphics.lib")
-#pragma comment(lib, "D:/ONLYOFFICE/core/build/lib/win_64/DEBUG/kernel.lib")
-#pragma comment(lib, "D:/ONLYOFFICE/core/build/lib/win_64/DEBUG/UnicodeConverter.lib")
-#pragma comment(lib, "D:/ONLYOFFICE/core/build/lib/win_64/DEBUG/CryptoPPLib.lib")
+#pragma comment(lib, "D:/TUNEOFFICE/core/Common/3dParty/icu/win_64/build/icuuc.lib")
+#pragma comment(lib, "D:/TUNEOFFICE/core/build/lib/win_64/DEBUG/graphics.lib")
+#pragma comment(lib, "D:/TUNEOFFICE/core/build/lib/win_64/DEBUG/kernel.lib")
+#pragma comment(lib, "D:/TUNEOFFICE/core/build/lib/win_64/DEBUG/UnicodeConverter.lib")
+#pragma comment(lib, "D:/TUNEOFFICE/core/build/lib/win_64/DEBUG/CryptoPPLib.lib")
 
 #elif defined (_WIN32)
 

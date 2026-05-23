@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -2505,7 +2505,7 @@ namespace NSDocxRenderer
 		};
 
 		// 2 main cases
-		// 1. lines of tables as a big rectangles with lines (onlyoffice), work with path commands
+		// 1. lines of tables as a big rectangles with lines (tuneoffice), work with path commands
 		// 2. lines of tables as a small rectangels for a single line (adobe), work with entire shape
 		// also word -> pdf adobe sets points as crossings of the table lines, so we can use it
 

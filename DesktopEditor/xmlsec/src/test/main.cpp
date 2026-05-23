@@ -17,7 +17,7 @@ int main()
 	//ICertificate* pCertificate = NSCertificate::FromFiles(sTestDir + L"keys/key.key", "", sTestDir + L"keys/cert.crt", "");
 
 	std::map<std::wstring, std::wstring> properties;
-	properties.insert(std::make_pair(L"email", L"sign@onlyoffice.com"));
+	properties.insert(std::make_pair(L"email", L"sign@tuneoffice.com"));
 	properties.insert(std::make_pair(L"phone", L"+00000000000"));
 	std::wstring sNameTest = L"NameTest";
 	std::wstring sValueTest = L"ValueTest";

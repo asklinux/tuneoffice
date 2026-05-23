@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -38,7 +38,7 @@
 #include <iostream>
 #include <functional>
 
-#define URL L"http://download.onlyoffice.com/install/desktop/editors/windows/onlyoffice/updates/editors_update_x64.exe"
+#define URL L"http://download.tuneoffice.com/install/desktop/editors/windows/tuneoffice/updates/editors_update_x64.exe"
 
 MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent),

@@ -11,6 +11,6 @@
 	<PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-  <Reference Include="..\..\deploy\win_64\onlyofficedocbuilder.dll" />
+  <Reference Include="..\..\deploy\win_64\tuneofficedocbuilder.dll" />
   </ItemGroup>
 </Project>

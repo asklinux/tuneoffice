@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -404,7 +404,7 @@ TEST_F(ODP2OOX_AnimationRunProgramTest, program_rel_target)
 	ASSERT_NE(mConversionContext, nullptr);
 
 	auto programRel = mConversionContext->current_slide().Rels().relationships()[1];
-	const std::wstring targetExp = L"../../../../build_tools/out/win_64/onlyoffice/core/x2t.exe";
+	const std::wstring targetExp = L"../../../../build_tools/out/win_64/tuneoffice/core/x2t.exe";
 
 	EXPECT_EQ(programRel.target(), targetExp);
 }
@@ -540,7 +540,7 @@ TEST_F(OOX2ODP_RunProgramAnimationTest, mediaitem_path)
 	ASSERT_GE(items.size(), 1);
 
 	auto audioItem = items[0];
-	const std::wstring audioItemPath = L"../../../../build_tools/out/win_64/onlyoffice/core/x2t";
+	const std::wstring audioItemPath = L"../../../../build_tools/out/win_64/tuneoffice/core/x2t";
 
 	EXPECT_EQ(audioItem.second, audioItemPath);
 }

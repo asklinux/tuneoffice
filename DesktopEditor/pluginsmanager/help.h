@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -96,7 +96,7 @@ L"                         The symbol = can be skipped for all parameters.\n" \
 L"                         Must be first on the command line.\n\n" \
 
 L"  --marketplace        = Optional parameter. Set plugins marketplace URL in quotes.\n" \
-L"                         Default is https://onlyoffice.github.io\n\n" \
+L"                         Default is https://tuneoffice.github.io\n\n" \
 
 L"  --print-installed    = Optional parameter without value. Print installed plugins.\n\n" \
 

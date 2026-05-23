@@ -1,12 +1,12 @@
 ﻿using static System.Console;
 using System.Runtime.InteropServices;
 
-using onlyofficedocbuilder;
+using tuneofficedocbuilder;
 
-using CDocBuilder = onlyofficedocbuilder.CONLYOFFICEDocBuilder;
-using CValue = onlyofficedocbuilder.CONLYOFFICEDocBuilderValue;
-using CContext = onlyofficedocbuilder.CONLYOFFICEDocBuilderContext;
-using CContextScope = onlyofficedocbuilder.CONLYOFFICEDocBuilderContextScope;
+using CDocBuilder = tuneofficedocbuilder.CTUNEOFFICEDocBuilder;
+using CValue = tuneofficedocbuilder.CTUNEOFFICEDocBuilderValue;
+using CContext = tuneofficedocbuilder.CTUNEOFFICEDocBuilderContext;
+using CContextScope = tuneofficedocbuilder.CTUNEOFFICEDocBuilderContextScope;
 
 namespace Test
 {

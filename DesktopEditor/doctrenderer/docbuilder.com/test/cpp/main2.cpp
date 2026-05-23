@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -66,8 +66,8 @@ int main(int argc, char *argv[])
 
 	CoInitialize(NULL);
 	
-	IONLYOFFICEDocBuilder* pBuilder = NULL;
-	if (FAILED(CoCreateInstance(__uuidof(CONLYOFFICEDocBuilder), NULL, CLSCTX_ALL, __uuidof(IONLYOFFICEDocBuilder), (void**)&pBuilder)))
+	ITUNEOFFICEDocBuilder* pBuilder = NULL;
+	if (FAILED(CoCreateInstance(__uuidof(CTUNEOFFICEDocBuilder), NULL, CLSCTX_ALL, __uuidof(ITUNEOFFICEDocBuilder), (void**)&pBuilder)))
 	{
 		CoUninitialize();
 		return 1;
@@ -78,21 +78,21 @@ int main(int argc, char *argv[])
 	pBuilder->OpenFile(_B("file.docx"), _B(""), &bRes);
 	//pBuilder->SaveFile(_B("html"), _B("D:/FILES/images.html"), &bRes);
 
-	IONLYOFFICEDocBuilderContext* pContext = NULL;
+	ITUNEOFFICEDocBuilderContext* pContext = NULL;
 	pBuilder->GetContext(&pContext);
 
-	IONLYOFFICEDocBuilderContextScope* pScope = NULL;
+	ITUNEOFFICEDocBuilderContextScope* pScope = NULL;
 	pContext->CreateScope(&pScope);
 
-	IONLYOFFICEDocBuilderValue* pGlobal = NULL; 
+	ITUNEOFFICEDocBuilderValue* pGlobal = NULL; 
 	pContext->GetGlobal(&pGlobal);
 
-	IONLYOFFICEDocBuilderValue* pApi = NULL;
+	ITUNEOFFICEDocBuilderValue* pApi = NULL;
 	pGlobal->GetProperty(_B("Api"), &pApi);
-	IONLYOFFICEDocBuilderValue* pDocument = NULL;
+	ITUNEOFFICEDocBuilderValue* pDocument = NULL;
 	pApi->Call(_B("GetDocument"), EMPTY_PARAM, EMPTY_PARAM, EMPTY_PARAM, EMPTY_PARAM, EMPTY_PARAM, EMPTY_PARAM, &pDocument);
 
-	IONLYOFFICEDocBuilderValue* pRanges = NULL;
+	ITUNEOFFICEDocBuilderValue* pRanges = NULL;
 	pDocument->Call(_B("Search"), ATL::CComVariant("year"), EMPTY_PARAM, EMPTY_PARAM, EMPTY_PARAM, EMPTY_PARAM, EMPTY_PARAM, &pRanges);
 
 	if (pRanges)
@@ -107,20 +107,20 @@ int main(int argc, char *argv[])
 
 			if (0 < nCount)
 			{
-				IONLYOFFICEDocBuilderValue* pSearchRange = NULL;
+				ITUNEOFFICEDocBuilderValue* pSearchRange = NULL;
 				pRanges->Get(0, &pSearchRange);
 
-				IONLYOFFICEDocBuilderValue* pComment = NULL;
+				ITUNEOFFICEDocBuilderValue* pComment = NULL;
 				pSearchRange->Call(_B("AddComment"), ATL::CComVariant("Comment Text"), ATL::CComVariant("Author"), 
 					EMPTY_PARAM, EMPTY_PARAM, EMPTY_PARAM, EMPTY_PARAM, &pComment);
 
-				IONLYOFFICEDocBuilderValue* pCommentID = NULL;
+				ITUNEOFFICEDocBuilderValue* pCommentID = NULL;
 				pComment->Call(_B("GetId"), EMPTY_PARAM, EMPTY_PARAM, EMPTY_PARAM, EMPTY_PARAM, EMPTY_PARAM, EMPTY_PARAM, &pCommentID);
 
 				// get comment id. 
 				// work with comment: 
-				// https://api.onlyoffice.com/docbuilder/textdocumentapi/apidocument/getcommentbyid
-				// https://api.onlyoffice.com/docbuilder/textdocumentapi/apicomment
+				// https://api.tuneoffice.com/docbuilder/textdocumentapi/apidocument/getcommentbyid
+				// https://api.tuneoffice.com/docbuilder/textdocumentapi/apicomment
 
 				BSTR bsCommentId = NULL;
 				pCommentID->ToString(&bsCommentId);

@@ -5,7 +5,7 @@
 # Set the base image to Ubuntu
 FROM ubuntu:18.04
 # File Author / Maintainer
-MAINTAINER onlyoffice.com
+MAINTAINER tuneoffice.com
 ################## BEGIN INSTALLATION ######################
 # Update Image
 RUN apt-get update

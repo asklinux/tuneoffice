@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -1247,9 +1247,9 @@ namespace NSGraphics
 		if (src.find(L"data:") == 0)
 		{
 			std::wstring strImage = m_pAppImage->GetImagesDirectory() + L"/texture.png";
-			bool bIsOnlyOfficeHatch = false;
-			if(src.find(L"onlyoffice_hatch") != std::wstring::npos)
-				bIsOnlyOfficeHatch = true;
+			bool bIsTuneOfficeHatch = false;
+			if(src.find(L"tuneoffice_hatch") != std::wstring::npos)
+				bIsTuneOfficeHatch = true;
 #ifdef ENABLE_GR_LOGS
 			std::wcout << L"put_brushTexture " << src << L"  "  << type << std::endl;
 #endif
@@ -1262,7 +1262,7 @@ namespace NSGraphics
 			BYTE* pImageData = new BYTE[nDecodeLen + 64];
 			if (TRUE == NSBase64::Base64Decode(sBase64MultyByte.c_str(), sBase64MultyByte.length(), pImageData, &nDecodeLen))
 			{
-				if(!bIsOnlyOfficeHatch)
+				if(!bIsTuneOfficeHatch)
 				{
 					NSFile::CFileBinary oImageWriter;
 					if (oImageWriter.CreateFileW(strImage))

@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -134,7 +134,7 @@ void word_files::write(const std::wstring & RootPath)
 
 	if (jsaProject_)
 	{
-		rels_files_.add( relationship(L"jsaId", L"http://schemas.onlyoffice.com/jsaProject", L"jsaProject.bin" ) );
+		rels_files_.add( relationship(L"jsaId", L"http://schemas.tuneoffice.com/jsaProject", L"jsaProject.bin" ) );
 		jsaProject_->write( path );
 	}
    

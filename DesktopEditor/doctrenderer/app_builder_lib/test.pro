@@ -9,7 +9,7 @@
 # warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
 # details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
 #
-# You can contact Ascensio System SIA by email at info@onlyoffice.com
+# You can contact Ascensio System SIA by email at info@tuneoffice.com
 # or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
 # LV-1050, Latvia, European Union.
 #
@@ -50,9 +50,9 @@ DESTDIR = $$PWD/build
 
 # Use installation builder path, or set the own path.
 core_windows {
-    DOCUMENT_BUILDER_INSTALL_PATH="C:/Program Files/ONLYOFFICE/DocumentBuilder"
+    DOCUMENT_BUILDER_INSTALL_PATH="C:/Program Files/TUNEOFFICE/DocumentBuilder"
 } else {
-    DOCUMENT_BUILDER_INSTALL_PATH=/opt/onlyoffice/documentbuilder
+    DOCUMENT_BUILDER_INSTALL_PATH=/opt/tuneoffice/documentbuilder
 }
 
 DEFINES += "DOCUMENT_BUILDER_INSTALL_PATH=\"$$DOCUMENT_BUILDER_INSTALL_PATH\""

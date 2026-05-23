@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -39,8 +39,8 @@
 #include <vector>
 #include "../graphics/pro/Fonts.h"
 
-#define ONLYOFFICE_FONTS_VERSION     15
-#define ONLYOFFICE_ALL_FONTS_VERSION 2
+#define TUNEOFFICE_FONTS_VERSION     15
+#define TUNEOFFICE_ALL_FONTS_VERSION 2
 
 class CApplicationFontsWorkerBreaker
 {

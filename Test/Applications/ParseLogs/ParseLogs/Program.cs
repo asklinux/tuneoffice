@@ -77,9 +77,9 @@ namespace ParseLogs
         }
         static void Main(string[] args)
         {
-            //string inputDir = @"D:\logs\doc.onlyoffice.eu\7.3.2\log2";
-            string inputDir = @"D:\logs\doc.onlyoffice.eu\7.4.0\log";
-            string outputFile = @"D:\logs\doc.onlyoffice.eu\7.4.0\changesError.txt";
+            //string inputDir = @"D:\logs\doc.tuneoffice.eu\7.3.2\log2";
+            string inputDir = @"D:\logs\doc.tuneoffice.eu\7.4.0\log";
+            string outputFile = @"D:\logs\doc.tuneoffice.eu\7.4.0\changesError.txt";
             using (StreamWriter writetext = new StreamWriter(outputFile))
             {
                 Dictionary<string, int> unique = new Dictionary<string, int>();

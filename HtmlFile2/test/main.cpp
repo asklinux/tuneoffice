@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -57,8 +57,8 @@ void getDirectories(const std::wstring& sDirectory, std::vector<std::wstring>& a
 
 int main()
 {
-    // if (Md::ConvertMdFileToHtml(L"C:\\ONLYOFFICE\\Files\\md\\Bugs\\74626\\file-1.md",
-    //                             L"C:\\ONLYOFFICE\\Files\\md\\Bugs\\74626\\file-1.html"))
+    // if (Md::ConvertMdFileToHtml(L"C:\\TUNEOFFICE\\Files\\md\\Bugs\\74626\\file-1.md",
+    //                             L"C:\\TUNEOFFICE\\Files\\md\\Bugs\\74626\\file-1.html"))
     //     std::wcout << L"Good" << std::endl;
     // else
     //     std::wcout << L"Bad" << std::endl;
@@ -148,7 +148,7 @@ int main()
         oParams.SetDescription(L"Description");
 
         // File to open
-        std::wstring sFile = L"C:\\ONLYOFFICE\\Files\\html\\test_tag_a_1.html";
+        std::wstring sFile = L"C:\\TUNEOFFICE\\Files\\html\\test_tag_a_1.html";
         CHtmlFile2 oFile;
         oFile.SetTmpDirectory(sOutputDirectory);
         nResConvert = (bMhtMode ? oFile.OpenMht(sFile, sOutputDirectory, &oParams) : oFile.OpenHtml(sFile, sOutputDirectory, &oParams));

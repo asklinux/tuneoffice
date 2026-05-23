@@ -6,7 +6,7 @@ solution_name = 'docbuilder.net.sln'
 deploy_directory = 'deploy'
 
 default_platform = 'win_64'
-default_docbuilder = 'C:/Program Files/ONLYOFFICE/DocumentBuilder'
+default_docbuilder = 'C:/Program Files/TUNEOFFICE/DocumentBuilder'
 default_msbuild = 'C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Msbuild/Current/Bin'
 default_out = 'out'
 

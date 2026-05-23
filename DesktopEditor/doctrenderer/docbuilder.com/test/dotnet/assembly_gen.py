@@ -24,7 +24,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
     
     dll_path = "../../deploy/" + args.platform + "/docbuilder.com.dll"
-    out_path = "../../deploy/" + args.platform + "/onlyofficedocbuilder.dll"
+    out_path = "../../deploy/" + args.platform + "/tuneofficedocbuilder.dll"
     
     # call build
     os.system("\"" + args.vcvars + "/vcvars64.bat\" && " +

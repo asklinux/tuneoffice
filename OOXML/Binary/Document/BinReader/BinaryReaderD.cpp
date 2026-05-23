@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -10074,7 +10074,7 @@ int Binary_DocumentTableReader::ReadSdtFormPr(BYTE type, long length, void* poRe
 			m_oFileWriter.m_pDrawingConverter->GetContentTypes()->Registration(L"oform/fieldMaster+xml", L"", pathOFormMaster.substr(3));	// del "../"		
 
 			unsigned int rId;
-			m_oFileWriter.m_pDrawingConverter->WriteRels(L"https://schemas.onlyoffice.com/relationships/oform-fieldMaster", pathOFormMaster, L"", &rId);
+			m_oFileWriter.m_pDrawingConverter->WriteRels(L"https://schemas.tuneoffice.com/relationships/oform-fieldMaster", pathOFormMaster, L"", &rId);
 
 			pFormPr->m_oFieldRid.Init();
 			pFormPr->m_oFieldRid->SetValue(L"rId" + std::to_wstring(rId));

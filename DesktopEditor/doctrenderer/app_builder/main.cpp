@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -147,7 +147,7 @@ int main(int argc, char *argv[])
 				if (!NSFile::CFileBinary::Exists(sLicensePathSrc))
 					return 1;
 
-				std::wstring sLicensePath = NSSystemUtils::GetEnvVariable(L"ONLYOFFICE_BUILDER_LICENSE");
+				std::wstring sLicensePath = NSSystemUtils::GetEnvVariable(L"TUNEOFFICE_BUILDER_LICENSE");
 				if (CheckLicense(sLicensePathSrc, sLicensePath))
 					return 0;
 

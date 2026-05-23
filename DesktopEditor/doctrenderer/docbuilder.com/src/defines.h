@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -54,23 +54,23 @@
 
 
 #define C_DOCBUILDER_VALUE_HEADER \
-[coclass, uuid("85C41585-25D7-40F1-9CC6-FA17052650F4"), threading(apartment), vi_progid("ONLYOFFICE.BuilderValue"), progid("ONLYOFFICE.BuilderValue.1"), version(1.0)]
+[coclass, uuid("85C41585-25D7-40F1-9CC6-FA17052650F4"), threading(apartment), vi_progid("TUNEOFFICE.BuilderValue"), progid("TUNEOFFICE.BuilderValue.1"), version(1.0)]
 
 #define C_DOCBUILDER_CONTEXT_SCOPE_HEADER \
-[coclass, uuid("c54e2b15-ff5b-45a2-aa15-89a02605c30c"), threading(apartment), vi_progid("ONLYOFFICE.BuilderContextScope"), progid("ONLYOFFICE.BuilderContextScope.1"), version(1.0)]
+[coclass, uuid("c54e2b15-ff5b-45a2-aa15-89a02605c30c"), threading(apartment), vi_progid("TUNEOFFICE.BuilderContextScope"), progid("TUNEOFFICE.BuilderContextScope.1"), version(1.0)]
 
 #define C_DOCBUILDER_CONTEXT_HEADER \
-[coclass, uuid("299250bb-16c2-4ab4-8a49-a0c350d66bb5"), threading(apartment), vi_progid("ONLYOFFICE.BuilderContext"), progid("ONLYOFFICE.BuilderContext.1"), version(1.0)]
+[coclass, uuid("299250bb-16c2-4ab4-8a49-a0c350d66bb5"), threading(apartment), vi_progid("TUNEOFFICE.BuilderContext"), progid("TUNEOFFICE.BuilderContext.1"), version(1.0)]
 
 #define C_DOCBUILDER_HEADER \
-[coclass, uuid("9BF69F3C-1506-41B9-B8EE-2839948C02E9"), threading(apartment), vi_progid("ONLYOFFICE.Builder"), progid("ONLYOFFICE.Builder.1"), version(1.0)]
+[coclass, uuid("9BF69F3C-1506-41B9-B8EE-2839948C02E9"), threading(apartment), vi_progid("TUNEOFFICE.Builder"), progid("TUNEOFFICE.Builder.1"), version(1.0)]
 
-#define I_DOCBUILDER_VALUE IONLYOFFICEDocBuilderValue
-#define I_DOCBUILDER_CONTEXT_SCOPE IONLYOFFICEDocBuilderContextScope
-#define I_DOCBUILDER_CONTEXT IONLYOFFICEDocBuilderContext
-#define I_DOCBUILDER IONLYOFFICEDocBuilder
+#define I_DOCBUILDER_VALUE ITUNEOFFICEDocBuilderValue
+#define I_DOCBUILDER_CONTEXT_SCOPE ITUNEOFFICEDocBuilderContextScope
+#define I_DOCBUILDER_CONTEXT ITUNEOFFICEDocBuilderContext
+#define I_DOCBUILDER ITUNEOFFICEDocBuilder
 
-#define C_DOCBUILDER_VALUE CONLYOFFICEDocBuilderValue
-#define C_DOCBUILDER_CONTEXT_SCOPE CONLYOFFICEDocBuilderContextScope
-#define C_DOCBUILDER_CONTEXT CONLYOFFICEDocBuilderContext
-#define C_DOCBUILDER CONLYOFFICEDocBuilder
+#define C_DOCBUILDER_VALUE CTUNEOFFICEDocBuilderValue
+#define C_DOCBUILDER_CONTEXT_SCOPE CTUNEOFFICEDocBuilderContextScope
+#define C_DOCBUILDER_CONTEXT CTUNEOFFICEDocBuilderContext
+#define C_DOCBUILDER CTUNEOFFICEDocBuilder

@@ -10,7 +10,7 @@
  * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. For
  * details, see the GNU AGPL at: https://www.gnu.org/licenses/agpl-3.0.html
  *
- * You can contact Ascensio System SIA by email at info@onlyoffice.com
+ * You can contact Ascensio System SIA by email at info@tuneoffice.com
  * or by postal mail at 20A-6 Ernesta Birznieka-Upisha Street, Riga,
  * LV-1050, Latvia, European Union.
  *
@@ -42,7 +42,7 @@
 #include "../../../../core/Common/Network/FileTransporter/include/FileTransporter.h"
 
 
-//#define URL L"http://nct.onlyoffice.com/sh/XHh"
+//#define URL L"http://nct.tuneoffice.com/sh/XHh"
 typedef std::wstring WString;
 typedef NSNetwork::NSFileTransport::CFileDownloader Downloader;
 
